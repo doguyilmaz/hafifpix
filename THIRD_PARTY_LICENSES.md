@@ -18,7 +18,7 @@ under its own license; full texts are available at the linked projects.
 
 | Library | License |
 |---------|---------|
-| Sparkle (updates) | MIT — https://sparkle-project.org |
+| Sparkle (updates) | MIT (https://sparkle-project.org) |
 | libpng | libpng/zlib |
 | libjpeg-turbo | BSD / IJG / zlib |
 | Little-CMS 2 | MIT |

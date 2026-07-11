@@ -1,10 +1,10 @@
 # HafifPix
 
-*hafif* (Turkish: lightweight) + *pix* — a native macOS image optimizer, built as a modern
+*hafif* (Turkish: lightweight) + *pix*. A native macOS image optimizer, built as a modern
 Swift 6 / SwiftUI successor to [ImageOptim](https://imageoptim.com). Apple Silicon only.
 
-Drop images (or folders) on the window; they are compressed **in place**, losslessly by
-default or lossy at your chosen quality — never made larger, never corrupted.
+Drop images or folders on the window and they are compressed **in place**: losslessly by
+default, or lossy at your chosen quality. Files are never made larger and never corrupted.
 
 ## Features
 
@@ -12,11 +12,11 @@ default or lossy at your chosen quality — never made larger, never corrupted.
 - **Keep-smallest engine racing**: every optimizer pass is adopted only if the result is
   smaller *and* still decodes with identical dimensions and frame count
 - **Modern engines**: oxipng (replaces OptiPNG/PNGCrush/AdvPNG/Zopfli), pngquant,
-  MozJPEG, jpegoptim, gifsicle, cwebp — all bundled inside the app, no dependencies
-- **Convert to modern formats**: WebP / HEIC / AVIF (written as sibling files;
-  animated GIF → animated WebP)
+  MozJPEG, jpegoptim, gifsicle and cwebp, all bundled inside the app with no dependencies
+- **Convert to modern formats**: WebP / HEIC / AVIF, written as sibling files.
+  Animated GIF becomes animated WebP
 - **Resize on optimize**: fit images within a max dimension before compression
-- **Safety**: atomic same-volume swaps, optional Trash/sidecar backups, and per-file
+- **Safety**: atomic same-volume swaps, optional Trash or sidecar backups and per-file
   *Revert to Original* for the whole session regardless of backup setting
 - **`hafif` CLI** for scripts and CI, sharing the app's engine and settings
 - **Finder integration**: Open With, Services menu ("Optimize with HafifPix"), dock drops
@@ -35,8 +35,7 @@ make test         # unit tests
 ```
 
 The bundling script copies the engine binaries and their dylibs into the app and
-re-links them (`@executable_path`/`@loader_path`), so the built app runs on Macs
-without Homebrew.
+re-links them, so the built app runs on Macs without Homebrew.
 
 ## CLI
 
@@ -61,22 +60,22 @@ Sources/
   hafif/                 # CLI
 ```
 
-Optimization chains (each step's output kept only if smaller + valid):
+Optimization chains. Each step's output is kept only if smaller and valid:
 
 | Format | Chain |
 |--------|-------|
-| PNG    | pngquant (lossy) → oxipng (+Zopfli at Insane) |
-| JPEG   | jpegli* (lossy) → jpegoptim → MozJPEG jpegtran |
-| GIF    | gifsicle (−O per level, --lossy) |
+| PNG    | pngquant (lossy), then oxipng (Zopfli at Insane) |
+| JPEG   | jpegli* (lossy), then jpegoptim, then MozJPEG jpegtran |
+| GIF    | gifsicle (per-level optimization, optional lossy) |
 | SVG    | built-in minifier (comments, editor metadata, whitespace) |
 | WebP   | cwebp re-encode (lossless sources stay lossless) |
 
-\* jpegli is picked up automatically if a `cjpegli` binary is on the system;
+\* jpegli is picked up automatically if a `cjpegli` binary is on the system.
 Homebrew doesn't ship one today.
 
 ## License
 
-GPL v3 — see [LICENSE](LICENSE). HafifPix bundles GPL-licensed engines
+GPL v3, see [LICENSE](LICENSE). HafifPix bundles GPL-licensed engines
 (pngquant, gifsicle, jpegoptim), which makes GPL the natural license for the
-distributed bundle; see [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md)
+distributed bundle. See [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md)
 for all attributions. Inspired by [ImageOptim](https://imageoptim.com) (GPL).

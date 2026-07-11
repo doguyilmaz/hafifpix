@@ -2,7 +2,7 @@ import Foundation
 import HafifPixCore
 
 let usage = """
-hafif — image optimizer (HafifPix CLI)
+hafif: image optimizer (HafifPix CLI)
 
 USAGE: hafif [options] <files or directories...>
 
