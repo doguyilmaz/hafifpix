@@ -140,6 +140,36 @@ public enum BackgroundRemover {
             }
         }
 
+        // Speck cleanup: small surviving islands whose color is still close to
+        // the background are residue (soft halos, dust), not subject. The real
+        // subject is a large connected component and is never touched.
+        var componentID = [Int](repeating: -1, count: width * height)
+        var component = 0
+        for start in 0..<(width * height) where !removed[start] && componentID[start] == -1 {
+            var members = [start]
+            var head = 0
+            componentID[start] = component
+            var nearBackground = 0
+            while head < members.count {
+                let index = members[head]; head += 1
+                if distance(index * 4) < tolerance * 6 { nearBackground += 1 }
+                let x = index % width, y = index / width
+                for (nx, ny) in [(x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1)] {
+                    guard nx >= 0, nx < width, ny >= 0, ny < height else { continue }
+                    let n = ny * width + nx
+                    if !removed[n], componentID[n] == -1 {
+                        componentID[n] = component
+                        members.append(n)
+                    }
+                }
+            }
+            let maxSpeck = max(64, width * height / 2000)
+            if members.count < maxSpeck, Double(nearBackground) / Double(members.count) > 0.6 {
+                for index in members { removed[index] = true }
+            }
+            component += 1
+        }
+
         // Edge band: pixels within 2px of the removed region hold the source's
         // anti-aliasing, i.e. a blend of subject color and background.
         var band = [Bool](repeating: false, count: width * height)
