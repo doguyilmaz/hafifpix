@@ -20,7 +20,8 @@ struct StatusBarView: View {
             Spacer()
 
             if !ToolRegistry.missingTools.isEmpty {
-                Label("\(ToolRegistry.missingTools.count) engines unavailable", systemImage: "exclamationmark.triangle")
+                let count = ToolRegistry.missingTools.count
+                Label("\(count) engine\(count == 1 ? "" : "s") unavailable", systemImage: "exclamationmark.triangle")
                     .font(.caption)
                     .foregroundStyle(.orange)
                     .help("Missing: \(ToolRegistry.missingTools.map(\.rawValue).joined(separator: ", "))")

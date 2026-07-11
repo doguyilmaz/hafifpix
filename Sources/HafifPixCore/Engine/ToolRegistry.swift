@@ -21,6 +21,12 @@ public enum ExternalTool: String, CaseIterable, Sendable {
             ["/opt/homebrew/bin/\(rawValue)", "/usr/local/bin/\(rawValue)"]
         }
     }
+
+    /// Nice-to-have engines whose absence is expected and shouldn't warn
+    /// (Homebrew ships no cjpegli today; the chain falls back to jpegoptim).
+    public var isOptional: Bool {
+        self == .cjpegli
+    }
 }
 
 public enum ToolRegistry {
@@ -45,7 +51,7 @@ public enum ToolRegistry {
     }
 
     public static var missingTools: [ExternalTool] {
-        ExternalTool.allCases.filter { cache[$0] == nil }
+        ExternalTool.allCases.filter { !$0.isOptional && cache[$0] == nil }
     }
 
     private static func locate(_ tool: ExternalTool) -> URL? {

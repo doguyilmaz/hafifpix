@@ -34,7 +34,7 @@ final class AppModel {
             switch status {
             case .pending: "Waiting"
             case .running(let step): step.capitalized
-            case .optimized: "Saved \(Formatting.savings(original: originalBytes, new: currentBytes))"
+            case .optimized: "Saved \(Formatting.bytes(savedBytes))"
             case .converted(let out): "→ \(out.lastPathComponent)"
             case .alreadyOptimal: "Already optimized"
             case .reverted: "Reverted to original"
