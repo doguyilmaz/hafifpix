@@ -40,6 +40,10 @@
 	<string>清空列表</string>
 	<key>Clear the list (⌘K)</key>
 	<string>清空列表 (⌘K)</string>
+	<key>Command Line Tool</key>
+	<string>命令行工具</string>
+	<key>Command line tool</key>
+	<string>命令行工具</string>
 	<key>Convert images to</key>
 	<string>将图像转换为</string>
 	<key>Convert to modern formats</key>
@@ -48,6 +52,8 @@
 	<string>转换后的文件写在原始文件旁边（photo.png → photo.%@）。SVG照常缩小。</string>
 	<key>Copy Path</key>
 	<string>拷贝路径</string>
+	<key>Could not install the command line tool.</key>
+	<string>无法安装命令行工具。</string>
 	<key>Drop images or folders here</key>
 	<string>将图像或文件夹拖放到这里</string>
 	<key>EXIF, GPS position, color profiles, rotation. Keep it if you rely on embedded copyright info.</key>
@@ -60,14 +66,18 @@
 	<string>每个引擎的输出只有在更小且能正确解码时才会保留。停用引擎主要是用节省换取速度。</string>
 	<key>Exhaustive compression trials. Noticeably slower on big images.</key>
 	<string>穷尽式压缩尝试。大图像明显更慢。</string>
-	<key>Extras</key>
-	<string>更多</string>
+	<key>Files</key>
+	<string>文件</string>
 	<key>Fit images within a maximum size</key>
 	<string>将图像限制在最大尺寸内</string>
 	<key>Gamma chunks, color profiles and optional chunks. Web browsers expect these removed.</key>
 	<string>Gamma块、颜色描述文件和可选块。网页浏览器期望这些被移除。</string>
 	<key>General</key>
 	<string>通用</string>
+	<key>Install</key>
+	<string>安装</string>
+	<key>Installed in /usr/local/bin</key>
+	<string>已安装到 /usr/local/bin</string>
 	<key>Language</key>
 	<string>语言</string>
 	<key>Larger images are downscaled before compression. Animations are resized too (GIF).</key>
@@ -160,8 +170,14 @@
 	<string>系统默认</string>
 	<key>Takes effect after the app is relaunched.</key>
 	<string>重新启动应用后生效。</string>
+	<key>The command line tool is missing from the app bundle.</key>
+	<string>应用包中缺少命令行工具。</string>
+	<key>Uninstall</key>
+	<string>卸载</string>
 	<key>Updates</key>
 	<string>更新</string>
+	<key>Use hafif from Terminal and scripts</key>
+	<string>在终端和脚本中使用 hafif</string>
 	<key>Waiting</key>
 	<string>等待中</string>
 	<key>Writing files</key>

@@ -10,8 +10,8 @@ struct SettingsView: View {
                 .tabItem { Label(L("Quality"), systemImage: "dial.medium") }
             SpeedSettingsView()
                 .tabItem { Label(L("Speed"), systemImage: "speedometer") }
-            ExtrasSettingsView()
-                .tabItem { Label(L("Extras"), systemImage: "wand.and.stars") }
+            FilesSettingsView()
+                .tabItem { Label(L("Files"), systemImage: "doc") }
             ToolsSettingsView()
                 .tabItem { Label(L("Engines"), systemImage: "wrench.and.screwdriver") }
         }
@@ -23,6 +23,8 @@ struct SettingsView: View {
 private struct GeneralSettingsView: View {
     @Environment(AppModel.self) private var model
     @Environment(UpdaterModel.self) private var updater
+    @State private var cliInstalled = CLIInstaller.isInstalled
+    @State private var cliError: String?
 
     // Language codes must match the lproj folders. Names are endonyms on purpose:
     // a reader hunting for their language recognizes it in any UI language.
@@ -74,37 +76,39 @@ private struct GeneralSettingsView: View {
                 }
             }
 
+            Section(L("Command line tool")) {
+                HStack {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(verbatim: "hafif")
+                            .font(.body.monospaced())
+                        Text(cliInstalled
+                             ? L("Installed in /usr/local/bin")
+                             : L("Use hafif from Terminal and scripts"))
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                    Spacer()
+                    Button(cliInstalled ? L("Uninstall") : L("Install")) {
+                        toggleCLI()
+                    }
+                }
+            }
+
             Section(L("Updates")) {
                 Toggle(L("Automatically check for updates"), isOn: $updater.automaticallyChecksForUpdates)
                 Toggle(L("Automatically download and install updates"), isOn: $updater.automaticallyDownloadsUpdates)
                     .disabled(!updater.automaticallyChecksForUpdates)
             }
-
-            Section(L("Metadata")) {
-                Toggle(L("Strip PNG metadata"), isOn: $model.settings.stripPNGMetadata)
-                Text(L("Gamma chunks, color profiles and optional chunks. Web browsers expect these removed."))
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                Toggle(L("Strip JPEG metadata"), isOn: $model.settings.stripJPEGMetadata)
-                Text(L("EXIF, GPS position, color profiles, rotation. Keep it if you rely on embedded copyright info."))
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-            }
-
-            Section(L("Writing files")) {
-                Toggle(L("Preserve file permissions and attributes"), isOn: $model.settings.preservePermissions)
-                Toggle(L("Preserve file creation and modification dates"), isOn: $model.settings.preserveDates)
-                Picker(L("Originals"), selection: $model.settings.backupMode) {
-                    ForEach(OptimizationSettings.BackupMode.allCases, id: \.self) { mode in
-                        Text(mode.displayName).tag(mode)
-                    }
-                }
-                Text(L("Regardless of this setting, every file can be reverted from the right-click menu while the app is open."))
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-            }
         }
         .formStyle(.grouped)
+        .alert(L("Command Line Tool"), isPresented: Binding(
+            get: { cliError != nil },
+            set: { if !$0 { cliError = nil } }
+        )) {
+            Button(L("OK"), role: .cancel) {}
+        } message: {
+            Text(cliError ?? "")
+        }
     }
 
     private func relaunch() {
@@ -114,6 +118,22 @@ private struct GeneralSettingsView: View {
         task.arguments = ["-c", "sleep 0.4; /usr/bin/open \"\(path)\""]
         try? task.run()
         NSApp.terminate(nil)
+    }
+
+    private func toggleCLI() {
+        do {
+            if cliInstalled {
+                try CLIInstaller.uninstall()
+            } else {
+                try CLIInstaller.install()
+            }
+            cliInstalled = CLIInstaller.isInstalled
+        } catch let error as CLIInstaller.CLIError {
+            // A cancelled auth dialog has no message; stay silent.
+            cliError = error.errorDescription
+        } catch {
+            cliError = error.localizedDescription
+        }
     }
 }
 
@@ -137,6 +157,17 @@ private struct QualitySettingsView: View {
                 QualitySlider(label: "WebP", value: $model.settings.webpQuality, range: 40...100)
             }
             .disabled(!model.settings.lossyEnabled)
+
+            Section(L("Metadata")) {
+                Toggle(L("Strip PNG metadata"), isOn: $model.settings.stripPNGMetadata)
+                Text(L("Gamma chunks, color profiles and optional chunks. Web browsers expect these removed."))
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                Toggle(L("Strip JPEG metadata"), isOn: $model.settings.stripJPEGMetadata)
+                Text(L("EXIF, GPS position, color profiles, rotation. Keep it if you rely on embedded copyright info."))
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
         }
         .formStyle(.grouped)
     }
@@ -213,12 +244,25 @@ private struct SpeedSettingsView: View {
     }
 }
 
-private struct ExtrasSettingsView: View {
+private struct FilesSettingsView: View {
     @Environment(AppModel.self) private var model
 
     var body: some View {
         @Bindable var model = model
         Form {
+            Section(L("Writing files")) {
+                Toggle(L("Preserve file permissions and attributes"), isOn: $model.settings.preservePermissions)
+                Toggle(L("Preserve file creation and modification dates"), isOn: $model.settings.preserveDates)
+                Picker(L("Originals"), selection: $model.settings.backupMode) {
+                    ForEach(OptimizationSettings.BackupMode.allCases, id: \.self) { mode in
+                        Text(mode.displayName).tag(mode)
+                    }
+                }
+                Text(L("Regardless of this setting, every file can be reverted from the right-click menu while the app is open."))
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+
             Section(L("Resize")) {
                 Toggle(L("Fit images within a maximum size"), isOn: $model.settings.resizeEnabled)
                 if model.settings.resizeEnabled {

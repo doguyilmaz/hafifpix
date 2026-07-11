@@ -40,6 +40,10 @@
 	<string>Listeyi Temizle</string>
 	<key>Clear the list (⌘K)</key>
 	<string>Listeyi temizle (⌘K)</string>
+	<key>Command Line Tool</key>
+	<string>Komut Satırı Aracı</string>
+	<key>Command line tool</key>
+	<string>Komut satırı aracı</string>
 	<key>Convert images to</key>
 	<string>Görselleri şuna dönüştür</string>
 	<key>Convert to modern formats</key>
@@ -48,6 +52,8 @@
 	<string>Dönüştürülen dosyalar orijinalin yanına yazılır (photo.png → photo.%@). SVG'ler her zamanki gibi küçültülür.</string>
 	<key>Copy Path</key>
 	<string>Yolu Kopyala</string>
+	<key>Could not install the command line tool.</key>
+	<string>Komut satırı aracı kurulamadı.</string>
 	<key>Drop images or folders here</key>
 	<string>Görselleri veya klasörleri buraya bırakın</string>
 	<key>EXIF, GPS position, color profiles, rotation. Keep it if you rely on embedded copyright info.</key>
@@ -60,14 +66,18 @@
 	<string>Her motorun çıktısı yalnızca daha küçükse ve doğru çözülüyorsa kullanılır. Motorları kapatmak çoğunlukla kazanç yerine hız kazandırır.</string>
 	<key>Exhaustive compression trials. Noticeably slower on big images.</key>
 	<string>Kapsamlı sıkıştırma denemeleri. Büyük görsellerde belirgin şekilde yavaş.</string>
-	<key>Extras</key>
-	<string>Ekstralar</string>
+	<key>Files</key>
+	<string>Dosyalar</string>
 	<key>Fit images within a maximum size</key>
 	<string>Görselleri en büyük boyuta sığdır</string>
 	<key>Gamma chunks, color profiles and optional chunks. Web browsers expect these removed.</key>
 	<string>Gama parçaları, renk profilleri ve isteğe bağlı parçalar. Web tarayıcıları bunların kaldırılmış olmasını bekler.</string>
 	<key>General</key>
 	<string>Genel</string>
+	<key>Install</key>
+	<string>Kur</string>
+	<key>Installed in /usr/local/bin</key>
+	<string>/usr/local/bin içine kuruldu</string>
 	<key>Language</key>
 	<string>Dil</string>
 	<key>Larger images are downscaled before compression. Animations are resized too (GIF).</key>
@@ -160,8 +170,14 @@
 	<string>Sistem Varsayılanı</string>
 	<key>Takes effect after the app is relaunched.</key>
 	<string>Uygulama yeniden başlatıldığında etkinleşir.</string>
+	<key>The command line tool is missing from the app bundle.</key>
+	<string>Komut satırı aracı uygulama paketinde bulunamadı.</string>
+	<key>Uninstall</key>
+	<string>Kaldır</string>
 	<key>Updates</key>
 	<string>Güncellemeler</string>
+	<key>Use hafif from Terminal and scripts</key>
+	<string>hafif komutunu Terminal ve betiklerde kullanın</string>
 	<key>Waiting</key>
 	<string>Bekliyor</string>
 	<key>Writing files</key>

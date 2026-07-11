@@ -40,6 +40,10 @@
 	<string>リストを消去</string>
 	<key>Clear the list (⌘K)</key>
 	<string>リストを消去 (⌘K)</string>
+	<key>Command Line Tool</key>
+	<string>コマンドラインツール</string>
+	<key>Command line tool</key>
+	<string>コマンドラインツール</string>
 	<key>Convert images to</key>
 	<string>変換先</string>
 	<key>Convert to modern formats</key>
@@ -48,6 +52,8 @@
 	<string>変換ファイルはオリジナルの隣に作成されます（photo.png → photo.%@）。SVGは通常どおり縮小されます。</string>
 	<key>Copy Path</key>
 	<string>パスをコピー</string>
+	<key>Could not install the command line tool.</key>
+	<string>コマンドラインツールをインストールできませんでした。</string>
 	<key>Drop images or folders here</key>
 	<string>ここに画像やフォルダをドロップ</string>
 	<key>EXIF, GPS position, color profiles, rotation. Keep it if you rely on embedded copyright info.</key>
@@ -60,14 +66,18 @@
 	<string>各エンジンの出力は、より小さく正しくデコードできる場合のみ採用されます。エンジンを無効にすると、主に削減率と引き換えに速度が上がります。</string>
 	<key>Exhaustive compression trials. Noticeably slower on big images.</key>
 	<string>徹底的な圧縮試行。大きな画像では明らかに遅くなります。</string>
-	<key>Extras</key>
-	<string>その他</string>
+	<key>Files</key>
+	<string>ファイル</string>
 	<key>Fit images within a maximum size</key>
 	<string>画像を最大サイズ内に収める</string>
 	<key>Gamma chunks, color profiles and optional chunks. Web browsers expect these removed.</key>
 	<string>ガンマチャンク、カラープロファイル、オプションのチャンク。Webブラウザはこれらが削除されていることを想定しています。</string>
 	<key>General</key>
 	<string>一般</string>
+	<key>Install</key>
+	<string>インストール</string>
+	<key>Installed in /usr/local/bin</key>
+	<string>/usr/local/bin にインストール済み</string>
 	<key>Language</key>
 	<string>言語</string>
 	<key>Larger images are downscaled before compression. Animations are resized too (GIF).</key>
@@ -160,8 +170,14 @@
 	<string>システムのデフォルト</string>
 	<key>Takes effect after the app is relaunched.</key>
 	<string>アプリの再起動後に有効になります。</string>
+	<key>The command line tool is missing from the app bundle.</key>
+	<string>コマンドラインツールがアプリバンドルにありません。</string>
+	<key>Uninstall</key>
+	<string>アンインストール</string>
 	<key>Updates</key>
 	<string>アップデート</string>
+	<key>Use hafif from Terminal and scripts</key>
+	<string>ターミナルやスクリプトで hafif を使う</string>
 	<key>Waiting</key>
 	<string>待機中</string>
 	<key>Writing files</key>

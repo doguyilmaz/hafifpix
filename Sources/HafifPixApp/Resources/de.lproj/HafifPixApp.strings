@@ -34,6 +34,10 @@
 	<string>Liste leeren</string>
 	<key>Clear the list (⌘K)</key>
 	<string>Liste leeren (⌘K)</string>
+	<key>Command Line Tool</key>
+	<string>Befehlszeilenwerkzeug</string>
+	<key>Command line tool</key>
+	<string>Befehlszeilenwerkzeug</string>
 	<key>Convert images to</key>
 	<string>Bilder konvertieren in</string>
 	<key>Convert to modern formats</key>
@@ -42,6 +46,8 @@
 	<string>Konvertierte Dateien entstehen neben dem Original (photo.png → photo.%@). SVGs werden wie üblich verkleinert.</string>
 	<key>Copy Path</key>
 	<string>Pfad kopieren</string>
+	<key>Could not install the command line tool.</key>
+	<string>Das Befehlszeilenwerkzeug konnte nicht installiert werden.</string>
 	<key>Drop images or folders here</key>
 	<string>Bilder oder Ordner hier ablegen</string>
 	<key>EXIF, GPS position, color profiles, rotation. Keep it if you rely on embedded copyright info.</key>
@@ -54,14 +60,18 @@
 	<string>Die Ausgabe jeder Engine wird nur übernommen, wenn sie kleiner ist und korrekt dekodiert. Engines zu deaktivieren tauscht vor allem Ersparnis gegen Tempo.</string>
 	<key>Exhaustive compression trials. Noticeably slower on big images.</key>
 	<string>Erschöpfende Kompressionsversuche. Bei großen Bildern deutlich langsamer.</string>
-	<key>Extras</key>
-	<string>Extras</string>
+	<key>Files</key>
+	<string>Dateien</string>
 	<key>Fit images within a maximum size</key>
 	<string>Bilder auf eine Maximalgröße begrenzen</string>
 	<key>Gamma chunks, color profiles and optional chunks. Web browsers expect these removed.</key>
 	<string>Gamma-Chunks, Farbprofile und optionale Chunks. Webbrowser erwarten, dass sie entfernt sind.</string>
 	<key>General</key>
 	<string>Allgemein</string>
+	<key>Install</key>
+	<string>Installieren</string>
+	<key>Installed in /usr/local/bin</key>
+	<string>In /usr/local/bin installiert</string>
 	<key>Language</key>
 	<string>Sprache</string>
 	<key>Larger images are downscaled before compression. Animations are resized too (GIF).</key>
@@ -152,8 +162,14 @@
 	<string>Systemstandard</string>
 	<key>Takes effect after the app is relaunched.</key>
 	<string>Wird nach einem Neustart der App wirksam.</string>
+	<key>The command line tool is missing from the app bundle.</key>
+	<string>Das Befehlszeilenwerkzeug fehlt im App-Paket.</string>
+	<key>Uninstall</key>
+	<string>Deinstallieren</string>
 	<key>Updates</key>
 	<string>Updates</string>
+	<key>Use hafif from Terminal and scripts</key>
+	<string>hafif im Terminal und in Skripten verwenden</string>
 	<key>Waiting</key>
 	<string>Wartet</string>
 	<key>Writing files</key>

@@ -56,7 +56,7 @@ func parseArguments(_ arguments: [String]) -> CLIOptions? {
             print(usage)
             return nil
         case "--version":
-            print("hafif 1.0.0 (HafifPix)")
+            print("hafif \(hafifVersion()) (HafifPix)")
             return nil
         case "--lossless":
             options.settings.lossyEnabled = false
@@ -132,6 +132,21 @@ func parseArguments(_ arguments: [String]) -> CLIOptions? {
         return nil
     }
     return options
+}
+
+/// hafif lives at HafifPix.app/Contents/Resources/bin/hafif, so the app's
+/// version is in ../../Info.plist. Resolve symlinks first, since the tool is
+/// usually invoked through a symlink on PATH.
+func hafifVersion() -> String {
+    let executable = URL(fileURLWithPath: CommandLine.arguments[0]).resolvingSymlinksInPath()
+    let infoPlist = executable
+        .deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent()
+        .appendingPathComponent("Info.plist")
+    if let dict = NSDictionary(contentsOf: infoPlist),
+       let version = dict["CFBundleShortVersionString"] as? String {
+        return version
+    }
+    return "dev"
 }
 
 guard let options = parseArguments(Array(CommandLine.arguments.dropFirst())) else {

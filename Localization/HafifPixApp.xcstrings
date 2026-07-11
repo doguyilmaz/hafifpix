@@ -382,13 +382,13 @@
       "ja" : { "stringUnit" : { "state" : "translated", "value" : "速度" } },
       "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "速度" } }
     } },
-    "Extras" : { "localizations" : {
-      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Ekstralar" } },
-      "de" : { "stringUnit" : { "state" : "translated", "value" : "Extras" } },
-      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Extras" } },
-      "es" : { "stringUnit" : { "state" : "translated", "value" : "Extras" } },
-      "ja" : { "stringUnit" : { "state" : "translated", "value" : "その他" } },
-      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "更多" } }
+    "Files" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Dosyalar" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Dateien" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Fichiers" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Archivos" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "ファイル" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "文件" } }
     } },
     "Engines" : { "localizations" : {
       "tr" : { "stringUnit" : { "state" : "translated", "value" : "Motorlar" } },
@@ -677,6 +677,70 @@
       "es" : { "stringUnit" : { "state" : "translated", "value" : "Idioma" } },
       "ja" : { "stringUnit" : { "state" : "translated", "value" : "言語" } },
       "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "语言" } }
+    } },
+    "Command line tool" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Komut satırı aracı" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Befehlszeilenwerkzeug" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Outil en ligne de commande" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Herramienta de línea de comandos" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "コマンドラインツール" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "命令行工具" } }
+    } },
+    "Command Line Tool" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Komut Satırı Aracı" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Befehlszeilenwerkzeug" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Outil en ligne de commande" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Herramienta de línea de comandos" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "コマンドラインツール" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "命令行工具" } }
+    } },
+    "Installed in /usr/local/bin" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "/usr/local/bin içine kuruldu" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "In /usr/local/bin installiert" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Installé dans /usr/local/bin" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Instalado en /usr/local/bin" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "/usr/local/bin にインストール済み" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "已安装到 /usr/local/bin" } }
+    } },
+    "Use hafif from Terminal and scripts" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "hafif komutunu Terminal ve betiklerde kullanın" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "hafif im Terminal und in Skripten verwenden" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Utiliser hafif depuis le Terminal et les scripts" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Usa hafif desde el Terminal y en scripts" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "ターミナルやスクリプトで hafif を使う" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "在终端和脚本中使用 hafif" } }
+    } },
+    "Install" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Kur" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Installieren" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Installer" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Instalar" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "インストール" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "安装" } }
+    } },
+    "Uninstall" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Kaldır" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Deinstallieren" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Désinstaller" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Desinstalar" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "アンインストール" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "卸载" } }
+    } },
+    "The command line tool is missing from the app bundle." : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Komut satırı aracı uygulama paketinde bulunamadı." } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Das Befehlszeilenwerkzeug fehlt im App-Paket." } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "L'outil en ligne de commande est absent du paquet de l'app." } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "La herramienta de línea de comandos falta en el paquete de la app." } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "コマンドラインツールがアプリバンドルにありません。" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "应用包中缺少命令行工具。" } }
+    } },
+    "Could not install the command line tool." : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Komut satırı aracı kurulamadı." } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Das Befehlszeilenwerkzeug konnte nicht installiert werden." } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Impossible d'installer l'outil en ligne de commande." } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "No se pudo instalar la herramienta de línea de comandos." } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "コマンドラインツールをインストールできませんでした。" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "无法安装命令行工具。" } }
     } },
     "System Default" : { "localizations" : {
       "tr" : { "stringUnit" : { "state" : "translated", "value" : "Sistem Varsayılanı" } },

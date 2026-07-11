@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.0 (2026-07-11)
+
+- Install the `hafif` command line tool from Settings, General (no more manual symlink)
+- `hafif --version` now reports the real app version
+
 ## 1.2.2 (2026-07-11)
 
 - Fixed a crash on launch: the localization resource bundle was not found

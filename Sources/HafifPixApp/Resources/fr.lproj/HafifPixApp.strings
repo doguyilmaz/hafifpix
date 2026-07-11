@@ -34,6 +34,10 @@
 	<string>Vider la liste</string>
 	<key>Clear the list (⌘K)</key>
 	<string>Vider la liste (⌘K)</string>
+	<key>Command Line Tool</key>
+	<string>Outil en ligne de commande</string>
+	<key>Command line tool</key>
+	<string>Outil en ligne de commande</string>
 	<key>Convert images to</key>
 	<string>Convertir les images en</string>
 	<key>Convert to modern formats</key>
@@ -42,6 +46,8 @@
 	<string>Les fichiers convertis sont créés à côté de l'original (photo.png → photo.%@). Les SVG sont minifiés comme d'habitude.</string>
 	<key>Copy Path</key>
 	<string>Copier le chemin</string>
+	<key>Could not install the command line tool.</key>
+	<string>Impossible d'installer l'outil en ligne de commande.</string>
 	<key>Drop images or folders here</key>
 	<string>Déposez des images ou des dossiers ici</string>
 	<key>EXIF, GPS position, color profiles, rotation. Keep it if you rely on embedded copyright info.</key>
@@ -54,14 +60,18 @@
 	<string>La sortie de chaque moteur n'est conservée que si elle est plus petite et se décode correctement. Désactiver des moteurs échange surtout du gain contre de la vitesse.</string>
 	<key>Exhaustive compression trials. Noticeably slower on big images.</key>
 	<string>Essais de compression exhaustifs. Nettement plus lent sur les grandes images.</string>
-	<key>Extras</key>
-	<string>Extras</string>
+	<key>Files</key>
+	<string>Fichiers</string>
 	<key>Fit images within a maximum size</key>
 	<string>Limiter les images à une taille maximale</string>
 	<key>Gamma chunks, color profiles and optional chunks. Web browsers expect these removed.</key>
 	<string>Chunks gamma, profils colorimétriques et chunks optionnels. Les navigateurs web s'attendent à leur suppression.</string>
 	<key>General</key>
 	<string>Général</string>
+	<key>Install</key>
+	<string>Installer</string>
+	<key>Installed in /usr/local/bin</key>
+	<string>Installé dans /usr/local/bin</string>
 	<key>Language</key>
 	<string>Langue</string>
 	<key>Larger images are downscaled before compression. Animations are resized too (GIF).</key>
@@ -152,8 +162,14 @@
 	<string>Réglage du système</string>
 	<key>Takes effect after the app is relaunched.</key>
 	<string>Prend effet après le relancement de l'app.</string>
+	<key>The command line tool is missing from the app bundle.</key>
+	<string>L'outil en ligne de commande est absent du paquet de l'app.</string>
+	<key>Uninstall</key>
+	<string>Désinstaller</string>
 	<key>Updates</key>
 	<string>Mises à jour</string>
+	<key>Use hafif from Terminal and scripts</key>
+	<string>Utiliser hafif depuis le Terminal et les scripts</string>
 	<key>Waiting</key>
 	<string>En attente</string>
 	<key>Writing files</key>

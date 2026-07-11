@@ -22,8 +22,9 @@ install: app
 
 install-cli:
 	@test -d /Applications/HafifPix.app || { echo "run 'make install' first"; exit 1; }
-	ln -sf /Applications/HafifPix.app/Contents/Resources/bin/hafif /usr/local/bin/hafif
-	@echo "Symlinked hafif to /usr/local/bin/hafif"
+	@bin=/opt/homebrew/bin; [ -w $$bin ] || bin=/usr/local/bin; \
+	ln -sf /Applications/HafifPix.app/Contents/Resources/bin/hafif $$bin/hafif && \
+	echo "Symlinked hafif to $$bin/hafif"
 
 icon:
 	swift scripts/make-icon-from-art.swift Resources/icon-art.png .build/AppIcon.iconset
