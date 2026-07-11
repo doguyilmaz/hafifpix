@@ -139,7 +139,9 @@ public struct OptimizationSettings: Codable, Sendable, Equatable {
 
 /// Shared persistence between the app and the CLI.
 public enum SettingsStorage {
-    public static let suiteName = "com.doguyilmaz.HafifPix"
+    // Must differ from the bundle identifier; macOS rejects a suite that
+    // equals it (and the app/CLI would then not share settings).
+    public static let suiteName = "com.doguyilmaz.HafifPix.settings"
     static let key = "settings.v1"
 
     public static func load() -> OptimizationSettings {

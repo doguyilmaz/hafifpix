@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.2.2 (2026-07-11)
+
+- Fixed a crash on launch: the localization resource bundle was not found
+  when the app ran outside its build directory (affected 1.2.0 and 1.2.1)
+- App and CLI now share settings correctly (settings suite no longer equals
+  the bundle identifier)
+
 ## 1.2.1 (2026-07-11)
 
 - Language picker now shows System Default instead of blank when no override is set
