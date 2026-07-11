@@ -670,6 +670,38 @@
       "ja" : { "stringUnit" : { "state" : "translated", "value" : "変換ファイルはオリジナルの隣に作成されます（photo.png → photo.%@）。SVGは通常どおり縮小されます。" } },
       "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "转换后的文件写在原始文件旁边（photo.png → photo.%@）。SVG照常缩小。" } }
     } },
+    "Language" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Dil" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Sprache" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Langue" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Idioma" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "言語" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "语言" } }
+    } },
+    "System Default" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Sistem Varsayılanı" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Systemstandard" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Réglage du système" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Predeterminado del sistema" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "システムのデフォルト" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "系统默认" } }
+    } },
+    "Takes effect after the app is relaunched." : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Uygulama yeniden başlatıldığında etkinleşir." } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Wird nach einem Neustart der App wirksam." } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Prend effet après le relancement de l'app." } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Se aplica tras relanzar la app." } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "アプリの再起動後に有効になります。" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "重新启动应用后生效。" } }
+    } },
+    "Relaunch Now" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Şimdi Yeniden Başlat" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Jetzt neu starten" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Relancer maintenant" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Relanzar ahora" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "今すぐ再起動" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "立即重新启动" } }
+    } },
     "Every engine's output is only kept when it is smaller and still decodes correctly. Disabling engines mainly trades savings for speed." : { "localizations" : {
       "tr" : { "stringUnit" : { "state" : "translated", "value" : "Her motorun çıktısı yalnızca daha küçükse ve doğru çözülüyorsa kullanılır. Motorları kapatmak çoğunlukla kazanç yerine hız kazandırır." } },
       "de" : { "stringUnit" : { "state" : "translated", "value" : "Die Ausgabe jeder Engine wird nur übernommen, wenn sie kleiner ist und korrekt dekodiert. Engines zu deaktivieren tauscht vor allem Ersparnis gegen Tempo." } },

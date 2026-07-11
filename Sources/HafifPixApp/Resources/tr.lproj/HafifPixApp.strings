@@ -68,6 +68,8 @@
 	<string>Gama parçaları, renk profilleri ve isteğe bağlı parçalar. Web tarayıcıları bunların kaldırılmış olmasını bekler.</string>
 	<key>General</key>
 	<string>Genel</string>
+	<key>Language</key>
+	<string>Dil</string>
 	<key>Larger images are downscaled before compression. Animations are resized too (GIF).</key>
 	<string>Daha büyük görseller sıkıştırmadan önce küçültülür. Animasyonlar da yeniden boyutlandırılır (GIF).</string>
 	<key>Level</key>
@@ -118,6 +120,8 @@
 	<string>Optimizasyonu geçerli ayarlarla yeniden çalıştır (⌘R)</string>
 	<key>Regardless of this setting, every file can be reverted from the right-click menu while the app is open.</key>
 	<string>Bu ayardan bağımsız olarak, uygulama açıkken her dosya sağ tık menüsünden geri alınabilir.</string>
+	<key>Relaunch Now</key>
+	<string>Şimdi Yeniden Başlat</string>
 	<key>Remove Background</key>
 	<string>Arka Planı Kaldır</string>
 	<key>Remove from List</key>
@@ -152,6 +156,10 @@
 	<string>JPEG meta verilerini kaldır</string>
 	<key>Strip PNG metadata</key>
 	<string>PNG meta verilerini kaldır</string>
+	<key>System Default</key>
+	<string>Sistem Varsayılanı</string>
+	<key>Takes effect after the app is relaunched.</key>
+	<string>Uygulama yeniden başlatıldığında etkinleşir.</string>
 	<key>Updates</key>
 	<string>Güncellemeler</string>
 	<key>Waiting</key>

@@ -24,10 +24,48 @@ private struct GeneralSettingsView: View {
     @Environment(AppModel.self) private var model
     @Environment(UpdaterModel.self) private var updater
 
+    // Language codes must match the lproj folders. Names are endonyms on purpose:
+    // a reader hunting for their language recognizes it in any UI language.
+    private static let languages: [(code: String?, name: String)] = [
+        (nil, ""), // placeholder; title resolved at render time (localized)
+        ("en", "English"), ("tr", "Türkçe"), ("de", "Deutsch"), ("fr", "Français"),
+        ("es", "Español"), ("ja", "日本語"), ("zh-Hans", "简体中文"),
+    ]
+    private static let launchLanguage: String? =
+        UserDefaults.standard.stringArray(forKey: "AppleLanguages")?.first
+    @State private var language: String? =
+        UserDefaults.standard.stringArray(forKey: "AppleLanguages")?.first
+
     var body: some View {
         @Bindable var model = model
         @Bindable var updater = updater
         Form {
+            Section(L("Language")) {
+                Picker(L("Language"), selection: $language) {
+                    ForEach(Self.languages, id: \.code) { option in
+                        Text(option.code == nil ? L("System Default") : option.name)
+                            .tag(option.code)
+                    }
+                }
+                .labelsHidden()
+                .onChange(of: language) { _, newValue in
+                    if let newValue {
+                        UserDefaults.standard.set([newValue], forKey: "AppleLanguages")
+                    } else {
+                        UserDefaults.standard.removeObject(forKey: "AppleLanguages")
+                    }
+                }
+                if language != Self.launchLanguage {
+                    HStack {
+                        Text(L("Takes effect after the app is relaunched."))
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                        Spacer()
+                        Button(L("Relaunch Now")) { relaunch() }
+                    }
+                }
+            }
+
             Section(L("Updates")) {
                 Toggle(L("Automatically check for updates"), isOn: $updater.automaticallyChecksForUpdates)
                 Toggle(L("Automatically download and install updates"), isOn: $updater.automaticallyDownloadsUpdates)
@@ -59,6 +97,15 @@ private struct GeneralSettingsView: View {
             }
         }
         .formStyle(.grouped)
+    }
+
+    private func relaunch() {
+        let path = Bundle.main.bundlePath
+        let task = Process()
+        task.executableURL = URL(fileURLWithPath: "/bin/sh")
+        task.arguments = ["-c", "sleep 0.4; /usr/bin/open \"\(path)\""]
+        try? task.run()
+        NSApp.terminate(nil)
     }
 }
 

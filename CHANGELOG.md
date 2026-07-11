@@ -4,6 +4,8 @@
 
 - Localized into Turkish, German, French, Spanish, Japanese and Simplified
   Chinese (string catalogs under `Localization/`, contributions welcome)
+- In-app language picker in Settings, General (or use the macOS per-app
+  language setting)
 
 ## 1.1.1 (2026-07-11)
 

@@ -68,6 +68,8 @@
 	<string>Gamma块、颜色描述文件和可选块。网页浏览器期望这些被移除。</string>
 	<key>General</key>
 	<string>通用</string>
+	<key>Language</key>
+	<string>语言</string>
 	<key>Larger images are downscaled before compression. Animations are resized too (GIF).</key>
 	<string>较大的图像会在压缩前缩小。动画（GIF）同样处理。</string>
 	<key>Level</key>
@@ -118,6 +120,8 @@
 	<string>使用当前设置重新运行优化 (⌘R)</string>
 	<key>Regardless of this setting, every file can be reverted from the right-click menu while the app is open.</key>
 	<string>无论此设置如何，应用打开期间任何文件都可通过右键菜单还原。</string>
+	<key>Relaunch Now</key>
+	<string>立即重新启动</string>
 	<key>Remove Background</key>
 	<string>移除背景</string>
 	<key>Remove from List</key>
@@ -152,6 +156,10 @@
 	<string>移除JPEG元数据</string>
 	<key>Strip PNG metadata</key>
 	<string>移除PNG元数据</string>
+	<key>System Default</key>
+	<string>系统默认</string>
+	<key>Takes effect after the app is relaunched.</key>
+	<string>重新启动应用后生效。</string>
 	<key>Updates</key>
 	<string>更新</string>
 	<key>Waiting</key>

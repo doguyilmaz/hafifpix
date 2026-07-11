@@ -62,6 +62,8 @@
 	<string>Chunks gamma, perfiles de color y chunks opcionales. Los navegadores esperan que se eliminen.</string>
 	<key>General</key>
 	<string>General</string>
+	<key>Language</key>
+	<string>Idioma</string>
 	<key>Larger images are downscaled before compression. Animations are resized too (GIF).</key>
 	<string>Las imágenes más grandes se reducen antes de comprimir. Las animaciones también (GIF).</string>
 	<key>Level</key>
@@ -110,6 +112,8 @@
 	<string>Repetir la optimización con los ajustes actuales (⌘R)</string>
 	<key>Regardless of this setting, every file can be reverted from the right-click menu while the app is open.</key>
 	<string>Independientemente de este ajuste, cada archivo puede restaurarse desde el menú contextual mientras la app esté abierta.</string>
+	<key>Relaunch Now</key>
+	<string>Relanzar ahora</string>
 	<key>Remove Background</key>
 	<string>Quitar fondo</string>
 	<key>Remove from List</key>
@@ -144,6 +148,10 @@
 	<string>Eliminar metadatos JPEG</string>
 	<key>Strip PNG metadata</key>
 	<string>Eliminar metadatos PNG</string>
+	<key>System Default</key>
+	<string>Predeterminado del sistema</string>
+	<key>Takes effect after the app is relaunched.</key>
+	<string>Se aplica tras relanzar la app.</string>
 	<key>Updates</key>
 	<string>Actualizaciones</string>
 	<key>Waiting</key>

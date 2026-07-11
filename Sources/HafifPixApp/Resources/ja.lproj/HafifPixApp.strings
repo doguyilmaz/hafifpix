@@ -68,6 +68,8 @@
 	<string>ガンマチャンク、カラープロファイル、オプションのチャンク。Webブラウザはこれらが削除されていることを想定しています。</string>
 	<key>General</key>
 	<string>一般</string>
+	<key>Language</key>
+	<string>言語</string>
 	<key>Larger images are downscaled before compression. Animations are resized too (GIF).</key>
 	<string>大きい画像は圧縮前に縮小されます。アニメーション（GIF）も対象です。</string>
 	<key>Level</key>
@@ -118,6 +120,8 @@
 	<string>現在の設定で最適化をやり直す (⌘R)</string>
 	<key>Regardless of this setting, every file can be reverted from the right-click menu while the app is open.</key>
 	<string>この設定に関わらず、アプリを開いている間は右クリックメニューからどのファイルも元に戻せます。</string>
+	<key>Relaunch Now</key>
+	<string>今すぐ再起動</string>
 	<key>Remove Background</key>
 	<string>背景を削除</string>
 	<key>Remove from List</key>
@@ -152,6 +156,10 @@
 	<string>JPEGメタデータを削除</string>
 	<key>Strip PNG metadata</key>
 	<string>PNGメタデータを削除</string>
+	<key>System Default</key>
+	<string>システムのデフォルト</string>
+	<key>Takes effect after the app is relaunched.</key>
+	<string>アプリの再起動後に有効になります。</string>
 	<key>Updates</key>
 	<string>アップデート</string>
 	<key>Waiting</key>
