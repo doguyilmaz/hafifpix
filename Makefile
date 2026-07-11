@@ -45,7 +45,7 @@ appcast:
 
 release: appcast
 	gh release create v$(VERSION) dist/release/HafifPix-$(VERSION).dmg dist/release/appcast.xml \
-		--title "HafifPix $(VERSION)" --generate-notes
+		--title "HafifPix-$(VERSION)" --generate-notes
 
 clean:
 	rm -rf .build dist

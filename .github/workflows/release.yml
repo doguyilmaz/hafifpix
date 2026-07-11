@@ -85,4 +85,4 @@ jobs:
         run: |
           gh release create "$GITHUB_REF_NAME" \
             dist/release/HafifPix-*.dmg dist/release/appcast.xml \
-            --title "HafifPix ${GITHUB_REF_NAME#v}" --generate-notes
+            --title "HafifPix-${GITHUB_REF_NAME#v}" --generate-notes
