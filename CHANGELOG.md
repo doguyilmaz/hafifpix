@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.1.1 (2026-07-11)
 
 - Background removal reworked as a hybrid: flat backgrounds (logos, screenshots,
   graphics) use a pixel-exact flood fill with color decontamination and speck
