@@ -5,14 +5,20 @@ struct FileTableView: View {
     @Environment(AppModel.self) private var model
     @Binding var selection: Set<UUID>
     @Binding var quickLookURL: URL?
+    // Persists the user's column widths and arrangement across launches.
+    @SceneStorage("fileTableColumns") private var columnCustomization: TableColumnCustomization<AppModel.Entry>
 
     var body: some View {
-        Table(model.entries, selection: $selection) {
+        // Ideal widths must sum below the default window width: overflowing
+        // triggers a horizontal scrollbar and drops the rounded inset row style.
+        Table(model.entries, selection: $selection, columnCustomization: $columnCustomization) {
             TableColumn("") { entry in
                 StatusIndicator(status: entry.status)
                     .frame(maxWidth: .infinity, alignment: .center)
             }
             .width(28)
+            .customizationID("state")
+            .disabledCustomizationBehavior(.all)
 
             TableColumn("Name") { entry in
                 HStack(spacing: 6) {
@@ -28,7 +34,8 @@ struct FileTableView: View {
                 }
                 .help(entry.url.path)
             }
-            .width(min: 180, ideal: 260)
+            .width(min: 150, ideal: 250)
+            .customizationID("name")
 
             TableColumn("Size") { entry in
                 if entry.currentBytes != entry.originalBytes {
@@ -41,7 +48,8 @@ struct FileTableView: View {
                         .foregroundStyle(.secondary)
                 }
             }
-            .width(min: 120, ideal: 170)
+            .width(min: 100, ideal: 140)
+            .customizationID("size")
 
             TableColumn("Savings") { entry in
                 if entry.savedBytes > 0 {
@@ -54,7 +62,8 @@ struct FileTableView: View {
                         .foregroundStyle(.tertiary)
                 }
             }
-            .width(min: 60, ideal: 80)
+            .width(min: 56, ideal: 70)
+            .customizationID("savings")
 
             TableColumn("Status") { entry in
                 Text(entry.statusText)
@@ -63,7 +72,8 @@ struct FileTableView: View {
                     .foregroundStyle(statusColor(entry.status))
                     .help(entry.statusText)
             }
-            .width(min: 140, ideal: 220)
+            .width(min: 110, ideal: 165)
+            .customizationID("status")
         }
         .contextMenu(forSelectionType: UUID.self) { ids in
             contextMenu(for: ids)

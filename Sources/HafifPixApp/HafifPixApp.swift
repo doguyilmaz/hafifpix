@@ -16,7 +16,7 @@ struct HafifPixApp: App {
                     AppDelegate.model = model
                 }
         }
-        .defaultSize(width: 720, height: 480)
+        .defaultSize(width: 780, height: 480)
         .commands {
             CommandGroup(after: .appInfo) {
                 Button("Check for Updates…") {
