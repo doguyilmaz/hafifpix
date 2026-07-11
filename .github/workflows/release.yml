@@ -1,0 +1,82 @@
+name: Release
+
+# Push a version tag to ship: git tag v1.0.1 && git push --tags
+# The tag is the single source of truth for the version — Info.plist is
+# stamped from it before building.
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install optimizer engines
+        run: brew install oxipng pngquant mozjpeg jpegoptim gifsicle webp
+
+      - name: Import signing certificate
+        env:
+          CERT_P12: ${{ secrets.MACOS_CERT_P12 }}
+          CERT_PASSWORD: ${{ secrets.MACOS_CERT_PASSWORD }}
+        run: |
+          KEYCHAIN="$RUNNER_TEMP/build.keychain-db"
+          KEYCHAIN_PASS=$(uuidgen)
+          security create-keychain -p "$KEYCHAIN_PASS" "$KEYCHAIN"
+          security set-keychain-settings -lut 21600 "$KEYCHAIN"
+          security unlock-keychain -p "$KEYCHAIN_PASS" "$KEYCHAIN"
+          echo "$CERT_P12" | base64 --decode > cert.p12
+          security import cert.p12 -k "$KEYCHAIN" -P "$CERT_PASSWORD" -T /usr/bin/codesign
+          rm cert.p12
+          security set-key-partition-list -S apple-tool:,apple: -s -k "$KEYCHAIN_PASS" "$KEYCHAIN" >/dev/null
+          security list-keychains -d user -s "$KEYCHAIN" login.keychain
+
+      - name: Stamp version from tag
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $VERSION" Resources/Info.plist
+          /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $VERSION" Resources/Info.plist
+
+      - name: Test
+        run: swift test
+
+      - name: Build signed DMG
+        env:
+          SIGN_IDENTITY: "Developer ID Application: Dogu Kaan Yilmaz (5MYT4VYJFC)"
+        run: make dmg
+
+      - name: Notarize and staple
+        env:
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          NOTARY_PASSWORD: ${{ secrets.NOTARY_PASSWORD }}
+        run: |
+          xcrun notarytool submit dist/HafifPix-*.dmg \
+            --apple-id "$APPLE_ID" --team-id 5MYT4VYJFC \
+            --password "$NOTARY_PASSWORD" --wait
+          xcrun stapler staple dist/HafifPix-*.dmg
+
+      - name: Generate signed appcast
+        env:
+          SPARKLE_KEY: ${{ secrets.SPARKLE_PRIVATE_KEY }}
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          rm -rf dist/release && mkdir -p dist/release
+          cp "dist/HafifPix-$VERSION.dmg" dist/release/
+          KEY_FILE="$RUNNER_TEMP/sparkle_key"
+          printf '%s' "$SPARKLE_KEY" > "$KEY_FILE"
+          .build/artifacts/sparkle/Sparkle/bin/generate_appcast dist/release \
+            --ed-key-file "$KEY_FILE" \
+            --download-url-prefix "https://github.com/doguyilmaz/hafifpix/releases/download/${GITHUB_REF_NAME}/"
+          rm "$KEY_FILE"
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            dist/release/HafifPix-*.dmg dist/release/appcast.xml \
+            --title "HafifPix ${GITHUB_REF_NAME#v}" --generate-notes

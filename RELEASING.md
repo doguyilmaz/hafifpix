@@ -1,5 +1,30 @@
 # Releasing HafifPix
 
+## Automated releases (preferred)
+
+Push a version tag and CI does everything — build, test, sign, notarize,
+staple, appcast, GitHub release:
+
+```sh
+git tag v1.0.1 && git push --tags
+```
+
+The tag is the single source of truth: `.github/workflows/release.yml` stamps
+`Info.plist` from it. Required repository secrets (Settings → Secrets → Actions):
+
+| Secret | Content | How to produce |
+|--------|---------|----------------|
+| `MACOS_CERT_P12` | base64 of the Developer ID .p12 | `base64 -i cert.p12 \| gh secret set MACOS_CERT_P12` |
+| `MACOS_CERT_PASSWORD` | the .p12's password | `gh secret set MACOS_CERT_PASSWORD` |
+| `APPLE_ID` | developer Apple ID email | `gh secret set APPLE_ID` |
+| `NOTARY_PASSWORD` | app-specific password | `gh secret set NOTARY_PASSWORD` |
+| `SPARKLE_PRIVATE_KEY` | Sparkle EdDSA private key | `generate_keys -x k && gh secret set SPARKLE_PRIVATE_KEY < k && rm k` |
+
+Note: CI-built DMGs may lack the pretty Finder icon layout (Finder scripting
+is limited on runners); the DMG itself is unaffected.
+
+## Manual releases (fallback)
+
 ## One-time setup (already done on this machine)
 
 - Sparkle EdDSA keys generated (`generate_keys`) — **private key lives in the login
