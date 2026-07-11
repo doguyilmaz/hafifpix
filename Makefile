@@ -26,7 +26,7 @@ install-cli:
 	@echo "Symlinked hafif to /usr/local/bin/hafif"
 
 icon:
-	swift scripts/make-icon.swift .build/AppIcon.iconset
+	swift scripts/make-icon-from-art.swift Resources/icon-art.png .build/AppIcon.iconset
 	iconutil -c icns .build/AppIcon.iconset -o Resources/AppIcon.icns
 
 dmg: app

@@ -45,7 +45,7 @@ printf 'APPL????' > "$CONTENTS/PkgInfo"
 
 if [[ ! -f Resources/AppIcon.icns ]]; then
     echo "==> Generating icon"
-    swift scripts/make-icon.swift "$ROOT/.build/AppIcon.iconset"
+    swift scripts/make-icon-from-art.swift Resources/icon-art.png "$ROOT/.build/AppIcon.iconset"
     iconutil -c icns "$ROOT/.build/AppIcon.iconset" -o Resources/AppIcon.icns
 fi
 cp Resources/AppIcon.icns "$CONTENTS/Resources/AppIcon.icns"
