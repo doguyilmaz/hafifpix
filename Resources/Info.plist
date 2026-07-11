@@ -7,7 +7,7 @@
     <key>CFBundleDisplayName</key>
     <string>HafifPix</string>
     <key>CFBundleIdentifier</key>
-    <string>dev.dogukyilmaz.HafifPix</string>
+    <string>com.doguyilmaz.HafifPix</string>
     <key>CFBundleVersion</key>
     <string>1</string>
     <key>CFBundleShortVersionString</key>
@@ -35,7 +35,7 @@
     <key>NSPrincipalClass</key>
     <string>NSApplication</string>
     <key>SUFeedURL</key>
-    <string>https://github.com/dogukyilmaz/hafifpix/releases/latest/download/appcast.xml</string>
+    <string>https://github.com/doguyilmaz/hafifpix/releases/latest/download/appcast.xml</string>
     <key>SUPublicEDKey</key>
     <string>j6ODlGaJePRaQypW8ezxZQBAwj2+TkAo0Sg/51fPN8o=</string>
     <key>SUEnableAutomaticChecks</key>

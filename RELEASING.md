@@ -8,8 +8,8 @@
   on their current version. The public key is embedded in `Resources/Info.plist`
   (`SUPublicEDKey`).
 - `SUFeedURL` points to
-  `https://github.com/dogukyilmaz/hafifpix/releases/latest/download/appcast.xml` —
-  change it if you host elsewhere.
+  `https://github.com/doguyilmaz/hafifpix/releases/latest/download/appcast.xml` —
+  change it if you host elsewhere (e.g. doguyilmaz.com).
 
 ## Gatekeeper signing (when you have an Apple Developer account)
 
