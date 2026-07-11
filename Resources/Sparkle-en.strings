@@ -1,0 +1,5 @@
+/* Overrides Sparkle's built-in English update messages to drop the em-dash.
+   Injected into Sparkle.framework/Resources/en.lproj by build-app.sh. */
+"%@ %@ is now available—you have %@. Would you like to download it now?" = "%1$@ %2$@ is now available. You have %3$@. Would you like to download it now?";
+"%@ %@ is now available—you have %@. This is an important update; would you like to download it now?" = "%1$@ %2$@ is now available. You have %3$@. This is an important update; would you like to download it now?";
+"%@ %@ is now available—you have %@. Would you like to learn more about this update on the web?" = "%1$@ %2$@ is now available. You have %3$@. Would you like to learn more about this update on the web?";

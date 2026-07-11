@@ -73,6 +73,11 @@ fi
 ditto "$SPARKLE_FW" "$FW_DIR/Sparkle.framework"
 install_name_tool -add_rpath "@executable_path/../Frameworks" "$CONTENTS/MacOS/HafifPix" 2>/dev/null || true
 
+# Sparkle's built-in English update messages use an em-dash; override them.
+SPARKLE_EN="$FW_DIR/Sparkle.framework/Versions/B/Resources/en.lproj"
+mkdir -p "$SPARKLE_EN"
+cp Resources/Sparkle-en.strings "$SPARKLE_EN/Sparkle.strings"
+
 # --- Dylib bundling -----------------------------------------------------
 # Copies every non-system dylib a binary needs into Contents/Frameworks and
 # rewrites load commands. Tools live in Resources/bin, so their deps resolve

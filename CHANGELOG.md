@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.1 (2026-07-11)
+
+- Language picker now shows System Default instead of blank when no override is set
+- Relaunch button sits on the language row (no layout shift)
+- Removed em-dash from Sparkle's English update message
+
 ## 1.2.0 (2026-07-11)
 
 - Localized into Turkish, German, French, Spanish, Japanese and Simplified

@@ -31,38 +31,46 @@ private struct GeneralSettingsView: View {
         ("en", "English"), ("tr", "Türkçe"), ("de", "Deutsch"), ("fr", "Français"),
         ("es", "Español"), ("ja", "日本語"), ("zh-Hans", "简体中文"),
     ]
-    private static let launchLanguage: String? =
-        UserDefaults.standard.stringArray(forKey: "AppleLanguages")?.first
-    @State private var language: String? =
-        UserDefaults.standard.stringArray(forKey: "AppleLanguages")?.first
+    // Read the override from the app's own domain only: standard defaults
+    // inherit the system-wide AppleLanguages (like "en-TR"), which would show
+    // as an empty picker selection instead of "System Default".
+    private static func languageOverride() -> String? {
+        guard let bundleID = Bundle.main.bundleIdentifier,
+              let domain = UserDefaults.standard.persistentDomain(forName: bundleID),
+              let code = (domain["AppleLanguages"] as? [String])?.first else { return nil }
+        // The macOS per-app language setting writes region-suffixed codes.
+        if code.hasPrefix("zh") { return "zh-Hans" }
+        return String(code.prefix(while: { $0 != "-" }))
+    }
+
+    private static let launchLanguage: String? = languageOverride()
+    @State private var language: String? = languageOverride()
 
     var body: some View {
         @Bindable var model = model
         @Bindable var updater = updater
         Form {
             Section(L("Language")) {
-                Picker(L("Language"), selection: $language) {
-                    ForEach(Self.languages, id: \.code) { option in
-                        Text(option.code == nil ? L("System Default") : option.name)
-                            .tag(option.code)
+                HStack {
+                    Picker(L("Language"), selection: $language) {
+                        ForEach(Self.languages, id: \.code) { option in
+                            Text(option.code == nil ? L("System Default") : option.name)
+                                .tag(option.code)
+                        }
                     }
-                }
-                .labelsHidden()
-                .onChange(of: language) { _, newValue in
-                    if let newValue {
-                        UserDefaults.standard.set([newValue], forKey: "AppleLanguages")
-                    } else {
-                        UserDefaults.standard.removeObject(forKey: "AppleLanguages")
+                    .labelsHidden()
+                    .onChange(of: language) { _, newValue in
+                        if let newValue {
+                            UserDefaults.standard.set([newValue], forKey: "AppleLanguages")
+                        } else {
+                            UserDefaults.standard.removeObject(forKey: "AppleLanguages")
+                        }
                     }
-                }
-                if language != Self.launchLanguage {
-                    HStack {
-                        Text(L("Takes effect after the app is relaunched."))
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                        Spacer()
-                        Button(L("Relaunch Now")) { relaunch() }
-                    }
+                    Spacer()
+                    // Same row, right side; reserved slot so it never reflows.
+                    Button(L("Relaunch Now")) { relaunch() }
+                        .opacity(language != Self.launchLanguage ? 1 : 0)
+                        .disabled(language == Self.launchLanguage)
                 }
             }
 
