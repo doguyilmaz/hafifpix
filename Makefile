@@ -1,6 +1,7 @@
 APP = dist/HafifPix.app
+VERSION := $(shell /usr/libexec/PlistBuddy -c 'Print CFBundleShortVersionString' Resources/Info.plist)
 
-.PHONY: build test app run install install-cli icon dmg appcast clean
+.PHONY: build test app run install install-cli icon dmg appcast release clean
 
 build:
 	swift build
@@ -32,10 +33,14 @@ dmg: app
 	bash scripts/make-dmg.sh
 
 appcast:
-	mkdir -p dist/release
-	cp dist/HafifPix-*.dmg dist/release/
-	.build/artifacts/sparkle/Sparkle/bin/generate_appcast dist/release
-	@echo "Upload dist/release/*.dmg and dist/release/appcast.xml to the GitHub release"
+	rm -rf dist/release && mkdir -p dist/release
+	cp dist/HafifPix-$(VERSION).dmg dist/release/
+	.build/artifacts/sparkle/Sparkle/bin/generate_appcast dist/release \
+		--download-url-prefix "https://github.com/doguyilmaz/hafifpix/releases/download/v$(VERSION)/"
+
+release: appcast
+	gh release create v$(VERSION) dist/release/HafifPix-$(VERSION).dmg dist/release/appcast.xml \
+		--title "HafifPix $(VERSION)" --generate-notes
 
 clean:
 	rm -rf .build dist
