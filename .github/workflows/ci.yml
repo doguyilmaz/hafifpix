@@ -7,7 +7,9 @@ on:
 
 jobs:
   test:
-    runs-on: macos-15
+    # macos-26 image: builds link against the macOS 26 SDK so the app gets
+    # the current system appearance (Liquid Glass) instead of compatibility mode.
+    runs-on: macos-26
     steps:
       - uses: actions/checkout@v4
       - name: Build

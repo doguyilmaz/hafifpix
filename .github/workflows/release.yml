@@ -12,8 +12,14 @@ permissions:
 
 jobs:
   release:
-    runs-on: macos-15
+    # macos-26: must match the SDK generation users run, otherwise the app
+    # renders in pre-Liquid-Glass compatibility mode (see v1.0.1).
+    runs-on: macos-26
     steps:
+      - name: Verify SDK generation
+        run: |
+          xcodebuild -version
+          xcrun --show-sdk-version
       - uses: actions/checkout@v4
 
       - name: Install optimizer engines
