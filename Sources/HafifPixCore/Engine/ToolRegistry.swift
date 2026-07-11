@@ -54,6 +54,13 @@ public enum ToolRegistry {
         if let resourceURL = Bundle.main.resourceURL {
             candidates.append(resourceURL.appendingPathComponent("bin/\(tool.rawValue)").path)
         }
+        // The bundled CLI lives in Resources/bin next to the engines.
+        if let executableURL = Bundle.main.executableURL {
+            candidates.append(
+                executableURL.deletingLastPathComponent()
+                    .appendingPathComponent(tool.rawValue).path
+            )
+        }
         if let override = ProcessInfo.processInfo.environment["HAFIFPIX_TOOLS_DIR"] {
             candidates.append("\(override)/\(tool.rawValue)")
         }
