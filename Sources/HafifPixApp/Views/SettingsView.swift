@@ -22,10 +22,18 @@ struct SettingsView: View {
 
 private struct GeneralSettingsView: View {
     @Environment(AppModel.self) private var model
+    @Environment(UpdaterModel.self) private var updater
 
     var body: some View {
         @Bindable var model = model
+        @Bindable var updater = updater
         Form {
+            Section("Updates") {
+                Toggle("Automatically check for updates", isOn: $updater.automaticallyChecksForUpdates)
+                Toggle("Automatically download and install updates", isOn: $updater.automaticallyDownloadsUpdates)
+                    .disabled(!updater.automaticallyChecksForUpdates)
+            }
+
             Section("Metadata") {
                 Toggle("Strip PNG metadata", isOn: $model.settings.stripPNGMetadata)
                 Text("Gamma chunks, color profiles and optional chunks. Web browsers expect these removed.")

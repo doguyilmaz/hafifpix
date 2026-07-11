@@ -1,6 +1,6 @@
 APP = dist/HafifPix.app
 
-.PHONY: build test app run install install-cli icon clean
+.PHONY: build test app run install install-cli icon dmg appcast clean
 
 build:
 	swift build
@@ -27,6 +27,15 @@ install-cli:
 icon:
 	swift scripts/make-icon.swift .build/AppIcon.iconset
 	iconutil -c icns .build/AppIcon.iconset -o Resources/AppIcon.icns
+
+dmg: app
+	bash scripts/make-dmg.sh
+
+appcast:
+	mkdir -p dist/release
+	cp dist/HafifPix-*.dmg dist/release/
+	.build/artifacts/sparkle/Sparkle/bin/generate_appcast dist/release
+	@echo "Upload dist/release/*.dmg and dist/release/appcast.xml to the GitHub release"
 
 clean:
 	rm -rf .build dist

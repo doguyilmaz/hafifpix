@@ -10,6 +10,14 @@ CONTENTS="$APP/Contents"
 BIN_DIR="$CONTENTS/Resources/bin"
 FW_DIR="$CONTENTS/Frameworks"
 
+# "-" = ad-hoc (local use). For distribution:
+#   SIGN_IDENTITY="Developer ID Application: Name (TEAMID)" make app
+SIGN_IDENTITY="${SIGN_IDENTITY:--}"
+SIGN_FLAGS=()
+if [[ "$SIGN_IDENTITY" != "-" ]]; then
+    SIGN_FLAGS=(--options runtime --timestamp)
+fi
+
 TOOLS=(
     /opt/homebrew/bin/pngquant
     /opt/homebrew/bin/oxipng
@@ -41,6 +49,15 @@ if [[ ! -f Resources/AppIcon.icns ]]; then
     iconutil -c icns "$ROOT/.build/AppIcon.iconset" -o Resources/AppIcon.icns
 fi
 cp Resources/AppIcon.icns "$CONTENTS/Resources/AppIcon.icns"
+
+echo "==> Embedding Sparkle"
+SPARKLE_FW=".build/artifacts/sparkle/Sparkle/Sparkle.xcframework/macos-arm64_x86_64/Sparkle.framework"
+if [[ ! -d "$SPARKLE_FW" ]]; then
+    echo "ERROR: Sparkle artifact missing — run 'swift build' first" >&2
+    exit 1
+fi
+ditto "$SPARKLE_FW" "$FW_DIR/Sparkle.framework"
+install_name_tool -add_rpath "@executable_path/../Frameworks" "$CONTENTS/MacOS/HafifPix" 2>/dev/null || true
 
 # --- Dylib bundling -----------------------------------------------------
 # Copies every non-system dylib a binary needs into Contents/Frameworks and
@@ -138,15 +155,25 @@ while ((${#PENDING[@]} > 0)); do
     done
 done
 
-echo "==> Code signing (ad-hoc)"
+echo "==> Code signing ($SIGN_IDENTITY)"
+sign() { codesign --force --sign "$SIGN_IDENTITY" ${SIGN_FLAGS[@]+"${SIGN_FLAGS[@]}"} "$@"; }
+
+# Sparkle: nested executables first, then the framework (per Sparkle docs).
+SPARKLE_B="$FW_DIR/Sparkle.framework/Versions/B"
+sign "$SPARKLE_B/XPCServices/Downloader.xpc" 2>/dev/null || true
+sign "$SPARKLE_B/XPCServices/Installer.xpc"
+sign "$SPARKLE_B/Autoupdate"
+sign "$SPARKLE_B/Updater.app"
+sign "$FW_DIR/Sparkle.framework"
+
 while IFS= read -r -d '' dylib; do
-    codesign --force --sign - "$dylib"
+    sign "$dylib"
 done < <(find "$FW_DIR" -name '*.dylib' -print0)
 while IFS= read -r -d '' bin; do
-    codesign --force --sign - "$bin"
+    sign "$bin"
 done < <(find "$BIN_DIR" -type f -print0)
-codesign --force --sign - "$CONTENTS/MacOS/HafifPix"
-codesign --force --sign - "$APP"
+sign "$CONTENTS/MacOS/HafifPix"
+sign "$APP"
 
 echo "==> Verifying bundled engines run"
 for tool in "$BIN_DIR"/*; do

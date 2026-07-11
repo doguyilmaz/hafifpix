@@ -5,17 +5,25 @@ import HafifPixCore
 struct HafifPixApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @State private var model = AppModel()
+    @State private var updater = UpdaterModel()
 
     var body: some Scene {
         Window("HafifPix", id: "main") {
             ContentView()
                 .environment(model)
+                .environment(updater)
                 .onAppear {
                     AppDelegate.model = model
                 }
         }
         .defaultSize(width: 720, height: 480)
         .commands {
+            CommandGroup(after: .appInfo) {
+                Button("Check for Updates…") {
+                    updater.checkForUpdates()
+                }
+                .disabled(!updater.canCheckForUpdates)
+            }
             CommandGroup(replacing: .newItem) {
                 Button("Open…") {
                     AppDelegate.model?.openFromMenu()
@@ -41,6 +49,7 @@ struct HafifPixApp: App {
         Settings {
             SettingsView()
                 .environment(model)
+                .environment(updater)
         }
     }
 }

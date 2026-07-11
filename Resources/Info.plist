@@ -34,6 +34,12 @@
     <string>© 2026 Doğu Yılmaz</string>
     <key>NSPrincipalClass</key>
     <string>NSApplication</string>
+    <key>SUFeedURL</key>
+    <string>https://github.com/dogukyilmaz/hafifpix/releases/latest/download/appcast.xml</string>
+    <key>SUPublicEDKey</key>
+    <string>j6ODlGaJePRaQypW8ezxZQBAwj2+TkAo0Sg/51fPN8o=</string>
+    <key>SUEnableAutomaticChecks</key>
+    <true/>
     <key>CFBundleDocumentTypes</key>
     <array>
         <dict>
