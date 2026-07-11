@@ -48,11 +48,27 @@ func render(canvas: CGFloat) -> NSBitmapImageRep {
     }
 
     let gradient = NSGradient(colors: [
-        NSColor(calibratedRed: 0.22, green: 0.16, blue: 0.55, alpha: 1),
-        NSColor(calibratedRed: 0.29, green: 0.35, blue: 0.85, alpha: 1),
-        NSColor(calibratedRed: 0.15, green: 0.65, blue: 0.72, alpha: 1),
+        NSColor(calibratedRed: 0.14, green: 0.10, blue: 0.42, alpha: 1),
+        NSColor(calibratedRed: 0.30, green: 0.32, blue: 0.88, alpha: 1),
+        NSColor(calibratedRed: 0.12, green: 0.68, blue: 0.75, alpha: 1),
     ])!
-    gradient.draw(in: plate, angle: 60)
+    gradient.draw(in: plate, angle: 62)
+
+    // Soft glow behind the glyph so the arrow reads at small sizes.
+    if let glow = NSGradient(
+        starting: NSColor.white.withAlphaComponent(0.16),
+        ending: NSColor.white.withAlphaComponent(0.0)
+    ) {
+        NSGraphicsContext.current?.saveGraphicsState()
+        plate.addClip()
+        let glowRadius = 330.0 * scale
+        let glowRect = NSRect(
+            x: canvas / 2 - glowRadius, y: canvas / 2 - glowRadius,
+            width: glowRadius * 2, height: glowRadius * 2
+        )
+        glow.draw(in: NSBezierPath(ovalIn: glowRect), relativeCenterPosition: .zero)
+        NSGraphicsContext.current?.restoreGraphicsState()
+    }
 
     // Subtle top highlight for depth.
     let highlight = NSGradient(
@@ -98,6 +114,11 @@ func render(canvas: CGFloat) -> NSBitmapImageRep {
     arrow.close()
     NSColor.white.setFill()
     arrow.fill()
+    // Stroking the filled shape with a round join rounds every corner.
+    arrow.lineJoinStyle = .round
+    arrow.lineWidth = 28 * scale
+    NSColor.white.setStroke()
+    arrow.stroke()
 
     return rep
 }

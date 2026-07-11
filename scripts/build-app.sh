@@ -49,6 +49,7 @@ if [[ ! -f Resources/AppIcon.icns ]]; then
     iconutil -c icns "$ROOT/.build/AppIcon.iconset" -o Resources/AppIcon.icns
 fi
 cp Resources/AppIcon.icns "$CONTENTS/Resources/AppIcon.icns"
+cp LICENSE THIRD_PARTY_LICENSES.md "$CONTENTS/Resources/"
 
 echo "==> Embedding Sparkle"
 SPARKLE_FW=".build/artifacts/sparkle/Sparkle/Sparkle.xcframework/macos-arm64_x86_64/Sparkle.framework"

@@ -73,3 +73,10 @@ Optimization chains (each step's output kept only if smaller + valid):
 
 \* jpegli is picked up automatically if a `cjpegli` binary is on the system;
 Homebrew doesn't ship one today.
+
+## License
+
+GPL v3 — see [LICENSE](LICENSE). HafifPix bundles GPL-licensed engines
+(pngquant, gifsicle, jpegoptim), which makes GPL the natural license for the
+distributed bundle; see [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md)
+for all attributions. Inspired by [ImageOptim](https://imageoptim.com) (GPL).
