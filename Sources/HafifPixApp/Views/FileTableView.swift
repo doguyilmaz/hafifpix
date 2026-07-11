@@ -7,12 +7,14 @@ struct FileTableView: View {
     @Binding var quickLookURL: URL?
     // Persists the user's column widths and arrangement across launches.
     @SceneStorage("fileTableColumns") private var columnCustomization: TableColumnCustomization<AppModel.Entry>
+    @State private var sortOrder: [KeyPathComparator<AppModel.Entry>] = []
 
     var body: some View {
         // Ideal widths must sum below the default window width: overflowing
         // triggers a horizontal scrollbar and drops the rounded inset row style.
-        Table(model.entries, selection: $selection, columnCustomization: $columnCustomization) {
-            TableColumn("") { entry in
+        Table(model.entries.sorted(using: sortOrder), selection: $selection,
+              sortOrder: $sortOrder, columnCustomization: $columnCustomization) {
+            TableColumn("", value: \.statusRank) { entry in
                 StatusIndicator(status: entry.status)
                     .frame(maxWidth: .infinity, alignment: .center)
             }
@@ -20,7 +22,7 @@ struct FileTableView: View {
             .customizationID("state")
             .disabledCustomizationBehavior(.all)
 
-            TableColumn("Name") { entry in
+            TableColumn("Name", value: \.name, comparator: .localizedStandard) { entry in
                 HStack(spacing: 6) {
                     Text(entry.name)
                         .lineLimit(1)
@@ -37,7 +39,7 @@ struct FileTableView: View {
             .width(min: 150, ideal: 250)
             .customizationID("name")
 
-            TableColumn("Size") { entry in
+            TableColumn("Size", value: \.originalBytes) { entry in
                 if entry.currentBytes != entry.originalBytes {
                     Text("\(Formatting.bytes(entry.originalBytes)) → \(Formatting.bytes(entry.currentBytes))")
                         .monospacedDigit()
@@ -51,7 +53,7 @@ struct FileTableView: View {
             .width(min: 100, ideal: 140)
             .customizationID("size")
 
-            TableColumn("Savings") { entry in
+            TableColumn("Savings", value: \.savingsFraction) { entry in
                 if entry.savedBytes > 0 {
                     Text(Formatting.savings(original: entry.originalBytes, new: entry.currentBytes))
                         .monospacedDigit()
@@ -65,7 +67,7 @@ struct FileTableView: View {
             .width(min: 56, ideal: 70)
             .customizationID("savings")
 
-            TableColumn("Status") { entry in
+            TableColumn("Status", value: \.statusText) { entry in
                 Text(entry.statusText)
                     .lineLimit(1)
                     .truncationMode(.tail)
@@ -101,6 +103,10 @@ struct FileTableView: View {
             if let id = ids.first, let entry = model.entries.first(where: { $0.id == id }) {
                 quickLookURL = entry.url
             }
+        }
+        Divider()
+        Button("Remove Background") {
+            model.removeBackground(entryIDs: ids)
         }
         Divider()
         Button("Revert to Original") {

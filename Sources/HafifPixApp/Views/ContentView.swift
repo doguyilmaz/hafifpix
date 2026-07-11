@@ -34,9 +34,17 @@ struct ContentView: View {
             isDropTargeted = $0
         }
         .safeAreaInset(edge: .bottom, spacing: 0) {
-            StatusBarView()
+            StatusBarView(selection: selection)
         }
         .quickLookPreview($quickLookURL)
+        .alert("Background Removal Failed", isPresented: Binding(
+            get: { model.backgroundRemovalError != nil },
+            set: { if !$0 { model.backgroundRemovalError = nil } }
+        )) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text(model.backgroundRemovalError ?? "")
+        }
         .toolbar {
             ToolbarItemGroup {
                 Button {

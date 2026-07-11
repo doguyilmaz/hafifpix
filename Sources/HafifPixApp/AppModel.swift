@@ -41,6 +41,23 @@ final class AppModel {
             case .failed(let message): message
             }
         }
+
+        // Sort keys for the table columns.
+        var statusRank: Int {
+            switch status {
+            case .pending: 0
+            case .running: 1
+            case .optimized: 2
+            case .converted: 3
+            case .alreadyOptimal: 4
+            case .reverted: 5
+            case .failed: 6
+            }
+        }
+
+        var savingsFraction: Double {
+            originalBytes > 0 ? Double(savedBytes) / Double(originalBytes) : 0
+        }
     }
 
     private(set) var entries: [Entry] = []
@@ -152,6 +169,45 @@ final class AppModel {
         let url = entries[index].url
         let engine = engine!
         Task { await engine.revert(id: jobID, url: url) }
+    }
+
+    // MARK: - Background removal
+
+    var backgroundRemovalError: String?
+
+    func removeBackground(entryIDs: Set<UUID>) {
+        for id in entryIDs {
+            guard let index = entries.firstIndex(where: { $0.id == id }),
+                  entries[index].format != .svg,
+                  !isRunning(entries[index]) else { continue }
+
+            let entry = entries[index]
+            let previousStatus = entry.status
+            entries[index].status = .running("removing background")
+
+            Task.detached(priority: .userInitiated) {
+                let output = BackgroundRemover.outputURL(for: entry.url)
+                do {
+                    try BackgroundRemover.removeBackground(from: entry.url, output: output)
+                    await MainActor.run {
+                        self.restoreStatus(entryID: id, to: previousStatus)
+                        // The extracted PNG joins the queue and gets optimized.
+                        self.add(urls: [output])
+                    }
+                } catch {
+                    await MainActor.run {
+                        self.restoreStatus(entryID: id, to: previousStatus)
+                        self.backgroundRemovalError = "\(entry.name): \(error.localizedDescription)"
+                    }
+                }
+            }
+        }
+    }
+
+    private func restoreStatus(entryID: UUID, to status: Entry.DisplayStatus) {
+        if let index = entries.firstIndex(where: { $0.id == entryID }) {
+            entries[index].status = status
+        }
     }
 
     func canRevert(entryID: UUID) async -> Bool {

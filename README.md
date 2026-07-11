@@ -16,6 +16,8 @@ default, or lossy at your chosen quality. Files are never made larger and never 
 - **Convert to modern formats**: WebP / HEIC / AVIF, written as sibling files.
   Animated GIF becomes animated WebP
 - **Resize on optimize**: fit images within a max dimension before compression
+- **Background removal**: extract the subject to a transparent PNG (right-click),
+  powered by Apple's on-device Vision model; the result is optimized automatically
 - **Safety**: atomic same-volume swaps, optional Trash or sidecar backups and per-file
   *Revert to Original* for the whole session regardless of backup setting
 - **`hafif` CLI** for scripts and CI, sharing the app's engine and settings
