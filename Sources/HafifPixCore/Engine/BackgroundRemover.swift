@@ -140,29 +140,49 @@ public enum BackgroundRemover {
             }
         }
 
-        // Apply mask: removed pixels go transparent; edge pixels bordering the
-        // removed region get partial alpha by color distance (de-fringing).
+        // Edge band: pixels within 2px of the removed region hold the source's
+        // anti-aliasing, i.e. a blend of subject color and background.
+        var band = [Bool](repeating: false, count: width * height)
+        for pass in 0..<2 {
+            var next = [Int]()
+            for index in 0..<(width * height) where !removed[index] && !band[index] {
+                let x = index % width, y = index / width
+                inner: for dy in -1...1 {
+                    for dx in -1...1 where dx != 0 || dy != 0 {
+                        let nx = x + dx, ny = y + dy
+                        guard nx >= 0, nx < width, ny >= 0, ny < height else { continue }
+                        let n = ny * width + nx
+                        if pass == 0 ? removed[n] : band[n] {
+                            next.append(index)
+                            break inner
+                        }
+                    }
+                }
+            }
+            for index in next { band[index] = true }
+        }
+
+        // Apply mask. Band pixels get color decontamination: un-blend the
+        // background share (t) out of the pixel instead of just fading it —
+        // this is what kills the white fringe line on the rim.
         for index in 0..<(width * height) {
             let o = index * 4
             if removed[index] {
                 pixels[o] = 0; pixels[o + 1] = 0; pixels[o + 2] = 0; pixels[o + 3] = 0
-            } else {
-                let x = index % width, y = index / width
-                var touchesRemoved = false
-                for (nx, ny) in [(x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1)] {
-                    guard nx >= 0, nx < width, ny >= 0, ny < height else { continue }
-                    if removed[ny * width + nx] { touchesRemoved = true; break }
+            } else if band[index] {
+                let d = (Double(distance(o)) / 3.0).squareRoot()
+                let bgShare = max(0.0, 1.0 - d / 170.0)
+                if bgShare >= 0.999 {
+                    pixels[o] = 0; pixels[o + 1] = 0; pixels[o + 2] = 0; pixels[o + 3] = 0
+                    continue
                 }
-                if touchesRemoved {
-                    let d = distance(o)
-                    let alpha = min(1.0, Double(d) / Double(tolerance * 2))
-                    let a = UInt8(alpha * 255)
-                    // Premultiplied: scale color with the new alpha.
-                    pixels[o] = UInt8(Double(pixels[o]) * alpha)
-                    pixels[o + 1] = UInt8(Double(pixels[o + 1]) * alpha)
-                    pixels[o + 2] = UInt8(Double(pixels[o + 2]) * alpha)
-                    pixels[o + 3] = a
-                }
+                let alpha = 1.0 - bgShare
+                // Premultiplied space: observed = subject*alpha + bg*bgShare,
+                // so subtracting bg*bgShare leaves the premultiplied subject.
+                pixels[o] = UInt8(max(0.0, Double(pixels[o]) - Double(bgR) * bgShare))
+                pixels[o + 1] = UInt8(max(0.0, Double(pixels[o + 1]) - Double(bgG) * bgShare))
+                pixels[o + 2] = UInt8(max(0.0, Double(pixels[o + 2]) - Double(bgB) * bgShare))
+                pixels[o + 3] = UInt8(alpha * 255)
             }
         }
 
