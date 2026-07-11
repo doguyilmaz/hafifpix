@@ -1,4 +1,6 @@
 import Foundation
+import CoreGraphics
+import ImageIO
 import Testing
 @testable import HafifPixCore
 
@@ -158,5 +160,47 @@ struct ConvertNamingTests {
 
         let sibling = ConvertPipeline.nonClobberingSibling(of: source, ext: "webp")
         #expect(sibling.lastPathComponent == "pic-1.webp")
+    }
+}
+
+@Suite("Background removal")
+struct BackgroundRemovalTests {
+    @Test func flatBackgroundFloodFill() throws {
+        let fm = FileManager.default
+        let dir = fm.temporaryDirectory.appendingPathComponent("hafif-bg-\(UUID().uuidString)")
+        try fm.createDirectory(at: dir, withIntermediateDirectories: true)
+        defer { try? fm.removeItem(at: dir) }
+
+        // Red square centered on white background.
+        let size = 200
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let context = CGContext(
+            data: nil, width: size, height: size, bitsPerComponent: 8,
+            bytesPerRow: size * 4, space: colorSpace,
+            bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue
+        )!
+        context.setFillColor(CGColor(red: 1, green: 1, blue: 1, alpha: 1))
+        context.fill(CGRect(x: 0, y: 0, width: size, height: size))
+        context.setFillColor(CGColor(red: 1, green: 0, blue: 0, alpha: 1))
+        context.fill(CGRect(x: 60, y: 60, width: 80, height: 80))
+        let image = context.makeImage()!
+
+        let input = dir.appendingPathComponent("in.png")
+        let output = dir.appendingPathComponent("out.png")
+        try ImageIOCodec.encode(images: [image], to: .png, quality: 100, output: input)
+
+        try BackgroundRemover.removeBackground(from: input, output: output)
+
+        let source = CGImageSourceCreateWithURL(output as CFURL, nil)!
+        let result = CGImageSourceCreateImageAtIndex(source, 0, nil)!
+        #expect(result.alphaInfo != .none)
+
+        // Corner must be transparent, center must stay opaque red.
+        let data = result.dataProvider!.data! as Data
+        let bytesPerRow = result.bytesPerRow
+        let cornerAlpha = data[5 * bytesPerRow + 5 * 4 + 3]
+        let centerAlpha = data[100 * bytesPerRow + 100 * 4 + 3]
+        #expect(cornerAlpha == 0)
+        #expect(centerAlpha == 255)
     }
 }
