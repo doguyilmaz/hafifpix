@@ -32,12 +32,12 @@ final class AppModel {
 
         var statusText: String {
             switch status {
-            case .pending: "Waiting"
-            case .running(let step): step.capitalized
-            case .optimized: "Saved \(Formatting.bytes(savedBytes))"
+            case .pending: L("Waiting")
+            case .running(let step): step
+            case .optimized: L("Saved \(Formatting.bytes(savedBytes))")
             case .converted(let out): "→ \(out.lastPathComponent)"
-            case .alreadyOptimal: "Already optimized"
-            case .reverted: "Reverted to original"
+            case .alreadyOptimal: L("Already optimized")
+            case .reverted: L("Reverted to original")
             case .failed(let message): message
             }
         }
@@ -183,7 +183,7 @@ final class AppModel {
 
             let entry = entries[index]
             let previousStatus = entry.status
-            entries[index].status = .running("removing background")
+            entries[index].status = .running(L("Removing background"))
 
             Task.detached(priority: .userInitiated) {
                 let output = BackgroundRemover.outputURL(for: entry.url)

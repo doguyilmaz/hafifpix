@@ -29,6 +29,11 @@ icon:
 	swift scripts/make-icon-from-art.swift Resources/icon-art.png .build/AppIcon.iconset
 	iconutil -c icns .build/AppIcon.iconset -o Resources/AppIcon.icns
 
+# Recompile .lproj resources after editing the catalogs in Localization/.
+strings:
+	xcrun xcstringstool compile Localization/HafifPixApp.xcstrings --output-directory Sources/HafifPixApp/Resources
+	xcrun xcstringstool compile Localization/HafifPixCore.xcstrings --output-directory Sources/HafifPixCore/Resources
+
 dmg: app
 	bash scripts/make-dmg.sh
 

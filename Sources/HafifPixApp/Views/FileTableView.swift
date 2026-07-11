@@ -22,7 +22,7 @@ struct FileTableView: View {
             .customizationID("state")
             .disabledCustomizationBehavior(.all)
 
-            TableColumn("Name", value: \.name, comparator: .localizedStandard) { entry in
+            TableColumn(L("Name"), value: \.name, comparator: .localizedStandard) { entry in
                 HStack(spacing: 6) {
                     Text(entry.name)
                         .lineLimit(1)
@@ -39,7 +39,7 @@ struct FileTableView: View {
             .width(min: 150, ideal: 250)
             .customizationID("name")
 
-            TableColumn("Size", value: \.originalBytes) { entry in
+            TableColumn(L("Size"), value: \.originalBytes) { entry in
                 if entry.currentBytes != entry.originalBytes {
                     Text("\(Formatting.bytes(entry.originalBytes)) → \(Formatting.bytes(entry.currentBytes))")
                         .monospacedDigit()
@@ -53,7 +53,7 @@ struct FileTableView: View {
             .width(min: 100, ideal: 140)
             .customizationID("size")
 
-            TableColumn("Savings", value: \.savingsFraction) { entry in
+            TableColumn(L("Savings"), value: \.savingsFraction) { entry in
                 if entry.savedBytes > 0 {
                     Text(Formatting.savings(original: entry.originalBytes, new: entry.currentBytes))
                         .monospacedDigit()
@@ -67,7 +67,7 @@ struct FileTableView: View {
             .width(min: 56, ideal: 70)
             .customizationID("savings")
 
-            TableColumn("Status", value: \.statusText) { entry in
+            TableColumn(L("Status"), value: \.statusText) { entry in
                 Text(entry.statusText)
                     .lineLimit(1)
                     .truncationMode(.tail)
@@ -98,26 +98,26 @@ struct FileTableView: View {
 
     @ViewBuilder
     private func contextMenu(for ids: Set<UUID>) -> some View {
-        Button("Reveal in Finder") { reveal(ids: ids) }
-        Button("Preview") {
+        Button(L("Reveal in Finder")) { reveal(ids: ids) }
+        Button(L("Preview")) {
             if let id = ids.first, let entry = model.entries.first(where: { $0.id == id }) {
                 quickLookURL = entry.url
             }
         }
         Divider()
-        Button("Remove Background") {
+        Button(L("Remove Background")) {
             model.removeBackground(entryIDs: ids)
         }
         Divider()
-        Button("Revert to Original") {
+        Button(L("Revert to Original")) {
             for id in ids { model.revert(entryID: id) }
         }
-        Button("Remove from List") {
+        Button(L("Remove from List")) {
             model.remove(ids: ids)
             selection.subtract(ids)
         }
         Divider()
-        Button("Copy Path") {
+        Button(L("Copy Path")) {
             let paths = model.entries.filter { ids.contains($0.id) }.map(\.url.path)
             NSPasteboard.general.clearContents()
             NSPasteboard.general.setString(paths.joined(separator: "\n"), forType: .string)

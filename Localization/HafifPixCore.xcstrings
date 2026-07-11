@@ -1,0 +1,302 @@
+{
+  "sourceLanguage" : "en",
+  "version" : "1.0",
+  "strings" : {
+    "Fast" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Hızlı" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Schnell" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Rapide" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Rápido" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "高速" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "快速" } }
+    } },
+    "Normal" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Normal" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Normal" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Normal" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Normal" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "標準" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "标准" } }
+    } },
+    "Extra" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Ekstra" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Extra" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Extra" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Extra" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "エクストラ" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "加强" } }
+    } },
+    "Insane" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Çılgın" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Extrem" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Extrême" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Extremo" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "最強" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "极限" } }
+    } },
+    "No backup (overwrite in place)" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Yedek yok (yerinde üzerine yaz)" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Kein Backup (direkt überschreiben)" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Pas de sauvegarde (écraser sur place)" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Sin copia (sobrescribir en el sitio)" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "バックアップなし（その場で上書き）" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "不备份（原地覆盖）" } }
+    } },
+    "Move originals to Trash" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Orijinalleri Çöp Sepeti'ne taşı" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Originale in den Papierkorb legen" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Déplacer les originaux vers la corbeille" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Mover originales a la papelera" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "オリジナルをゴミ箱へ移動" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "将原始文件移到废纸篓" } }
+    } },
+    "Keep originals as .orig files" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Orijinalleri .orig dosyası olarak sakla" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Originale als .orig-Dateien behalten" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Conserver les originaux en fichiers .orig" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Conservar originales como archivos .orig" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "オリジナルを.origファイルとして保持" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "将原始文件保留为.orig文件" } }
+    } },
+    "Don't convert" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Dönüştürme" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Nicht konvertieren" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ne pas convertir" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "No convertir" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "変換しない" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "不转换" } }
+    } },
+    "pngquant (lossy PNG)" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "pngquant (kayıplı PNG)" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "pngquant (verlustbehaftetes PNG)" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "pngquant (PNG avec perte)" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "pngquant (PNG con pérdida)" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "pngquant（非可逆PNG）" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "pngquant（有损PNG）" } }
+    } },
+    "OxiPNG (lossless PNG)" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "OxiPNG (kayıpsız PNG)" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "OxiPNG (verlustfreies PNG)" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "OxiPNG (PNG sans perte)" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "OxiPNG (PNG sin pérdida)" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "OxiPNG（可逆PNG）" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "OxiPNG（无损PNG）" } }
+    } },
+    "Zopfli (extreme PNG deflate)" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Zopfli (aşırı PNG deflate)" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Zopfli (extremes PNG-Deflate)" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Zopfli (deflate PNG extrême)" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Zopfli (deflate PNG extremo)" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "Zopfli（極限PNG deflate）" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "Zopfli（极限PNG deflate）" } }
+    } },
+    "jpegli (modern lossy JPEG)" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "jpegli (modern kayıplı JPEG)" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "jpegli (modernes verlustbehaftetes JPEG)" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "jpegli (JPEG avec perte moderne)" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "jpegli (JPEG con pérdida moderno)" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "jpegli（モダンな非可逆JPEG）" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "jpegli（现代有损JPEG）" } }
+    } },
+    "SVG Minifier (built-in)" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "SVG Küçültücü (yerleşik)" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "SVG-Minifier (integriert)" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Minificateur SVG (intégré)" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Minificador SVG (integrado)" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "SVGミニファイア（内蔵）" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "SVG压缩器（内置）" } }
+    } },
+    "Lossy minification enabled (JPEG %@, PNG %@, GIF %@)" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Kayıplı küçültme açık (JPEG %@, PNG %@, GIF %@)" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Verlustbehaftete Verkleinerung aktiv (JPEG %@, PNG %@, GIF %@)" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Minification avec perte activée (JPEG %@, PNG %@, GIF %@)" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Minificación con pérdida activada (JPEG %@, PNG %@, GIF %@)" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "非可逆圧縮が有効（JPEG %@、PNG %@、GIF %@）" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "已启用有损压缩（JPEG %@，PNG %@，GIF %@）" } }
+    } },
+    "Lossless optimization" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Kayıpsız optimizasyon" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Verlustfreie Optimierung" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Optimisation sans perte" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Optimización sin pérdida" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "可逆最適化" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "无损优化" } }
+    } },
+    "Level: %@" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Düzey: %@" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Stufe: %@" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Niveau : %@" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Nivel: %@" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "レベル: %@" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "级别：%@" } }
+    } },
+    "Fit to %lldpx" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "En fazla %lldpx" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Max. %lldpx" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Max. %lldpx" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Máx. %lldpx" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "最大%lldpx" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "最大%lldpx" } }
+    } },
+    "Convert to %@" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "%@ formatına dönüştür" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Konvertieren in %@" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Convertir en %@" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Convertir a %@" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "%@へ変換" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "转换为%@" } }
+    } },
+    "Converting to %@" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "%@ formatına dönüştürülüyor" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Wird in %@ konvertiert" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Conversion en %@" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Convirtiendo a %@" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "%@へ変換中" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "正在转换为%@" } }
+    } },
+    "Cancelled" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "İptal edildi" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Abgebrochen" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Annulé" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Cancelado" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "キャンセルされました" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "已取消" } }
+    } },
+    "%@ is not available" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "%@ kullanılamıyor" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "%@ ist nicht verfügbar" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "%@ n'est pas disponible" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "%@ no está disponible" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "%@は利用できません" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "%@不可用" } }
+    } },
+    "%@ timed out" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "%@ zaman aşımına uğradı" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "%@ hat das Zeitlimit überschritten" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "%@ a expiré" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "%@ agotó el tiempo de espera" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "%@がタイムアウトしました" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "%@超时" } }
+    } },
+    "%@ failed (exit %d): %@" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "%@ başarısız oldu (çıkış %d): %@" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "%@ fehlgeschlagen (Exit %d): %@" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "%@ a échoué (code %d) : %@" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "%@ falló (salida %d): %@" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "%@が失敗しました（終了コード%d）: %@" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "%@失败（退出码%d）：%@" } }
+    } },
+    "Could not read image" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Görsel okunamadı" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Bild konnte nicht gelesen werden" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Impossible de lire l'image" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "No se pudo leer la imagen" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "画像を読み込めませんでした" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "无法读取图像" } }
+    } },
+    "Could not decode image" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Görsel çözülemedi" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Bild konnte nicht dekodiert werden" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Impossible de décoder l'image" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "No se pudo decodificar la imagen" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "画像をデコードできませんでした" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "无法解码图像" } }
+    } },
+    "No encoder for %@ on this system" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Bu sistemde %@ için kodlayıcı yok" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Kein Encoder für %@ auf diesem System" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Aucun encodeur pour %@ sur ce système" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "No hay codificador para %@ en este sistema" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "このシステムには%@のエンコーダがありません" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "此系统没有%@的编码器" } }
+    } },
+    "Encoding to %@ failed" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "%@ olarak kodlama başarısız" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Kodierung nach %@ fehlgeschlagen" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Échec de l'encodage en %@" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Falló la codificación a %@" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "%@へのエンコードに失敗しました" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "编码为%@失败" } }
+    } },
+    "No conversion target selected" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Dönüştürme hedefi seçilmedi" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Kein Konvertierungsziel gewählt" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Aucune cible de conversion sélectionnée" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "No se seleccionó destino de conversión" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "変換先が選択されていません" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "未选择转换目标" } }
+    } },
+    "Could not decode source image" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Kaynak görsel çözülemedi" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Quellbild konnte nicht dekodiert werden" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Impossible de décoder l'image source" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "No se pudo decodificar la imagen de origen" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "元画像をデコードできませんでした" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "无法解码源图像" } }
+    } },
+    "Animated images can't be converted to %@" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Animasyonlu görseller %@ formatına dönüştürülemez" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Animierte Bilder können nicht in %@ konvertiert werden" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Les images animées ne peuvent pas être converties en %@" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Las imágenes animadas no se pueden convertir a %@" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "アニメーション画像は%@へ変換できません" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "动画图像无法转换为%@" } }
+    } },
+    "Converted file failed verification" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Dönüştürülen dosya doğrulamadan geçemedi" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Konvertierte Datei bestand die Prüfung nicht" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Le fichier converti a échoué à la vérification" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "El archivo convertido no superó la verificación" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "変換ファイルが検証に失敗しました" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "转换后的文件未通过验证" } }
+    } },
+    "No subject found in the image" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Görselde özne bulunamadı" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Kein Motiv im Bild gefunden" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Aucun sujet trouvé dans l'image" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "No se encontró ningún sujeto en la imagen" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "画像内に被写体が見つかりませんでした" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "图像中未找到主体" } }
+    } },
+    "Could not render the extracted subject" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Ayıklanan özne oluşturulamadı" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Freigestelltes Motiv konnte nicht gerendert werden" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Impossible de générer le sujet détouré" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "No se pudo generar el sujeto extraído" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "切り抜いた被写体を描画できませんでした" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "无法渲染提取的主体" } }
+    } },
+    "Not an SVG document" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "SVG belgesi değil" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Kein SVG-Dokument" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ce n'est pas un document SVG" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "No es un documento SVG" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "SVG文書ではありません" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "不是SVG文档" } }
+    } },
+    "Could not encode minified SVG" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Küçültülmüş SVG kodlanamadı" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Verkleinertes SVG konnte nicht kodiert werden" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Impossible d'encoder le SVG minifié" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "No se pudo codificar el SVG minificado" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "縮小したSVGをエンコードできませんでした" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "无法编码压缩后的SVG" } }
+    } },
+    "Minified SVG failed verification" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Küçültülmüş SVG doğrulamadan geçemedi" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Verkleinertes SVG bestand die Prüfung nicht" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Le SVG minifié a échoué à la vérification" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "El SVG minificado no superó la verificación" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "縮小したSVGが検証に失敗しました" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "压缩后的SVG未通过验证" } }
+    } },
+    "No original stored for this file" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Bu dosya için saklanan orijinal yok" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Kein Original für diese Datei gespeichert" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Aucun original conservé pour ce fichier" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "No hay original guardado para este archivo" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "このファイルのオリジナルは保存されていません" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "此文件没有已保存的原始版本" } }
+    } }
+  }
+}

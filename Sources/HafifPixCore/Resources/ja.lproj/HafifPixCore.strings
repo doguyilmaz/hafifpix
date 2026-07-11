@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>%@ failed (exit %d): %@</key>
+	<string>%@が失敗しました（終了コード%d）: %@</string>
+	<key>%@ is not available</key>
+	<string>%@は利用できません</string>
+	<key>%@ timed out</key>
+	<string>%@がタイムアウトしました</string>
+	<key>Animated images can't be converted to %@</key>
+	<string>アニメーション画像は%@へ変換できません</string>
+	<key>Cancelled</key>
+	<string>キャンセルされました</string>
+	<key>Convert to %@</key>
+	<string>%@へ変換</string>
+	<key>Converted file failed verification</key>
+	<string>変換ファイルが検証に失敗しました</string>
+	<key>Converting to %@</key>
+	<string>%@へ変換中</string>
+	<key>Could not decode image</key>
+	<string>画像をデコードできませんでした</string>
+	<key>Could not decode source image</key>
+	<string>元画像をデコードできませんでした</string>
+	<key>Could not encode minified SVG</key>
+	<string>縮小したSVGをエンコードできませんでした</string>
+	<key>Could not read image</key>
+	<string>画像を読み込めませんでした</string>
+	<key>Could not render the extracted subject</key>
+	<string>切り抜いた被写体を描画できませんでした</string>
+	<key>Don't convert</key>
+	<string>変換しない</string>
+	<key>Encoding to %@ failed</key>
+	<string>%@へのエンコードに失敗しました</string>
+	<key>Extra</key>
+	<string>エクストラ</string>
+	<key>Fast</key>
+	<string>高速</string>
+	<key>Fit to %lldpx</key>
+	<string>最大%lldpx</string>
+	<key>Insane</key>
+	<string>最強</string>
+	<key>Keep originals as .orig files</key>
+	<string>オリジナルを.origファイルとして保持</string>
+	<key>Level: %@</key>
+	<string>レベル: %@</string>
+	<key>Lossless optimization</key>
+	<string>可逆最適化</string>
+	<key>Lossy minification enabled (JPEG %@, PNG %@, GIF %@)</key>
+	<string>非可逆圧縮が有効（JPEG %@、PNG %@、GIF %@）</string>
+	<key>Minified SVG failed verification</key>
+	<string>縮小したSVGが検証に失敗しました</string>
+	<key>Move originals to Trash</key>
+	<string>オリジナルをゴミ箱へ移動</string>
+	<key>No backup (overwrite in place)</key>
+	<string>バックアップなし（その場で上書き）</string>
+	<key>No conversion target selected</key>
+	<string>変換先が選択されていません</string>
+	<key>No encoder for %@ on this system</key>
+	<string>このシステムには%@のエンコーダがありません</string>
+	<key>No original stored for this file</key>
+	<string>このファイルのオリジナルは保存されていません</string>
+	<key>No subject found in the image</key>
+	<string>画像内に被写体が見つかりませんでした</string>
+	<key>Normal</key>
+	<string>標準</string>
+	<key>Not an SVG document</key>
+	<string>SVG文書ではありません</string>
+	<key>OxiPNG (lossless PNG)</key>
+	<string>OxiPNG（可逆PNG）</string>
+	<key>SVG Minifier (built-in)</key>
+	<string>SVGミニファイア（内蔵）</string>
+	<key>Zopfli (extreme PNG deflate)</key>
+	<string>Zopfli（極限PNG deflate）</string>
+	<key>jpegli (modern lossy JPEG)</key>
+	<string>jpegli（モダンな非可逆JPEG）</string>
+	<key>pngquant (lossy PNG)</key>
+	<string>pngquant（非可逆PNG）</string>
+</dict>
+</plist>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>%lld engines unavailable</key>
+	<string>%lld motor kullanılamıyor</string>
+	<key>%lld files · %@</key>
+	<string>%lld dosya · %@</string>
+	<key>Add Images</key>
+	<string>Görsel Ekle</string>
+	<key>Add images or folders (⌘O)</key>
+	<string>Görsel veya klasör ekle (⌘O)</string>
+	<key>Adds Zopfli deflate to PNGs. Can take minutes per image, saves the last few percent.</key>
+	<string>PNG'lere Zopfli deflate ekler. Görsel başına dakikalar sürebilir, son birkaç yüzdeyi kazandırır.</string>
+	<key>Again</key>
+	<string>Yeniden</string>
+	<key>Already optimized</key>
+	<string>Zaten optimize</string>
+	<key>Already optimized (%lld files)</key>
+	<string>Zaten optimize (%lld dosya)</string>
+	<key>Auto (%lld cores)</key>
+	<string>Otomatik (%lld çekirdek)</string>
+	<key>Automatically check for updates</key>
+	<string>Güncellemeleri otomatik denetle</string>
+	<key>Automatically download and install updates</key>
+	<string>Güncellemeleri otomatik indir ve yükle</string>
+	<key>Background Removal Failed</key>
+	<string>Arka Plan Kaldırılamadı</string>
+	<key>Balanced effort: the sweet spot for everyday use.</key>
+	<string>Dengeli çaba: günlük kullanım için ideal nokta.</string>
+	<key>Browse…</key>
+	<string>Göz At…</string>
+	<key>Check for Updates…</key>
+	<string>Güncellemeleri Denetle…</string>
+	<key>Choose images or folders to optimize</key>
+	<string>Optimize edilecek görselleri veya klasörleri seçin</string>
+	<key>Clear</key>
+	<string>Temizle</string>
+	<key>Clear List</key>
+	<string>Listeyi Temizle</string>
+	<key>Clear the list (⌘K)</key>
+	<string>Listeyi temizle (⌘K)</string>
+	<key>Convert images to</key>
+	<string>Görselleri şuna dönüştür</string>
+	<key>Convert to modern formats</key>
+	<string>Modern formatlara dönüştür</string>
+	<key>Converted files are written next to the original (photo.png → photo.%@). SVGs are minified as usual.</key>
+	<string>Dönüştürülen dosyalar orijinalin yanına yazılır (photo.png → photo.%@). SVG'ler her zamanki gibi küçültülür.</string>
+	<key>Copy Path</key>
+	<string>Yolu Kopyala</string>
+	<key>Drop images or folders here</key>
+	<string>Görselleri veya klasörleri buraya bırakın</string>
+	<key>EXIF, GPS position, color profiles, rotation. Keep it if you rely on embedded copyright info.</key>
+	<string>EXIF, GPS konumu, renk profilleri, döndürme. Gömülü telif hakkı bilgisine ihtiyacınız varsa koruyun.</string>
+	<key>Enable lossy minification</key>
+	<string>Kayıplı küçültmeyi etkinleştir</string>
+	<key>Engines</key>
+	<string>Motorlar</string>
+	<key>Every engine's output is only kept when it is smaller and still decodes correctly. Disabling engines mainly trades savings for speed.</key>
+	<string>Her motorun çıktısı yalnızca daha küçükse ve doğru çözülüyorsa kullanılır. Motorları kapatmak çoğunlukla kazanç yerine hız kazandırır.</string>
+	<key>Exhaustive compression trials. Noticeably slower on big images.</key>
+	<string>Kapsamlı sıkıştırma denemeleri. Büyük görsellerde belirgin şekilde yavaş.</string>
+	<key>Extras</key>
+	<string>Ekstralar</string>
+	<key>Fit images within a maximum size</key>
+	<string>Görselleri en büyük boyuta sığdır</string>
+	<key>Gamma chunks, color profiles and optional chunks. Web browsers expect these removed.</key>
+	<string>Gama parçaları, renk profilleri ve isteğe bağlı parçalar. Web tarayıcıları bunların kaldırılmış olmasını bekler.</string>
+	<key>General</key>
+	<string>Genel</string>
+	<key>Larger images are downscaled before compression. Animations are resized too (GIF).</key>
+	<string>Daha büyük görseller sıkıştırmadan önce küçültülür. Animasyonlar da yeniden boyutlandırılır (GIF).</string>
+	<key>Level</key>
+	<string>Düzey</string>
+	<key>Longest side</key>
+	<string>En uzun kenar</string>
+	<key>Makes files much smaller, but may subtly change how images look.</key>
+	<string>Dosyaları çok daha küçük yapar ancak görsellerin görünümünü hafifçe değiştirebilir.</string>
+	<key>Metadata</key>
+	<string>Meta Veriler</string>
+	<key>Missing: %@</key>
+	<string>Eksik: %@</string>
+	<key>Move original to Trash when converted file is smaller</key>
+	<string>Dönüştürülen dosya daha küçükse orijinali Çöp Sepeti'ne taşı</string>
+	<key>Name</key>
+	<string>Ad</string>
+	<key>OK</key>
+	<string>Tamam</string>
+	<key>Open settings (⌘,)</key>
+	<string>Ayarları aç (⌘,)</string>
+	<key>Open…</key>
+	<string>Aç…</string>
+	<key>Optimization level</key>
+	<string>Optimizasyon düzeyi</string>
+	<key>Optimize Again</key>
+	<string>Yeniden Optimize Et</string>
+	<key>Optimizing… %lld files remaining</key>
+	<string>Optimize ediliyor… %lld dosya kaldı</string>
+	<key>Originals</key>
+	<string>Orijinaller</string>
+	<key>Parallelism</key>
+	<string>Paralellik</string>
+	<key>Pixels</key>
+	<string>Piksel</string>
+	<key>Preserve file creation and modification dates</key>
+	<string>Dosya oluşturma ve değiştirme tarihlerini koru</string>
+	<key>Preserve file permissions and attributes</key>
+	<string>Dosya izinlerini ve özniteliklerini koru</string>
+	<key>Preview</key>
+	<string>Önizle</string>
+	<key>Quality</key>
+	<string>Kalite</string>
+	<key>Quality targets</key>
+	<string>Kalite hedefleri</string>
+	<key>Quick single-pass compression. Good for large batches.</key>
+	<string>Hızlı tek geçişli sıkıştırma. Büyük gruplar için uygundur.</string>
+	<key>Re-run optimization with current settings (⌘R)</key>
+	<string>Optimizasyonu geçerli ayarlarla yeniden çalıştır (⌘R)</string>
+	<key>Regardless of this setting, every file can be reverted from the right-click menu while the app is open.</key>
+	<string>Bu ayardan bağımsız olarak, uygulama açıkken her dosya sağ tık menüsünden geri alınabilir.</string>
+	<key>Remove Background</key>
+	<string>Arka Planı Kaldır</string>
+	<key>Remove from List</key>
+	<string>Listeden Kaldır</string>
+	<key>Removing background</key>
+	<string>Arka plan kaldırılıyor</string>
+	<key>Resize</key>
+	<string>Yeniden Boyutlandır</string>
+	<key>Reveal in Finder</key>
+	<string>Finder'da Göster</string>
+	<key>Revert to Original</key>
+	<string>Orijinale Döndür</string>
+	<key>Reverted to original</key>
+	<string>Orijinale döndürüldü</string>
+	<key>Saved %@</key>
+	<string>%@ kazanıldı</string>
+	<key>Saved %@ out of %@ (%@)</key>
+	<string>Kazanç: %@ / %@ (%@)</string>
+	<key>Savings</key>
+	<string>Kazanç</string>
+	<key>Settings</key>
+	<string>Ayarlar</string>
+	<key>Simultaneous files</key>
+	<string>Eşzamanlı dosya</string>
+	<key>Size</key>
+	<string>Boyut</string>
+	<key>Speed</key>
+	<string>Hız</string>
+	<key>Status</key>
+	<string>Durum</string>
+	<key>Strip JPEG metadata</key>
+	<string>JPEG meta verilerini kaldır</string>
+	<key>Strip PNG metadata</key>
+	<string>PNG meta verilerini kaldır</string>
+	<key>Updates</key>
+	<string>Güncellemeler</string>
+	<key>Waiting</key>
+	<string>Bekliyor</string>
+	<key>Writing files</key>
+	<string>Dosya Yazma</string>
+</dict>
+</plist>

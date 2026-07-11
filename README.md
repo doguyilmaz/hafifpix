@@ -27,6 +27,13 @@ default, or lossy at your chosen quality. Files are never made larger and never 
 - **`hafif` CLI** for scripts and CI, sharing the app's engine and settings
 - **Finder integration**: Open With, Services menu ("Optimize with HafifPix"), dock drops
 
+## Languages
+
+Available in English, Turkish, German, French, Spanish, Japanese and
+Simplified Chinese. Help translate it: the string catalogs live in
+`Localization/*.xcstrings`; add your language, run `make strings` and open
+a pull request.
+
 ## Build
 
 Requires Xcode (CLI tools) and Homebrew-installed engines:

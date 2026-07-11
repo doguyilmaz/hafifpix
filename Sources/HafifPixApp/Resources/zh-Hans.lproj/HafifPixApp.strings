@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>%lld engines unavailable</key>
+	<string>%lld个引擎不可用</string>
+	<key>%lld files · %@</key>
+	<string>%lld个文件 · %@</string>
+	<key>Add Images</key>
+	<string>添加图像</string>
+	<key>Add images or folders (⌘O)</key>
+	<string>添加图像或文件夹 (⌘O)</string>
+	<key>Adds Zopfli deflate to PNGs. Can take minutes per image, saves the last few percent.</key>
+	<string>为PNG添加Zopfli deflate。每张图可能耗时数分钟，可节省最后几个百分点。</string>
+	<key>Again</key>
+	<string>再次</string>
+	<key>Already optimized</key>
+	<string>已是最优</string>
+	<key>Already optimized (%lld files)</key>
+	<string>已是最优（%lld个文件）</string>
+	<key>Auto (%lld cores)</key>
+	<string>自动（%lld核心）</string>
+	<key>Automatically check for updates</key>
+	<string>自动检查更新</string>
+	<key>Automatically download and install updates</key>
+	<string>自动下载并安装更新</string>
+	<key>Background Removal Failed</key>
+	<string>背景移除失败</string>
+	<key>Balanced effort: the sweet spot for everyday use.</key>
+	<string>均衡的力度：日常使用的最佳选择。</string>
+	<key>Browse…</key>
+	<string>浏览…</string>
+	<key>Check for Updates…</key>
+	<string>检查更新…</string>
+	<key>Choose images or folders to optimize</key>
+	<string>选择要优化的图像或文件夹</string>
+	<key>Clear</key>
+	<string>清空</string>
+	<key>Clear List</key>
+	<string>清空列表</string>
+	<key>Clear the list (⌘K)</key>
+	<string>清空列表 (⌘K)</string>
+	<key>Convert images to</key>
+	<string>将图像转换为</string>
+	<key>Convert to modern formats</key>
+	<string>转换为现代格式</string>
+	<key>Converted files are written next to the original (photo.png → photo.%@). SVGs are minified as usual.</key>
+	<string>转换后的文件写在原始文件旁边（photo.png → photo.%@）。SVG照常缩小。</string>
+	<key>Copy Path</key>
+	<string>拷贝路径</string>
+	<key>Drop images or folders here</key>
+	<string>将图像或文件夹拖放到这里</string>
+	<key>EXIF, GPS position, color profiles, rotation. Keep it if you rely on embedded copyright info.</key>
+	<string>EXIF、GPS位置、颜色描述文件、旋转。若依赖内嵌版权信息请保留。</string>
+	<key>Enable lossy minification</key>
+	<string>启用有损压缩</string>
+	<key>Engines</key>
+	<string>引擎</string>
+	<key>Every engine's output is only kept when it is smaller and still decodes correctly. Disabling engines mainly trades savings for speed.</key>
+	<string>每个引擎的输出只有在更小且能正确解码时才会保留。停用引擎主要是用节省换取速度。</string>
+	<key>Exhaustive compression trials. Noticeably slower on big images.</key>
+	<string>穷尽式压缩尝试。大图像明显更慢。</string>
+	<key>Extras</key>
+	<string>更多</string>
+	<key>Fit images within a maximum size</key>
+	<string>将图像限制在最大尺寸内</string>
+	<key>Gamma chunks, color profiles and optional chunks. Web browsers expect these removed.</key>
+	<string>Gamma块、颜色描述文件和可选块。网页浏览器期望这些被移除。</string>
+	<key>General</key>
+	<string>通用</string>
+	<key>Larger images are downscaled before compression. Animations are resized too (GIF).</key>
+	<string>较大的图像会在压缩前缩小。动画（GIF）同样处理。</string>
+	<key>Level</key>
+	<string>级别</string>
+	<key>Longest side</key>
+	<string>最长边</string>
+	<key>Makes files much smaller, but may subtly change how images look.</key>
+	<string>文件会小得多，但图像外观可能有细微变化。</string>
+	<key>Metadata</key>
+	<string>元数据</string>
+	<key>Missing: %@</key>
+	<string>缺少：%@</string>
+	<key>Move original to Trash when converted file is smaller</key>
+	<string>转换后的文件更小时将原始文件移到废纸篓</string>
+	<key>Name</key>
+	<string>名称</string>
+	<key>OK</key>
+	<string>好</string>
+	<key>Open settings (⌘,)</key>
+	<string>打开设置 (⌘,)</string>
+	<key>Open…</key>
+	<string>打开…</string>
+	<key>Optimization level</key>
+	<string>优化级别</string>
+	<key>Optimize Again</key>
+	<string>再次优化</string>
+	<key>Optimizing… %lld files remaining</key>
+	<string>正在优化… 剩余%lld个文件</string>
+	<key>Originals</key>
+	<string>原始文件</string>
+	<key>Parallelism</key>
+	<string>并行</string>
+	<key>Pixels</key>
+	<string>像素</string>
+	<key>Preserve file creation and modification dates</key>
+	<string>保留文件创建和修改日期</string>
+	<key>Preserve file permissions and attributes</key>
+	<string>保留文件权限和属性</string>
+	<key>Preview</key>
+	<string>预览</string>
+	<key>Quality</key>
+	<string>质量</string>
+	<key>Quality targets</key>
+	<string>质量目标</string>
+	<key>Quick single-pass compression. Good for large batches.</key>
+	<string>快速单遍压缩。适合大批量处理。</string>
+	<key>Re-run optimization with current settings (⌘R)</key>
+	<string>使用当前设置重新运行优化 (⌘R)</string>
+	<key>Regardless of this setting, every file can be reverted from the right-click menu while the app is open.</key>
+	<string>无论此设置如何，应用打开期间任何文件都可通过右键菜单还原。</string>
+	<key>Remove Background</key>
+	<string>移除背景</string>
+	<key>Remove from List</key>
+	<string>从列表中移除</string>
+	<key>Removing background</key>
+	<string>正在移除背景</string>
+	<key>Resize</key>
+	<string>调整大小</string>
+	<key>Reveal in Finder</key>
+	<string>在访达中显示</string>
+	<key>Revert to Original</key>
+	<string>还原为原始文件</string>
+	<key>Reverted to original</key>
+	<string>已还原为原始文件</string>
+	<key>Saved %@</key>
+	<string>已节省 %@</string>
+	<key>Saved %@ out of %@ (%@)</key>
+	<string>已节省 %@（共 %@，%@）</string>
+	<key>Savings</key>
+	<string>节省</string>
+	<key>Settings</key>
+	<string>设置</string>
+	<key>Simultaneous files</key>
+	<string>同时处理的文件数</string>
+	<key>Size</key>
+	<string>大小</string>
+	<key>Speed</key>
+	<string>速度</string>
+	<key>Status</key>
+	<string>状态</string>
+	<key>Strip JPEG metadata</key>
+	<string>移除JPEG元数据</string>
+	<key>Strip PNG metadata</key>
+	<string>移除PNG元数据</string>
+	<key>Updates</key>
+	<string>更新</string>
+	<key>Waiting</key>
+	<string>等待中</string>
+	<key>Writing files</key>
+	<string>文件写入</string>
+</dict>
+</plist>

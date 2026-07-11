@@ -16,11 +16,11 @@ public enum ProcessError: Error, LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .toolNotFound(let name):
-            "\(name) is not available"
+            LC("\(name) is not available")
         case .timeout(let tool):
-            "\(tool) timed out"
+            LC("\(tool) timed out")
         case .failed(let tool, let code, let stderr):
-            "\(tool) failed (exit \(code)): \(stderr.trimmingCharacters(in: .whitespacesAndNewlines).prefix(200))"
+            LC("\(tool) failed (exit \(code)): \(String(stderr.trimmingCharacters(in: .whitespacesAndNewlines).prefix(200)))")
         }
     }
 }

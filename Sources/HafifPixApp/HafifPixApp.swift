@@ -19,26 +19,26 @@ struct HafifPixApp: App {
         .defaultSize(width: 780, height: 480)
         .commands {
             CommandGroup(after: .appInfo) {
-                Button("Check for Updates…") {
+                Button(L("Check for Updates…")) {
                     updater.checkForUpdates()
                 }
                 .disabled(!updater.canCheckForUpdates)
             }
             CommandGroup(replacing: .newItem) {
-                Button("Open…") {
+                Button(L("Open…")) {
                     AppDelegate.model?.openFromMenu()
                 }
                 .keyboardShortcut("o")
             }
             CommandGroup(after: .newItem) {
                 Divider()
-                Button("Optimize Again") {
+                Button(L("Optimize Again")) {
                     model.again()
                 }
                 .keyboardShortcut("r")
                 .disabled(model.entries.isEmpty || model.isBusy)
 
-                Button("Clear List") {
+                Button(L("Clear List")) {
                     model.clear()
                 }
                 .keyboardShortcut("k")
@@ -96,7 +96,7 @@ extension AppModel {
         panel.canChooseFiles = true
         panel.canChooseDirectories = true
         panel.allowsMultipleSelection = true
-        panel.message = "Choose images or folders to optimize"
+        panel.message = L("Choose images or folders to optimize")
         if panel.runModal() == .OK {
             add(urls: panel.urls)
         }

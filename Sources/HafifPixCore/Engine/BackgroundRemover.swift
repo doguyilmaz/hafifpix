@@ -238,8 +238,8 @@ public enum BackgroundRemover {
 
         public var errorDescription: String? {
             switch self {
-            case .noSubjectFound: "No subject found in the image"
-            case .renderFailed: "Could not render the extracted subject"
+            case .noSubjectFound: LC("No subject found in the image")
+            case .renderFailed: LC("Could not render the extracted subject")
             }
         }
     }

@@ -125,10 +125,10 @@ public enum ConvertPipeline {
 
         public var errorDescription: String? {
             switch self {
-            case .noTarget: "No conversion target selected"
-            case .undecodable: "Could not decode source image"
-            case .animatedUnsupported(let format): "Animated images can't be converted to \(format)"
-            case .verificationFailed: "Converted file failed verification"
+            case .noTarget: LC("No conversion target selected")
+            case .undecodable: LC("Could not decode source image")
+            case .animatedUnsupported(let format): LC("Animated images can't be converted to \(format)")
+            case .verificationFailed: LC("Converted file failed verification")
             }
         }
     }

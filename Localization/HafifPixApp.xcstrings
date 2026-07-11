@@ -1,0 +1,682 @@
+{
+  "sourceLanguage" : "en",
+  "version" : "1.0",
+  "strings" : {
+    "Check for Updates…" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Güncellemeleri Denetle…" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Nach Updates suchen…" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Rechercher des mises à jour…" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Buscar actualizaciones…" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "アップデートを確認…" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "检查更新…" } }
+    } },
+    "Open…" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Aç…" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Öffnen…" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ouvrir…" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Abrir…" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "開く…" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "打开…" } }
+    } },
+    "Optimize Again" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Yeniden Optimize Et" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Erneut optimieren" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Optimiser à nouveau" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Optimizar de nuevo" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "再度最適化" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "再次优化" } }
+    } },
+    "Clear List" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Listeyi Temizle" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Liste leeren" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Vider la liste" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Vaciar lista" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "リストを消去" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "清空列表" } }
+    } },
+    "Add Images" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Görsel Ekle" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Bilder hinzufügen" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ajouter des images" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Añadir imágenes" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "画像を追加" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "添加图像" } }
+    } },
+    "Again" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Yeniden" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Erneut" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "À nouveau" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "De nuevo" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "再実行" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "再次" } }
+    } },
+    "Clear" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Temizle" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Leeren" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Vider" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Vaciar" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "消去" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "清空" } }
+    } },
+    "Settings" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Ayarlar" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Einstellungen" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Réglages" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Ajustes" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "設定" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "设置" } }
+    } },
+    "Add images or folders (⌘O)" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Görsel veya klasör ekle (⌘O)" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Bilder oder Ordner hinzufügen (⌘O)" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ajouter des images ou des dossiers (⌘O)" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Añadir imágenes o carpetas (⌘O)" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "画像やフォルダを追加 (⌘O)" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "添加图像或文件夹 (⌘O)" } }
+    } },
+    "Re-run optimization with current settings (⌘R)" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Optimizasyonu geçerli ayarlarla yeniden çalıştır (⌘R)" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Optimierung mit aktuellen Einstellungen erneut ausführen (⌘R)" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Relancer l'optimisation avec les réglages actuels (⌘R)" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Repetir la optimización con los ajustes actuales (⌘R)" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "現在の設定で最適化をやり直す (⌘R)" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "使用当前设置重新运行优化 (⌘R)" } }
+    } },
+    "Clear the list (⌘K)" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Listeyi temizle (⌘K)" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Liste leeren (⌘K)" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Vider la liste (⌘K)" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Vaciar la lista (⌘K)" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "リストを消去 (⌘K)" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "清空列表 (⌘K)" } }
+    } },
+    "Open settings (⌘,)" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Ayarları aç (⌘,)" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Einstellungen öffnen (⌘,)" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ouvrir les réglages (⌘,)" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Abrir ajustes (⌘,)" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "設定を開く (⌘,)" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "打开设置 (⌘,)" } }
+    } },
+    "Choose images or folders to optimize" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Optimize edilecek görselleri veya klasörleri seçin" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Bilder oder Ordner zum Optimieren auswählen" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Choisir des images ou des dossiers à optimiser" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Elige imágenes o carpetas para optimizar" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "最適化する画像やフォルダを選択" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "选择要优化的图像或文件夹" } }
+    } },
+    "Background Removal Failed" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Arka Plan Kaldırılamadı" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Hintergrund konnte nicht entfernt werden" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Échec de la suppression de l'arrière-plan" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "No se pudo quitar el fondo" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "背景を削除できませんでした" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "背景移除失败" } }
+    } },
+    "OK" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Tamam" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "OK" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "OK" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Aceptar" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "OK" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "好" } }
+    } },
+    "Drop images or folders here" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Görselleri veya klasörleri buraya bırakın" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Bilder oder Ordner hier ablegen" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Déposez des images ou des dossiers ici" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Suelta imágenes o carpetas aquí" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "ここに画像やフォルダをドロップ" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "将图像或文件夹拖放到这里" } }
+    } },
+    "Browse…" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Göz At…" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Durchsuchen…" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Parcourir…" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Explorar…" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "参照…" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "浏览…" } }
+    } },
+    "Name" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Ad" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Name" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Nom" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Nombre" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "名前" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "名称" } }
+    } },
+    "Size" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Boyut" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Größe" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Taille" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Tamaño" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "サイズ" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "大小" } }
+    } },
+    "Savings" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Kazanç" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Ersparnis" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Gain" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Ahorro" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "削減率" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "节省" } }
+    } },
+    "Status" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Durum" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Status" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "État" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Estado" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "状態" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "状态" } }
+    } },
+    "Reveal in Finder" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Finder'da Göster" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Im Finder zeigen" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Afficher dans le Finder" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Mostrar en el Finder" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "Finderに表示" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "在访达中显示" } }
+    } },
+    "Preview" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Önizle" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Vorschau" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Aperçu" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Previsualizar" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "プレビュー" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "预览" } }
+    } },
+    "Remove Background" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Arka Planı Kaldır" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Hintergrund entfernen" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Supprimer l'arrière-plan" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Quitar fondo" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "背景を削除" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "移除背景" } }
+    } },
+    "Revert to Original" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Orijinale Döndür" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Auf Original zurücksetzen" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Rétablir l'original" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Restaurar original" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "オリジナルに戻す" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "还原为原始文件" } }
+    } },
+    "Remove from List" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Listeden Kaldır" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Aus Liste entfernen" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Retirer de la liste" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Quitar de la lista" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "リストから削除" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "从列表中移除" } }
+    } },
+    "Copy Path" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Yolu Kopyala" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Pfad kopieren" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Copier le chemin" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Copiar ruta" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "パスをコピー" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "拷贝路径" } }
+    } },
+    "%lld engines unavailable" : { "localizations" : {
+      "en" : { "variations" : { "plural" : {
+        "one" : { "stringUnit" : { "state" : "translated", "value" : "%lld engine unavailable" } },
+        "other" : { "stringUnit" : { "state" : "translated", "value" : "%lld engines unavailable" } }
+      } } },
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "%lld motor kullanılamıyor" } },
+      "de" : { "variations" : { "plural" : {
+        "one" : { "stringUnit" : { "state" : "translated", "value" : "%lld Engine nicht verfügbar" } },
+        "other" : { "stringUnit" : { "state" : "translated", "value" : "%lld Engines nicht verfügbar" } }
+      } } },
+      "fr" : { "variations" : { "plural" : {
+        "one" : { "stringUnit" : { "state" : "translated", "value" : "%lld moteur indisponible" } },
+        "other" : { "stringUnit" : { "state" : "translated", "value" : "%lld moteurs indisponibles" } }
+      } } },
+      "es" : { "variations" : { "plural" : {
+        "one" : { "stringUnit" : { "state" : "translated", "value" : "%lld motor no disponible" } },
+        "other" : { "stringUnit" : { "state" : "translated", "value" : "%lld motores no disponibles" } }
+      } } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "%lld個のエンジンが利用できません" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "%lld个引擎不可用" } }
+    } },
+    "Missing: %@" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Eksik: %@" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Fehlt: %@" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Manquant : %@" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Faltan: %@" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "不足: %@" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "缺少：%@" } }
+    } },
+    "%lld files · %@" : { "localizations" : {
+      "en" : { "variations" : { "plural" : {
+        "one" : { "stringUnit" : { "state" : "translated", "value" : "%lld file · %@" } },
+        "other" : { "stringUnit" : { "state" : "translated", "value" : "%lld files · %@" } }
+      } } },
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "%lld dosya · %@" } },
+      "de" : { "variations" : { "plural" : {
+        "one" : { "stringUnit" : { "state" : "translated", "value" : "%lld Datei · %@" } },
+        "other" : { "stringUnit" : { "state" : "translated", "value" : "%lld Dateien · %@" } }
+      } } },
+      "fr" : { "variations" : { "plural" : {
+        "one" : { "stringUnit" : { "state" : "translated", "value" : "%lld fichier · %@" } },
+        "other" : { "stringUnit" : { "state" : "translated", "value" : "%lld fichiers · %@" } }
+      } } },
+      "es" : { "variations" : { "plural" : {
+        "one" : { "stringUnit" : { "state" : "translated", "value" : "%lld archivo · %@" } },
+        "other" : { "stringUnit" : { "state" : "translated", "value" : "%lld archivos · %@" } }
+      } } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "%lld個のファイル · %@" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "%lld个文件 · %@" } }
+    } },
+    "Optimizing… %lld files remaining" : { "localizations" : {
+      "en" : { "variations" : { "plural" : {
+        "one" : { "stringUnit" : { "state" : "translated", "value" : "Optimizing… %lld file remaining" } },
+        "other" : { "stringUnit" : { "state" : "translated", "value" : "Optimizing… %lld files remaining" } }
+      } } },
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Optimize ediliyor… %lld dosya kaldı" } },
+      "de" : { "variations" : { "plural" : {
+        "one" : { "stringUnit" : { "state" : "translated", "value" : "Wird optimiert… noch %lld Datei" } },
+        "other" : { "stringUnit" : { "state" : "translated", "value" : "Wird optimiert… noch %lld Dateien" } }
+      } } },
+      "fr" : { "variations" : { "plural" : {
+        "one" : { "stringUnit" : { "state" : "translated", "value" : "Optimisation… %lld fichier restant" } },
+        "other" : { "stringUnit" : { "state" : "translated", "value" : "Optimisation… %lld fichiers restants" } }
+      } } },
+      "es" : { "variations" : { "plural" : {
+        "one" : { "stringUnit" : { "state" : "translated", "value" : "Optimizando… queda %lld archivo" } },
+        "other" : { "stringUnit" : { "state" : "translated", "value" : "Optimizando… quedan %lld archivos" } }
+      } } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "最適化中… 残り%lld個" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "正在优化… 剩余%lld个文件" } }
+    } },
+    "Saved %@ out of %@ (%@)" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Kazanç: %@ / %@ (%@)" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "%@ von %@ gespart (%@)" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "%@ économisés sur %@ (%@)" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "%@ ahorrados de %@ (%@)" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "%@ 削減（全体 %@、%@）" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "已节省 %@（共 %@，%@）" } }
+    } },
+    "Already optimized (%lld files)" : { "localizations" : {
+      "en" : { "variations" : { "plural" : {
+        "one" : { "stringUnit" : { "state" : "translated", "value" : "Already optimized (%lld file)" } },
+        "other" : { "stringUnit" : { "state" : "translated", "value" : "Already optimized (%lld files)" } }
+      } } },
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Zaten optimize (%lld dosya)" } },
+      "de" : { "variations" : { "plural" : {
+        "one" : { "stringUnit" : { "state" : "translated", "value" : "Bereits optimiert (%lld Datei)" } },
+        "other" : { "stringUnit" : { "state" : "translated", "value" : "Bereits optimiert (%lld Dateien)" } }
+      } } },
+      "fr" : { "variations" : { "plural" : {
+        "one" : { "stringUnit" : { "state" : "translated", "value" : "Déjà optimisé (%lld fichier)" } },
+        "other" : { "stringUnit" : { "state" : "translated", "value" : "Déjà optimisés (%lld fichiers)" } }
+      } } },
+      "es" : { "variations" : { "plural" : {
+        "one" : { "stringUnit" : { "state" : "translated", "value" : "Ya optimizado (%lld archivo)" } },
+        "other" : { "stringUnit" : { "state" : "translated", "value" : "Ya optimizados (%lld archivos)" } }
+      } } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "すでに最適化済み（%lld個のファイル）" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "已是最优（%lld个文件）" } }
+    } },
+    "Waiting" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Bekliyor" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Wartet" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "En attente" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "En espera" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "待機中" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "等待中" } }
+    } },
+    "Saved %@" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "%@ kazanıldı" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "%@ gespart" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "%@ économisés" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "%@ ahorrados" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "%@ 削減" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "已节省 %@" } }
+    } },
+    "Already optimized" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Zaten optimize" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Bereits optimiert" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Déjà optimisé" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Ya optimizado" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "すでに最適化済み" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "已是最优" } }
+    } },
+    "Reverted to original" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Orijinale döndürüldü" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Auf Original zurückgesetzt" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Original rétabli" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Restaurado al original" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "オリジナルに戻しました" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "已还原为原始文件" } }
+    } },
+    "Removing background" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Arka plan kaldırılıyor" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Hintergrund wird entfernt" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Suppression de l'arrière-plan" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Quitando fondo" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "背景を削除中" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "正在移除背景" } }
+    } },
+    "General" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Genel" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Allgemein" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Général" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "General" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "一般" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "通用" } }
+    } },
+    "Quality" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Kalite" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Qualität" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Qualité" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Calidad" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "品質" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "质量" } }
+    } },
+    "Speed" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Hız" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Tempo" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Vitesse" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Velocidad" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "速度" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "速度" } }
+    } },
+    "Extras" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Ekstralar" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Extras" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Extras" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Extras" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "その他" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "更多" } }
+    } },
+    "Engines" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Motorlar" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Engines" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Moteurs" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Motores" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "エンジン" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "引擎" } }
+    } },
+    "Updates" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Güncellemeler" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Updates" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Mises à jour" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Actualizaciones" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "アップデート" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "更新" } }
+    } },
+    "Automatically check for updates" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Güncellemeleri otomatik denetle" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Automatisch nach Updates suchen" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Rechercher automatiquement les mises à jour" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Buscar actualizaciones automáticamente" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "自動的にアップデートを確認" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "自动检查更新" } }
+    } },
+    "Automatically download and install updates" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Güncellemeleri otomatik indir ve yükle" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Updates automatisch laden und installieren" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Télécharger et installer automatiquement les mises à jour" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Descargar e instalar actualizaciones automáticamente" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "アップデートを自動的にダウンロードしてインストール" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "自动下载并安装更新" } }
+    } },
+    "Metadata" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Meta Veriler" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Metadaten" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Métadonnées" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Metadatos" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "メタデータ" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "元数据" } }
+    } },
+    "Strip PNG metadata" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "PNG meta verilerini kaldır" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "PNG-Metadaten entfernen" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Supprimer les métadonnées PNG" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Eliminar metadatos PNG" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "PNGメタデータを削除" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "移除PNG元数据" } }
+    } },
+    "Gamma chunks, color profiles and optional chunks. Web browsers expect these removed." : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Gama parçaları, renk profilleri ve isteğe bağlı parçalar. Web tarayıcıları bunların kaldırılmış olmasını bekler." } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Gamma-Chunks, Farbprofile und optionale Chunks. Webbrowser erwarten, dass sie entfernt sind." } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Chunks gamma, profils colorimétriques et chunks optionnels. Les navigateurs web s'attendent à leur suppression." } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Chunks gamma, perfiles de color y chunks opcionales. Los navegadores esperan que se eliminen." } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "ガンマチャンク、カラープロファイル、オプションのチャンク。Webブラウザはこれらが削除されていることを想定しています。" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "Gamma块、颜色描述文件和可选块。网页浏览器期望这些被移除。" } }
+    } },
+    "Strip JPEG metadata" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "JPEG meta verilerini kaldır" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "JPEG-Metadaten entfernen" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Supprimer les métadonnées JPEG" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Eliminar metadatos JPEG" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "JPEGメタデータを削除" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "移除JPEG元数据" } }
+    } },
+    "EXIF, GPS position, color profiles, rotation. Keep it if you rely on embedded copyright info." : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "EXIF, GPS konumu, renk profilleri, döndürme. Gömülü telif hakkı bilgisine ihtiyacınız varsa koruyun." } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "EXIF, GPS-Position, Farbprofile, Ausrichtung. Behalten, falls eingebettete Urheberrechtsinfos benötigt werden." } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "EXIF, position GPS, profils colorimétriques, rotation. À conserver si vous dépendez des informations de copyright intégrées." } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "EXIF, posición GPS, perfiles de color, rotación. Consérvalos si dependes de la información de copyright integrada." } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "EXIF、GPS位置情報、カラープロファイル、回転。埋め込まれた著作権情報が必要な場合は残してください。" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "EXIF、GPS位置、颜色描述文件、旋转。若依赖内嵌版权信息请保留。" } }
+    } },
+    "Writing files" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Dosya Yazma" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Dateien schreiben" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Écriture des fichiers" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Escritura de archivos" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "ファイルの書き込み" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "文件写入" } }
+    } },
+    "Preserve file permissions and attributes" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Dosya izinlerini ve özniteliklerini koru" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Dateiberechtigungen und -attribute erhalten" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Préserver les permissions et attributs des fichiers" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Conservar permisos y atributos de los archivos" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "ファイルの権限と属性を保持" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "保留文件权限和属性" } }
+    } },
+    "Preserve file creation and modification dates" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Dosya oluşturma ve değiştirme tarihlerini koru" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Erstellungs- und Änderungsdatum erhalten" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Préserver les dates de création et de modification" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Conservar fechas de creación y modificación" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "ファイルの作成日と変更日を保持" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "保留文件创建和修改日期" } }
+    } },
+    "Originals" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Orijinaller" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Originale" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Originaux" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Originales" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "オリジナル" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "原始文件" } }
+    } },
+    "Regardless of this setting, every file can be reverted from the right-click menu while the app is open." : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Bu ayardan bağımsız olarak, uygulama açıkken her dosya sağ tık menüsünden geri alınabilir." } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Unabhängig von dieser Einstellung lässt sich jede Datei über das Kontextmenü zurücksetzen, solange die App geöffnet ist." } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Quel que soit ce réglage, chaque fichier peut être rétabli via le menu contextuel tant que l'app est ouverte." } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Independientemente de este ajuste, cada archivo puede restaurarse desde el menú contextual mientras la app esté abierta." } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "この設定に関わらず、アプリを開いている間は右クリックメニューからどのファイルも元に戻せます。" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "无论此设置如何，应用打开期间任何文件都可通过右键菜单还原。" } }
+    } },
+    "Enable lossy minification" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Kayıplı küçültmeyi etkinleştir" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Verlustbehaftete Verkleinerung aktivieren" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Activer la minification avec perte" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Activar minificación con pérdida" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "非可逆圧縮を有効にする" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "启用有损压缩" } }
+    } },
+    "Makes files much smaller, but may subtly change how images look." : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Dosyaları çok daha küçük yapar ancak görsellerin görünümünü hafifçe değiştirebilir." } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Macht Dateien deutlich kleiner, kann das Aussehen der Bilder aber leicht verändern." } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Réduit fortement la taille des fichiers, mais peut légèrement modifier l'apparence des images." } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Hace los archivos mucho más pequeños, pero puede cambiar sutilmente el aspecto de las imágenes." } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "ファイルは大幅に小さくなりますが、画像の見た目がわずかに変わる場合があります。" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "文件会小得多，但图像外观可能有细微变化。" } }
+    } },
+    "Quality targets" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Kalite hedefleri" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Qualitätsziele" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Objectifs de qualité" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Objetivos de calidad" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "品質の目標" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "质量目标" } }
+    } },
+    "Optimization level" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Optimizasyon düzeyi" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Optimierungsstufe" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Niveau d'optimisation" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Nivel de optimización" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "最適化レベル" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "优化级别" } }
+    } },
+    "Level" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Düzey" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Stufe" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Niveau" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Nivel" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "レベル" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "级别" } }
+    } },
+    "Quick single-pass compression. Good for large batches." : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Hızlı tek geçişli sıkıştırma. Büyük gruplar için uygundur." } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Schnelle Kompression in einem Durchgang. Gut für große Stapel." } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Compression rapide en une passe. Idéal pour les gros lots." } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Compresión rápida de una sola pasada. Ideal para lotes grandes." } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "1パスの高速圧縮。大量処理に最適。" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "快速单遍压缩。适合大批量处理。" } }
+    } },
+    "Balanced effort: the sweet spot for everyday use." : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Dengeli çaba: günlük kullanım için ideal nokta." } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Ausgewogener Aufwand: der ideale Punkt für den Alltag." } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Effort équilibré : le bon compromis au quotidien." } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Esfuerzo equilibrado: el punto justo para el día a día." } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "バランスの取れた設定。日常使いに最適。" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "均衡的力度：日常使用的最佳选择。" } }
+    } },
+    "Exhaustive compression trials. Noticeably slower on big images." : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Kapsamlı sıkıştırma denemeleri. Büyük görsellerde belirgin şekilde yavaş." } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Erschöpfende Kompressionsversuche. Bei großen Bildern deutlich langsamer." } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Essais de compression exhaustifs. Nettement plus lent sur les grandes images." } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Pruebas de compresión exhaustivas. Bastante más lento con imágenes grandes." } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "徹底的な圧縮試行。大きな画像では明らかに遅くなります。" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "穷尽式压缩尝试。大图像明显更慢。" } }
+    } },
+    "Adds Zopfli deflate to PNGs. Can take minutes per image, saves the last few percent." : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "PNG'lere Zopfli deflate ekler. Görsel başına dakikalar sürebilir, son birkaç yüzdeyi kazandırır." } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Fügt PNGs Zopfli-Deflate hinzu. Kann Minuten pro Bild dauern, spart die letzten Prozent." } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ajoute Zopfli aux PNG. Peut prendre plusieurs minutes par image, gagne les derniers pourcents." } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Añade Zopfli a los PNG. Puede tardar minutos por imagen y ahorra los últimos porcentajes." } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "PNGにZopfli deflateを追加。1枚に数分かかることもありますが、最後の数パーセントを削減します。" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "为PNG添加Zopfli deflate。每张图可能耗时数分钟，可节省最后几个百分点。" } }
+    } },
+    "Parallelism" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Paralellik" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Parallelität" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Parallélisme" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Paralelismo" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "並列処理" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "并行" } }
+    } },
+    "Simultaneous files" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Eşzamanlı dosya" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Gleichzeitige Dateien" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Fichiers simultanés" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Archivos simultáneos" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "同時処理ファイル数" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "同时处理的文件数" } }
+    } },
+    "Auto (%lld cores)" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Otomatik (%lld çekirdek)" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Automatisch (%lld Kerne)" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Auto (%lld cœurs)" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Auto (%lld núcleos)" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "自動（%lldコア）" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "自动（%lld核心）" } }
+    } },
+    "Resize" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Yeniden Boyutlandır" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Größe ändern" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Redimensionner" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Redimensionar" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "リサイズ" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "调整大小" } }
+    } },
+    "Fit images within a maximum size" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Görselleri en büyük boyuta sığdır" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Bilder auf eine Maximalgröße begrenzen" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Limiter les images à une taille maximale" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Ajustar las imágenes a un tamaño máximo" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "画像を最大サイズ内に収める" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "将图像限制在最大尺寸内" } }
+    } },
+    "Longest side" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "En uzun kenar" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Längste Seite" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Côté le plus long" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Lado más largo" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "長辺" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "最长边" } }
+    } },
+    "Pixels" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Piksel" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Pixel" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Pixels" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Píxeles" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "ピクセル" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "像素" } }
+    } },
+    "Larger images are downscaled before compression. Animations are resized too (GIF)." : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Daha büyük görseller sıkıştırmadan önce küçültülür. Animasyonlar da yeniden boyutlandırılır (GIF)." } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Größere Bilder werden vor der Kompression verkleinert. Auch Animationen (GIF)." } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Les images plus grandes sont réduites avant compression. Les animations aussi (GIF)." } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Las imágenes más grandes se reducen antes de comprimir. Las animaciones también (GIF)." } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "大きい画像は圧縮前に縮小されます。アニメーション（GIF）も対象です。" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "较大的图像会在压缩前缩小。动画（GIF）同样处理。" } }
+    } },
+    "Convert to modern formats" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Modern formatlara dönüştür" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "In moderne Formate konvertieren" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Convertir vers des formats modernes" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Convertir a formatos modernos" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "モダンフォーマットへ変換" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "转换为现代格式" } }
+    } },
+    "Convert images to" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Görselleri şuna dönüştür" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Bilder konvertieren in" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Convertir les images en" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Convertir imágenes a" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "変換先" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "将图像转换为" } }
+    } },
+    "Move original to Trash when converted file is smaller" : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Dönüştürülen dosya daha küçükse orijinali Çöp Sepeti'ne taşı" } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Original in den Papierkorb legen, wenn die konvertierte Datei kleiner ist" } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Déplacer l'original vers la corbeille si le fichier converti est plus petit" } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Mover el original a la papelera si el archivo convertido es más pequeño" } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "変換後のファイルが小さい場合はオリジナルをゴミ箱へ" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "转换后的文件更小时将原始文件移到废纸篓" } }
+    } },
+    "Converted files are written next to the original (photo.png → photo.%@). SVGs are minified as usual." : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Dönüştürülen dosyalar orijinalin yanına yazılır (photo.png → photo.%@). SVG'ler her zamanki gibi küçültülür." } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Konvertierte Dateien entstehen neben dem Original (photo.png → photo.%@). SVGs werden wie üblich verkleinert." } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "Les fichiers convertis sont créés à côté de l'original (photo.png → photo.%@). Les SVG sont minifiés comme d'habitude." } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "Los archivos convertidos se crean junto al original (photo.png → photo.%@). Los SVG se minifican como siempre." } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "変換ファイルはオリジナルの隣に作成されます（photo.png → photo.%@）。SVGは通常どおり縮小されます。" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "转换后的文件写在原始文件旁边（photo.png → photo.%@）。SVG照常缩小。" } }
+    } },
+    "Every engine's output is only kept when it is smaller and still decodes correctly. Disabling engines mainly trades savings for speed." : { "localizations" : {
+      "tr" : { "stringUnit" : { "state" : "translated", "value" : "Her motorun çıktısı yalnızca daha küçükse ve doğru çözülüyorsa kullanılır. Motorları kapatmak çoğunlukla kazanç yerine hız kazandırır." } },
+      "de" : { "stringUnit" : { "state" : "translated", "value" : "Die Ausgabe jeder Engine wird nur übernommen, wenn sie kleiner ist und korrekt dekodiert. Engines zu deaktivieren tauscht vor allem Ersparnis gegen Tempo." } },
+      "fr" : { "stringUnit" : { "state" : "translated", "value" : "La sortie de chaque moteur n'est conservée que si elle est plus petite et se décode correctement. Désactiver des moteurs échange surtout du gain contre de la vitesse." } },
+      "es" : { "stringUnit" : { "state" : "translated", "value" : "La salida de cada motor solo se conserva si es más pequeña y se decodifica correctamente. Desactivar motores intercambia sobre todo ahorro por velocidad." } },
+      "ja" : { "stringUnit" : { "state" : "translated", "value" : "各エンジンの出力は、より小さく正しくデコードできる場合のみ採用されます。エンジンを無効にすると、主に削減率と引き換えに速度が上がります。" } },
+      "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "每个引擎的输出只有在更小且能正确解码时才会保留。停用引擎主要是用节省换取速度。" } }
+    } }
+  }
+}

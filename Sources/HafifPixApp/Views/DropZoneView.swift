@@ -25,15 +25,15 @@ struct DropZoneView: View {
             .animation(.easeInOut(duration: 0.15), value: isTargeted)
 
             VStack(spacing: 6) {
-                Text("Drop images or folders here")
+                Text(L("Drop images or folders here"))
                     .font(.title3.weight(.medium))
                     .foregroundStyle(.secondary)
-                Text("PNG · JPEG · GIF · SVG · WebP")
+                Text(verbatim: "PNG · JPEG · GIF · SVG · WebP")
                     .font(.callout)
                     .foregroundStyle(.tertiary)
             }
 
-            Button("Browse…", action: onBrowse)
+            Button(L("Browse…"), action: onBrowse)
                 .controlSize(.large)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

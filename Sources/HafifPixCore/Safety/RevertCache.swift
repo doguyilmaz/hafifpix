@@ -46,6 +46,6 @@ public actor RevertCache {
 
     public enum RevertError: Error, LocalizedError {
         case nothingStashed
-        public var errorDescription: String? { "No original stored for this file" }
+        public var errorDescription: String? { LC("No original stored for this file") }
     }
 }

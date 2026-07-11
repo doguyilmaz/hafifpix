@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>%@ failed (exit %d): %@</key>
+	<string>%@ a échoué (code %d) : %@</string>
+	<key>%@ is not available</key>
+	<string>%@ n'est pas disponible</string>
+	<key>%@ timed out</key>
+	<string>%@ a expiré</string>
+	<key>Animated images can't be converted to %@</key>
+	<string>Les images animées ne peuvent pas être converties en %@</string>
+	<key>Cancelled</key>
+	<string>Annulé</string>
+	<key>Convert to %@</key>
+	<string>Convertir en %@</string>
+	<key>Converted file failed verification</key>
+	<string>Le fichier converti a échoué à la vérification</string>
+	<key>Converting to %@</key>
+	<string>Conversion en %@</string>
+	<key>Could not decode image</key>
+	<string>Impossible de décoder l'image</string>
+	<key>Could not decode source image</key>
+	<string>Impossible de décoder l'image source</string>
+	<key>Could not encode minified SVG</key>
+	<string>Impossible d'encoder le SVG minifié</string>
+	<key>Could not read image</key>
+	<string>Impossible de lire l'image</string>
+	<key>Could not render the extracted subject</key>
+	<string>Impossible de générer le sujet détouré</string>
+	<key>Don't convert</key>
+	<string>Ne pas convertir</string>
+	<key>Encoding to %@ failed</key>
+	<string>Échec de l'encodage en %@</string>
+	<key>Extra</key>
+	<string>Extra</string>
+	<key>Fast</key>
+	<string>Rapide</string>
+	<key>Fit to %lldpx</key>
+	<string>Max. %lldpx</string>
+	<key>Insane</key>
+	<string>Extrême</string>
+	<key>Keep originals as .orig files</key>
+	<string>Conserver les originaux en fichiers .orig</string>
+	<key>Level: %@</key>
+	<string>Niveau : %@</string>
+	<key>Lossless optimization</key>
+	<string>Optimisation sans perte</string>
+	<key>Lossy minification enabled (JPEG %@, PNG %@, GIF %@)</key>
+	<string>Minification avec perte activée (JPEG %@, PNG %@, GIF %@)</string>
+	<key>Minified SVG failed verification</key>
+	<string>Le SVG minifié a échoué à la vérification</string>
+	<key>Move originals to Trash</key>
+	<string>Déplacer les originaux vers la corbeille</string>
+	<key>No backup (overwrite in place)</key>
+	<string>Pas de sauvegarde (écraser sur place)</string>
+	<key>No conversion target selected</key>
+	<string>Aucune cible de conversion sélectionnée</string>
+	<key>No encoder for %@ on this system</key>
+	<string>Aucun encodeur pour %@ sur ce système</string>
+	<key>No original stored for this file</key>
+	<string>Aucun original conservé pour ce fichier</string>
+	<key>No subject found in the image</key>
+	<string>Aucun sujet trouvé dans l'image</string>
+	<key>Normal</key>
+	<string>Normal</string>
+	<key>Not an SVG document</key>
+	<string>Ce n'est pas un document SVG</string>
+	<key>OxiPNG (lossless PNG)</key>
+	<string>OxiPNG (PNG sans perte)</string>
+	<key>SVG Minifier (built-in)</key>
+	<string>Minificateur SVG (intégré)</string>
+	<key>Zopfli (extreme PNG deflate)</key>
+	<string>Zopfli (deflate PNG extrême)</string>
+	<key>jpegli (modern lossy JPEG)</key>
+	<string>jpegli (JPEG avec perte moderne)</string>
+	<key>pngquant (lossy PNG)</key>
+	<string>pngquant (PNG avec perte)</string>
+</dict>
+</plist>

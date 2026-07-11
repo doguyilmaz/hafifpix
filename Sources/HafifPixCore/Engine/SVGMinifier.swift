@@ -86,9 +86,9 @@ public enum SVGMinifier {
 
         public var errorDescription: String? {
             switch self {
-            case .notSVG: "Not an SVG document"
-            case .encodingFailed: "Could not encode minified SVG"
-            case .verificationFailed: "Minified SVG failed verification"
+            case .notSVG: LC("Not an SVG document")
+            case .encodingFailed: LC("Could not encode minified SVG")
+            case .verificationFailed: LC("Minified SVG failed verification")
             }
         }
     }

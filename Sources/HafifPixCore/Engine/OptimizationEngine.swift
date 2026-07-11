@@ -60,7 +60,7 @@ public actor OptimizationEngine {
 
     public func cancelAll() {
         for job in pending {
-            emit(JobEvent(id: job.request.id, status: .failed(message: "Cancelled")))
+            emit(JobEvent(id: job.request.id, status: .failed(message: LC("Cancelled"))))
         }
         pending.removeAll()
         for task in running.values {
@@ -109,7 +109,7 @@ enum JobExecutor {
                 && !(request.format == .webp && settings.convertTarget == .webp)
 
             if wantsConvert {
-                emit(JobEvent(id: request.id, status: .running(step: "converting to \(settings.convertTarget.displayName)")))
+                emit(JobEvent(id: request.id, status: .running(step: LC("Converting to \(settings.convertTarget.displayName)"))))
                 let result = try await ConvertPipeline.convert(original: request.url, format: request.format, context: context)
                 if settings.convertRemovesOriginal, result.newBytes < result.originalBytes {
                     try? fm.trashItem(at: request.url, resultingItemURL: nil)
@@ -141,7 +141,7 @@ enum JobExecutor {
                 emit(JobEvent(id: request.id, status: .alreadyOptimal(bytes: outcome.originalBytes)))
             }
         } catch is CancellationError {
-            emit(JobEvent(id: request.id, status: .failed(message: "Cancelled")))
+            emit(JobEvent(id: request.id, status: .failed(message: LC("Cancelled"))))
         } catch {
             emit(JobEvent(id: request.id, status: .failed(message: error.localizedDescription)))
         }

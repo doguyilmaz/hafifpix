@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>%lld engines unavailable</key>
+	<string>%lld個のエンジンが利用できません</string>
+	<key>%lld files · %@</key>
+	<string>%lld個のファイル · %@</string>
+	<key>Add Images</key>
+	<string>画像を追加</string>
+	<key>Add images or folders (⌘O)</key>
+	<string>画像やフォルダを追加 (⌘O)</string>
+	<key>Adds Zopfli deflate to PNGs. Can take minutes per image, saves the last few percent.</key>
+	<string>PNGにZopfli deflateを追加。1枚に数分かかることもありますが、最後の数パーセントを削減します。</string>
+	<key>Again</key>
+	<string>再実行</string>
+	<key>Already optimized</key>
+	<string>すでに最適化済み</string>
+	<key>Already optimized (%lld files)</key>
+	<string>すでに最適化済み（%lld個のファイル）</string>
+	<key>Auto (%lld cores)</key>
+	<string>自動（%lldコア）</string>
+	<key>Automatically check for updates</key>
+	<string>自動的にアップデートを確認</string>
+	<key>Automatically download and install updates</key>
+	<string>アップデートを自動的にダウンロードしてインストール</string>
+	<key>Background Removal Failed</key>
+	<string>背景を削除できませんでした</string>
+	<key>Balanced effort: the sweet spot for everyday use.</key>
+	<string>バランスの取れた設定。日常使いに最適。</string>
+	<key>Browse…</key>
+	<string>参照…</string>
+	<key>Check for Updates…</key>
+	<string>アップデートを確認…</string>
+	<key>Choose images or folders to optimize</key>
+	<string>最適化する画像やフォルダを選択</string>
+	<key>Clear</key>
+	<string>消去</string>
+	<key>Clear List</key>
+	<string>リストを消去</string>
+	<key>Clear the list (⌘K)</key>
+	<string>リストを消去 (⌘K)</string>
+	<key>Convert images to</key>
+	<string>変換先</string>
+	<key>Convert to modern formats</key>
+	<string>モダンフォーマットへ変換</string>
+	<key>Converted files are written next to the original (photo.png → photo.%@). SVGs are minified as usual.</key>
+	<string>変換ファイルはオリジナルの隣に作成されます（photo.png → photo.%@）。SVGは通常どおり縮小されます。</string>
+	<key>Copy Path</key>
+	<string>パスをコピー</string>
+	<key>Drop images or folders here</key>
+	<string>ここに画像やフォルダをドロップ</string>
+	<key>EXIF, GPS position, color profiles, rotation. Keep it if you rely on embedded copyright info.</key>
+	<string>EXIF、GPS位置情報、カラープロファイル、回転。埋め込まれた著作権情報が必要な場合は残してください。</string>
+	<key>Enable lossy minification</key>
+	<string>非可逆圧縮を有効にする</string>
+	<key>Engines</key>
+	<string>エンジン</string>
+	<key>Every engine's output is only kept when it is smaller and still decodes correctly. Disabling engines mainly trades savings for speed.</key>
+	<string>各エンジンの出力は、より小さく正しくデコードできる場合のみ採用されます。エンジンを無効にすると、主に削減率と引き換えに速度が上がります。</string>
+	<key>Exhaustive compression trials. Noticeably slower on big images.</key>
+	<string>徹底的な圧縮試行。大きな画像では明らかに遅くなります。</string>
+	<key>Extras</key>
+	<string>その他</string>
+	<key>Fit images within a maximum size</key>
+	<string>画像を最大サイズ内に収める</string>
+	<key>Gamma chunks, color profiles and optional chunks. Web browsers expect these removed.</key>
+	<string>ガンマチャンク、カラープロファイル、オプションのチャンク。Webブラウザはこれらが削除されていることを想定しています。</string>
+	<key>General</key>
+	<string>一般</string>
+	<key>Larger images are downscaled before compression. Animations are resized too (GIF).</key>
+	<string>大きい画像は圧縮前に縮小されます。アニメーション（GIF）も対象です。</string>
+	<key>Level</key>
+	<string>レベル</string>
+	<key>Longest side</key>
+	<string>長辺</string>
+	<key>Makes files much smaller, but may subtly change how images look.</key>
+	<string>ファイルは大幅に小さくなりますが、画像の見た目がわずかに変わる場合があります。</string>
+	<key>Metadata</key>
+	<string>メタデータ</string>
+	<key>Missing: %@</key>
+	<string>不足: %@</string>
+	<key>Move original to Trash when converted file is smaller</key>
+	<string>変換後のファイルが小さい場合はオリジナルをゴミ箱へ</string>
+	<key>Name</key>
+	<string>名前</string>
+	<key>OK</key>
+	<string>OK</string>
+	<key>Open settings (⌘,)</key>
+	<string>設定を開く (⌘,)</string>
+	<key>Open…</key>
+	<string>開く…</string>
+	<key>Optimization level</key>
+	<string>最適化レベル</string>
+	<key>Optimize Again</key>
+	<string>再度最適化</string>
+	<key>Optimizing… %lld files remaining</key>
+	<string>最適化中… 残り%lld個</string>
+	<key>Originals</key>
+	<string>オリジナル</string>
+	<key>Parallelism</key>
+	<string>並列処理</string>
+	<key>Pixels</key>
+	<string>ピクセル</string>
+	<key>Preserve file creation and modification dates</key>
+	<string>ファイルの作成日と変更日を保持</string>
+	<key>Preserve file permissions and attributes</key>
+	<string>ファイルの権限と属性を保持</string>
+	<key>Preview</key>
+	<string>プレビュー</string>
+	<key>Quality</key>
+	<string>品質</string>
+	<key>Quality targets</key>
+	<string>品質の目標</string>
+	<key>Quick single-pass compression. Good for large batches.</key>
+	<string>1パスの高速圧縮。大量処理に最適。</string>
+	<key>Re-run optimization with current settings (⌘R)</key>
+	<string>現在の設定で最適化をやり直す (⌘R)</string>
+	<key>Regardless of this setting, every file can be reverted from the right-click menu while the app is open.</key>
+	<string>この設定に関わらず、アプリを開いている間は右クリックメニューからどのファイルも元に戻せます。</string>
+	<key>Remove Background</key>
+	<string>背景を削除</string>
+	<key>Remove from List</key>
+	<string>リストから削除</string>
+	<key>Removing background</key>
+	<string>背景を削除中</string>
+	<key>Resize</key>
+	<string>リサイズ</string>
+	<key>Reveal in Finder</key>
+	<string>Finderに表示</string>
+	<key>Revert to Original</key>
+	<string>オリジナルに戻す</string>
+	<key>Reverted to original</key>
+	<string>オリジナルに戻しました</string>
+	<key>Saved %@</key>
+	<string>%@ 削減</string>
+	<key>Saved %@ out of %@ (%@)</key>
+	<string>%@ 削減（全体 %@、%@）</string>
+	<key>Savings</key>
+	<string>削減率</string>
+	<key>Settings</key>
+	<string>設定</string>
+	<key>Simultaneous files</key>
+	<string>同時処理ファイル数</string>
+	<key>Size</key>
+	<string>サイズ</string>
+	<key>Speed</key>
+	<string>速度</string>
+	<key>Status</key>
+	<string>状態</string>
+	<key>Strip JPEG metadata</key>
+	<string>JPEGメタデータを削除</string>
+	<key>Strip PNG metadata</key>
+	<string>PNGメタデータを削除</string>
+	<key>Updates</key>
+	<string>アップデート</string>
+	<key>Waiting</key>
+	<string>待機中</string>
+	<key>Writing files</key>
+	<string>ファイルの書き込み</string>
+</dict>
+</plist>

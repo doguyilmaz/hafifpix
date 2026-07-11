@@ -27,10 +27,10 @@ struct StatusBarView: View {
 
             if !ToolRegistry.missingTools.isEmpty {
                 let count = ToolRegistry.missingTools.count
-                Label("\(count) engine\(count == 1 ? "" : "s") unavailable", systemImage: "exclamationmark.triangle")
+                Label(L("\(count) engines unavailable"), systemImage: "exclamationmark.triangle")
                     .font(.caption)
                     .foregroundStyle(.orange)
-                    .help("Missing: \(ToolRegistry.missingTools.map(\.rawValue).joined(separator: ", "))")
+                    .help(L("Missing: \(ToolRegistry.missingTools.map(\.rawValue).joined(separator: ", "))"))
             }
         }
         .padding(.horizontal, 14)
@@ -61,7 +61,7 @@ struct StatusBarView: View {
                         .truncationMode(.head)
                 }
                 .buttonStyle(.plain)
-                .help("Reveal in Finder")
+                .help(L("Reveal in Finder"))
                 .frame(maxWidth: 380, alignment: .trailing)
 
                 // Rightmost and never cleared, so it doesn't shift or flicker.
@@ -84,7 +84,7 @@ struct StatusBarView: View {
             }
         } else if selected.count > 1 {
             let total = selected.reduce(Int64(0)) { $0 + $1.currentBytes }
-            Text("\(selected.count) files · \(Formatting.bytes(total))")
+            Text(L("\(selected.count) files · \(Formatting.bytes(total))"))
                 .font(.callout)
                 .foregroundStyle(.secondary)
                 .layoutPriority(1)
@@ -93,12 +93,11 @@ struct StatusBarView: View {
 
     private var statusText: String {
         if model.isBusy {
-            let remaining = model.activeJobs
-            return "Optimizing… \(remaining) file\(remaining == 1 ? "" : "s") remaining"
+            return L("Optimizing… \(model.activeJobs) files remaining")
         }
         if let totals = model.totals, totals.saved > 0 {
             let percent = Formatting.savings(original: totals.original, new: totals.original - totals.saved)
-            return "Saved \(Formatting.bytes(totals.saved)) out of \(Formatting.bytes(totals.original)) (\(percent))"
+            return L("Saved \(Formatting.bytes(totals.saved)) out of \(Formatting.bytes(totals.original)) (\(percent))")
         }
         // Files processed but nothing shrank: say that instead of leaving
         // the settings hint up. The hint belongs to the empty state only.
@@ -108,7 +107,7 @@ struct StatusBarView: View {
             return true
         }
         if !finished.isEmpty {
-            return "Already optimized (\(finished.count) file\(finished.count == 1 ? "" : "s"))"
+            return L("Already optimized (\(finished.count) files)")
         }
         return model.settings.summaryLine
     }

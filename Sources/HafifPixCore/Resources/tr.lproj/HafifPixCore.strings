@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>%@ failed (exit %d): %@</key>
+	<string>%@ başarısız oldu (çıkış %d): %@</string>
+	<key>%@ is not available</key>
+	<string>%@ kullanılamıyor</string>
+	<key>%@ timed out</key>
+	<string>%@ zaman aşımına uğradı</string>
+	<key>Animated images can't be converted to %@</key>
+	<string>Animasyonlu görseller %@ formatına dönüştürülemez</string>
+	<key>Cancelled</key>
+	<string>İptal edildi</string>
+	<key>Convert to %@</key>
+	<string>%@ formatına dönüştür</string>
+	<key>Converted file failed verification</key>
+	<string>Dönüştürülen dosya doğrulamadan geçemedi</string>
+	<key>Converting to %@</key>
+	<string>%@ formatına dönüştürülüyor</string>
+	<key>Could not decode image</key>
+	<string>Görsel çözülemedi</string>
+	<key>Could not decode source image</key>
+	<string>Kaynak görsel çözülemedi</string>
+	<key>Could not encode minified SVG</key>
+	<string>Küçültülmüş SVG kodlanamadı</string>
+	<key>Could not read image</key>
+	<string>Görsel okunamadı</string>
+	<key>Could not render the extracted subject</key>
+	<string>Ayıklanan özne oluşturulamadı</string>
+	<key>Don't convert</key>
+	<string>Dönüştürme</string>
+	<key>Encoding to %@ failed</key>
+	<string>%@ olarak kodlama başarısız</string>
+	<key>Extra</key>
+	<string>Ekstra</string>
+	<key>Fast</key>
+	<string>Hızlı</string>
+	<key>Fit to %lldpx</key>
+	<string>En fazla %lldpx</string>
+	<key>Insane</key>
+	<string>Çılgın</string>
+	<key>Keep originals as .orig files</key>
+	<string>Orijinalleri .orig dosyası olarak sakla</string>
+	<key>Level: %@</key>
+	<string>Düzey: %@</string>
+	<key>Lossless optimization</key>
+	<string>Kayıpsız optimizasyon</string>
+	<key>Lossy minification enabled (JPEG %@, PNG %@, GIF %@)</key>
+	<string>Kayıplı küçültme açık (JPEG %@, PNG %@, GIF %@)</string>
+	<key>Minified SVG failed verification</key>
+	<string>Küçültülmüş SVG doğrulamadan geçemedi</string>
+	<key>Move originals to Trash</key>
+	<string>Orijinalleri Çöp Sepeti'ne taşı</string>
+	<key>No backup (overwrite in place)</key>
+	<string>Yedek yok (yerinde üzerine yaz)</string>
+	<key>No conversion target selected</key>
+	<string>Dönüştürme hedefi seçilmedi</string>
+	<key>No encoder for %@ on this system</key>
+	<string>Bu sistemde %@ için kodlayıcı yok</string>
+	<key>No original stored for this file</key>
+	<string>Bu dosya için saklanan orijinal yok</string>
+	<key>No subject found in the image</key>
+	<string>Görselde özne bulunamadı</string>
+	<key>Normal</key>
+	<string>Normal</string>
+	<key>Not an SVG document</key>
+	<string>SVG belgesi değil</string>
+	<key>OxiPNG (lossless PNG)</key>
+	<string>OxiPNG (kayıpsız PNG)</string>
+	<key>SVG Minifier (built-in)</key>
+	<string>SVG Küçültücü (yerleşik)</string>
+	<key>Zopfli (extreme PNG deflate)</key>
+	<string>Zopfli (aşırı PNG deflate)</string>
+	<key>jpegli (modern lossy JPEG)</key>
+	<string>jpegli (modern kayıplı JPEG)</string>
+	<key>pngquant (lossy PNG)</key>
+	<string>pngquant (kayıplı PNG)</string>
+</dict>
+</plist>

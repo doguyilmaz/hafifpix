@@ -43,6 +43,19 @@ cp .build/release/hafif "$BIN_DIR/hafif"
 cp Resources/Info.plist "$CONTENTS/Info.plist"
 printf 'APPL????' > "$CONTENTS/PkgInfo"
 
+# SPM resource bundles (localizations). Bundle.module looks them up relative
+# to the running executable, so the CLI needs the core bundle next to it too.
+RELEASE_DIR=".build/arm64-apple-macosx/release"
+ditto "$RELEASE_DIR/HafifPix_HafifPixApp.bundle" "$CONTENTS/Resources/HafifPix_HafifPixApp.bundle"
+ditto "$RELEASE_DIR/HafifPix_HafifPixCore.bundle" "$CONTENTS/Resources/HafifPix_HafifPixCore.bundle"
+ditto "$RELEASE_DIR/HafifPix_HafifPixCore.bundle" "$BIN_DIR/HafifPix_HafifPixCore.bundle"
+
+# The app itself must declare each localization (marker lproj dirs), or macOS
+# clamps nested bundles to the development language.
+for locale in en tr de fr es ja zh-Hans; do
+    mkdir -p "$CONTENTS/Resources/$locale.lproj"
+done
+
 if [[ ! -f Resources/AppIcon.icns ]]; then
     echo "==> Generating icon"
     swift scripts/make-icon-from-art.swift Resources/icon-art.png "$ROOT/.build/AppIcon.iconset"
@@ -172,12 +185,13 @@ while IFS= read -r -d '' dylib; do
 done < <(find "$FW_DIR" -name '*.dylib' -print0)
 while IFS= read -r -d '' bin; do
     sign "$bin"
-done < <(find "$BIN_DIR" -type f -print0)
+done < <(find "$BIN_DIR" -maxdepth 1 -type f -print0)
 sign "$CONTENTS/MacOS/HafifPix"
 sign "$APP"
 
 echo "==> Verifying bundled engines run"
 for tool in "$BIN_DIR"/*; do
+    [[ -d "$tool" ]] && continue
     name=$(basename "$tool")
     [[ "$name" == "hafif" ]] && continue
     if ! "$tool" --version >/dev/null 2>&1 && ! "$tool" -version >/dev/null 2>&1 && ! "$tool" --help >/dev/null 2>&1; then

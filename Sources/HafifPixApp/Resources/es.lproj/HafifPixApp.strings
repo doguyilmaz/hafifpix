@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Add Images</key>
+	<string>Añadir imágenes</string>
+	<key>Add images or folders (⌘O)</key>
+	<string>Añadir imágenes o carpetas (⌘O)</string>
+	<key>Adds Zopfli deflate to PNGs. Can take minutes per image, saves the last few percent.</key>
+	<string>Añade Zopfli a los PNG. Puede tardar minutos por imagen y ahorra los últimos porcentajes.</string>
+	<key>Again</key>
+	<string>De nuevo</string>
+	<key>Already optimized</key>
+	<string>Ya optimizado</string>
+	<key>Auto (%lld cores)</key>
+	<string>Auto (%lld núcleos)</string>
+	<key>Automatically check for updates</key>
+	<string>Buscar actualizaciones automáticamente</string>
+	<key>Automatically download and install updates</key>
+	<string>Descargar e instalar actualizaciones automáticamente</string>
+	<key>Background Removal Failed</key>
+	<string>No se pudo quitar el fondo</string>
+	<key>Balanced effort: the sweet spot for everyday use.</key>
+	<string>Esfuerzo equilibrado: el punto justo para el día a día.</string>
+	<key>Browse…</key>
+	<string>Explorar…</string>
+	<key>Check for Updates…</key>
+	<string>Buscar actualizaciones…</string>
+	<key>Choose images or folders to optimize</key>
+	<string>Elige imágenes o carpetas para optimizar</string>
+	<key>Clear</key>
+	<string>Vaciar</string>
+	<key>Clear List</key>
+	<string>Vaciar lista</string>
+	<key>Clear the list (⌘K)</key>
+	<string>Vaciar la lista (⌘K)</string>
+	<key>Convert images to</key>
+	<string>Convertir imágenes a</string>
+	<key>Convert to modern formats</key>
+	<string>Convertir a formatos modernos</string>
+	<key>Converted files are written next to the original (photo.png → photo.%@). SVGs are minified as usual.</key>
+	<string>Los archivos convertidos se crean junto al original (photo.png → photo.%@). Los SVG se minifican como siempre.</string>
+	<key>Copy Path</key>
+	<string>Copiar ruta</string>
+	<key>Drop images or folders here</key>
+	<string>Suelta imágenes o carpetas aquí</string>
+	<key>EXIF, GPS position, color profiles, rotation. Keep it if you rely on embedded copyright info.</key>
+	<string>EXIF, posición GPS, perfiles de color, rotación. Consérvalos si dependes de la información de copyright integrada.</string>
+	<key>Enable lossy minification</key>
+	<string>Activar minificación con pérdida</string>
+	<key>Engines</key>
+	<string>Motores</string>
+	<key>Every engine's output is only kept when it is smaller and still decodes correctly. Disabling engines mainly trades savings for speed.</key>
+	<string>La salida de cada motor solo se conserva si es más pequeña y se decodifica correctamente. Desactivar motores intercambia sobre todo ahorro por velocidad.</string>
+	<key>Exhaustive compression trials. Noticeably slower on big images.</key>
+	<string>Pruebas de compresión exhaustivas. Bastante más lento con imágenes grandes.</string>
+	<key>Extras</key>
+	<string>Extras</string>
+	<key>Fit images within a maximum size</key>
+	<string>Ajustar las imágenes a un tamaño máximo</string>
+	<key>Gamma chunks, color profiles and optional chunks. Web browsers expect these removed.</key>
+	<string>Chunks gamma, perfiles de color y chunks opcionales. Los navegadores esperan que se eliminen.</string>
+	<key>General</key>
+	<string>General</string>
+	<key>Larger images are downscaled before compression. Animations are resized too (GIF).</key>
+	<string>Las imágenes más grandes se reducen antes de comprimir. Las animaciones también (GIF).</string>
+	<key>Level</key>
+	<string>Nivel</string>
+	<key>Longest side</key>
+	<string>Lado más largo</string>
+	<key>Makes files much smaller, but may subtly change how images look.</key>
+	<string>Hace los archivos mucho más pequeños, pero puede cambiar sutilmente el aspecto de las imágenes.</string>
+	<key>Metadata</key>
+	<string>Metadatos</string>
+	<key>Missing: %@</key>
+	<string>Faltan: %@</string>
+	<key>Move original to Trash when converted file is smaller</key>
+	<string>Mover el original a la papelera si el archivo convertido es más pequeño</string>
+	<key>Name</key>
+	<string>Nombre</string>
+	<key>OK</key>
+	<string>Aceptar</string>
+	<key>Open settings (⌘,)</key>
+	<string>Abrir ajustes (⌘,)</string>
+	<key>Open…</key>
+	<string>Abrir…</string>
+	<key>Optimization level</key>
+	<string>Nivel de optimización</string>
+	<key>Optimize Again</key>
+	<string>Optimizar de nuevo</string>
+	<key>Originals</key>
+	<string>Originales</string>
+	<key>Parallelism</key>
+	<string>Paralelismo</string>
+	<key>Pixels</key>
+	<string>Píxeles</string>
+	<key>Preserve file creation and modification dates</key>
+	<string>Conservar fechas de creación y modificación</string>
+	<key>Preserve file permissions and attributes</key>
+	<string>Conservar permisos y atributos de los archivos</string>
+	<key>Preview</key>
+	<string>Previsualizar</string>
+	<key>Quality</key>
+	<string>Calidad</string>
+	<key>Quality targets</key>
+	<string>Objetivos de calidad</string>
+	<key>Quick single-pass compression. Good for large batches.</key>
+	<string>Compresión rápida de una sola pasada. Ideal para lotes grandes.</string>
+	<key>Re-run optimization with current settings (⌘R)</key>
+	<string>Repetir la optimización con los ajustes actuales (⌘R)</string>
+	<key>Regardless of this setting, every file can be reverted from the right-click menu while the app is open.</key>
+	<string>Independientemente de este ajuste, cada archivo puede restaurarse desde el menú contextual mientras la app esté abierta.</string>
+	<key>Remove Background</key>
+	<string>Quitar fondo</string>
+	<key>Remove from List</key>
+	<string>Quitar de la lista</string>
+	<key>Removing background</key>
+	<string>Quitando fondo</string>
+	<key>Resize</key>
+	<string>Redimensionar</string>
+	<key>Reveal in Finder</key>
+	<string>Mostrar en el Finder</string>
+	<key>Revert to Original</key>
+	<string>Restaurar original</string>
+	<key>Reverted to original</key>
+	<string>Restaurado al original</string>
+	<key>Saved %@</key>
+	<string>%@ ahorrados</string>
+	<key>Saved %@ out of %@ (%@)</key>
+	<string>%@ ahorrados de %@ (%@)</string>
+	<key>Savings</key>
+	<string>Ahorro</string>
+	<key>Settings</key>
+	<string>Ajustes</string>
+	<key>Simultaneous files</key>
+	<string>Archivos simultáneos</string>
+	<key>Size</key>
+	<string>Tamaño</string>
+	<key>Speed</key>
+	<string>Velocidad</string>
+	<key>Status</key>
+	<string>Estado</string>
+	<key>Strip JPEG metadata</key>
+	<string>Eliminar metadatos JPEG</string>
+	<key>Strip PNG metadata</key>
+	<string>Eliminar metadatos PNG</string>
+	<key>Updates</key>
+	<string>Actualizaciones</string>
+	<key>Waiting</key>
+	<string>En espera</string>
+	<key>Writing files</key>
+	<string>Escritura de archivos</string>
+</dict>
+</plist>

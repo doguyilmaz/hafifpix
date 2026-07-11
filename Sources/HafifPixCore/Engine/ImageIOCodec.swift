@@ -109,10 +109,10 @@ public enum ImageIOCodec {
 
         public var errorDescription: String? {
             switch self {
-            case .unreadable: "Could not read image"
-            case .decodeFailed: "Could not decode image"
-            case .encoderUnavailable(let type): "No encoder for \(type) on this system"
-            case .encodeFailed(let type): "Encoding to \(type) failed"
+            case .unreadable: LC("Could not read image")
+            case .decodeFailed: LC("Could not decode image")
+            case .encoderUnavailable(let type): LC("No encoder for \(type) on this system")
+            case .encodeFailed(let type): LC("Encoding to \(type) failed")
             }
         }
     }

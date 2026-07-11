@@ -9,10 +9,10 @@ public struct OptimizationSettings: Codable, Sendable, Equatable {
 
         public var displayName: String {
             switch self {
-            case .fast: "Fast"
-            case .normal: "Normal"
-            case .extra: "Extra"
-            case .insane: "Insane"
+            case .fast: LC("Fast")
+            case .normal: LC("Normal")
+            case .extra: LC("Extra")
+            case .insane: LC("Insane")
             }
         }
     }
@@ -24,9 +24,9 @@ public struct OptimizationSettings: Codable, Sendable, Equatable {
 
         public var displayName: String {
             switch self {
-            case .none: "No backup (overwrite in place)"
-            case .trash: "Move originals to Trash"
-            case .sidecar: "Keep originals as .orig files"
+            case .none: LC("No backup (overwrite in place)")
+            case .trash: LC("Move originals to Trash")
+            case .sidecar: LC("Keep originals as .orig files")
             }
         }
     }
@@ -39,7 +39,7 @@ public struct OptimizationSettings: Codable, Sendable, Equatable {
 
         public var displayName: String {
             switch self {
-            case .none: "Don't convert"
+            case .none: LC("Don't convert")
             case .webp: "WebP"
             case .heic: "HEIC"
             case .avif: "AVIF"
@@ -70,14 +70,14 @@ public struct OptimizationSettings: Codable, Sendable, Equatable {
 
         public var displayName: String {
             switch self {
-            case .pngquant: "pngquant (lossy PNG)"
-            case .oxipng: "OxiPNG (lossless PNG)"
-            case .zopfli: "Zopfli (extreme PNG deflate)"
+            case .pngquant: LC("pngquant (lossy PNG)")
+            case .oxipng: LC("OxiPNG (lossless PNG)")
+            case .zopfli: LC("Zopfli (extreme PNG deflate)")
             case .jpegoptim: "JPEGOptim"
             case .jpegtran: "MozJPEG jpegtran"
-            case .jpegli: "jpegli (modern lossy JPEG)"
+            case .jpegli: LC("jpegli (modern lossy JPEG)")
             case .gifsicle: "Gifsicle"
-            case .svgMinifier: "SVG Minifier (built-in)"
+            case .svgMinifier: LC("SVG Minifier (built-in)")
             case .cwebp: "cwebp (WebP)"
             }
         }
@@ -123,13 +123,16 @@ public struct OptimizationSettings: Codable, Sendable, Equatable {
     public var summaryLine: String {
         var parts: [String] = []
         if lossyEnabled {
-            parts.append("Lossy minification enabled (JPEG \(jpegQuality)%, PNG \(pngQuality)%, GIF \(gifQuality)%)")
+            // Percent values are pre-formatted: a literal % inside a
+            // localized format string is a reliable source of crashes.
+            let jpeg = "\(jpegQuality)%", png = "\(pngQuality)%", gif = "\(gifQuality)%"
+            parts.append(LC("Lossy minification enabled (JPEG \(jpeg), PNG \(png), GIF \(gif))"))
         } else {
-            parts.append("Lossless optimization")
+            parts.append(LC("Lossless optimization"))
         }
-        parts.append("Level: \(level.displayName)")
-        if resizeEnabled { parts.append("Fit to \(maxDimension)px") }
-        if convertTarget != .none { parts.append("Convert to \(convertTarget.displayName)") }
+        parts.append(LC("Level: \(level.displayName)"))
+        if resizeEnabled { parts.append(LC("Fit to \(maxDimension)px")) }
+        if convertTarget != .none { parts.append(LC("Convert to \(convertTarget.displayName)")) }
         return parts.joined(separator: " · ")
     }
 }

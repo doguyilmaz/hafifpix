@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>%@ failed (exit %d): %@</key>
+	<string>%@失败（退出码%d）：%@</string>
+	<key>%@ is not available</key>
+	<string>%@不可用</string>
+	<key>%@ timed out</key>
+	<string>%@超时</string>
+	<key>Animated images can't be converted to %@</key>
+	<string>动画图像无法转换为%@</string>
+	<key>Cancelled</key>
+	<string>已取消</string>
+	<key>Convert to %@</key>
+	<string>转换为%@</string>
+	<key>Converted file failed verification</key>
+	<string>转换后的文件未通过验证</string>
+	<key>Converting to %@</key>
+	<string>正在转换为%@</string>
+	<key>Could not decode image</key>
+	<string>无法解码图像</string>
+	<key>Could not decode source image</key>
+	<string>无法解码源图像</string>
+	<key>Could not encode minified SVG</key>
+	<string>无法编码压缩后的SVG</string>
+	<key>Could not read image</key>
+	<string>无法读取图像</string>
+	<key>Could not render the extracted subject</key>
+	<string>无法渲染提取的主体</string>
+	<key>Don't convert</key>
+	<string>不转换</string>
+	<key>Encoding to %@ failed</key>
+	<string>编码为%@失败</string>
+	<key>Extra</key>
+	<string>加强</string>
+	<key>Fast</key>
+	<string>快速</string>
+	<key>Fit to %lldpx</key>
+	<string>最大%lldpx</string>
+	<key>Insane</key>
+	<string>极限</string>
+	<key>Keep originals as .orig files</key>
+	<string>将原始文件保留为.orig文件</string>
+	<key>Level: %@</key>
+	<string>级别：%@</string>
+	<key>Lossless optimization</key>
+	<string>无损优化</string>
+	<key>Lossy minification enabled (JPEG %@, PNG %@, GIF %@)</key>
+	<string>已启用有损压缩（JPEG %@，PNG %@，GIF %@）</string>
+	<key>Minified SVG failed verification</key>
+	<string>压缩后的SVG未通过验证</string>
+	<key>Move originals to Trash</key>
+	<string>将原始文件移到废纸篓</string>
+	<key>No backup (overwrite in place)</key>
+	<string>不备份（原地覆盖）</string>
+	<key>No conversion target selected</key>
+	<string>未选择转换目标</string>
+	<key>No encoder for %@ on this system</key>
+	<string>此系统没有%@的编码器</string>
+	<key>No original stored for this file</key>
+	<string>此文件没有已保存的原始版本</string>
+	<key>No subject found in the image</key>
+	<string>图像中未找到主体</string>
+	<key>Normal</key>
+	<string>标准</string>
+	<key>Not an SVG document</key>
+	<string>不是SVG文档</string>
+	<key>OxiPNG (lossless PNG)</key>
+	<string>OxiPNG（无损PNG）</string>
+	<key>SVG Minifier (built-in)</key>
+	<string>SVG压缩器（内置）</string>
+	<key>Zopfli (extreme PNG deflate)</key>
+	<string>Zopfli（极限PNG deflate）</string>
+	<key>jpegli (modern lossy JPEG)</key>
+	<string>jpegli（现代有损JPEG）</string>
+	<key>pngquant (lossy PNG)</key>
+	<string>pngquant（有损PNG）</string>
+</dict>
+</plist>

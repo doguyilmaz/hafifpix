@@ -37,11 +37,11 @@ struct ContentView: View {
             StatusBarView(selection: selection)
         }
         .quickLookPreview($quickLookURL)
-        .alert("Background Removal Failed", isPresented: Binding(
+        .alert(L("Background Removal Failed"), isPresented: Binding(
             get: { model.backgroundRemovalError != nil },
             set: { if !$0 { model.backgroundRemovalError = nil } }
         )) {
-            Button("OK", role: .cancel) {}
+            Button(L("OK"), role: .cancel) {}
         } message: {
             Text(model.backgroundRemovalError ?? "")
         }
@@ -50,31 +50,31 @@ struct ContentView: View {
                 Button {
                     openPanel()
                 } label: {
-                    Label("Add Images", systemImage: "plus")
+                    Label(L("Add Images"), systemImage: "plus")
                 }
-                .help("Add images or folders (⌘O)")
+                .help(L("Add images or folders (⌘O)"))
 
                 Button {
                     model.again()
                 } label: {
-                    Label("Again", systemImage: "arrow.clockwise")
+                    Label(L("Again"), systemImage: "arrow.clockwise")
                 }
                 .disabled(model.entries.isEmpty || model.isBusy)
-                .help("Re-run optimization with current settings (⌘R)")
+                .help(L("Re-run optimization with current settings (⌘R)"))
 
                 Button {
                     selection.removeAll()
                     model.clear()
                 } label: {
-                    Label("Clear", systemImage: "xmark.circle")
+                    Label(L("Clear"), systemImage: "xmark.circle")
                 }
                 .disabled(model.entries.isEmpty)
-                .help("Clear the list (⌘K)")
+                .help(L("Clear the list (⌘K)"))
 
                 SettingsLink {
-                    Label("Settings", systemImage: "gearshape")
+                    Label(L("Settings"), systemImage: "gearshape")
                 }
-                .help("Open settings (⌘,)")
+                .help(L("Open settings (⌘,)"))
             }
         }
         .navigationTitle("HafifPix")
@@ -86,7 +86,7 @@ struct ContentView: View {
         panel.canChooseDirectories = true
         panel.allowsMultipleSelection = true
         panel.allowedContentTypes = [.png, .jpeg, .gif, .svg, .webP, .folder]
-        panel.message = "Choose images or folders to optimize"
+        panel.message = L("Choose images or folders to optimize")
         if panel.runModal() == .OK {
             model.add(urls: panel.urls)
         }

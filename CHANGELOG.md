@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.0 (2026-07-11)
+
+- Localized into Turkish, German, French, Spanish, Japanese and Simplified
+  Chinese (string catalogs under `Localization/`, contributions welcome)
+
 ## 1.1.1 (2026-07-11)
 
 - Background removal reworked as a hybrid: flat backgrounds (logos, screenshots,
