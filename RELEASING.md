@@ -13,17 +13,17 @@
 
 ## Gatekeeper signing (when you have an Apple Developer account)
 
-Enroll in the Apple Developer Program ($99/yr), create a **Developer ID
-Application** certificate in Xcode, then build with:
+Certificate created 2026-07-11: `Developer ID Application: Dogu Kaan Yilmaz (5MYT4VYJFC)`
+(the .p12 backup + password live in the password manager). Build releases with:
 
 ```sh
-SIGN_IDENTITY="Developer ID Application: Your Name (TEAMID)" make dmg
+SIGN_IDENTITY="Developer ID Application: Dogu Kaan Yilmaz (5MYT4VYJFC)" make dmg
 xcrun notarytool submit dist/HafifPix-*.dmg --keychain-profile hafifpix --wait
 xcrun stapler staple dist/HafifPix-*.dmg
 ```
 
-(One-time: `xcrun notarytool store-credentials hafifpix --apple-id you@… --team-id TEAMID`
-with an app-specific password.)
+(One-time: `xcrun notarytool store-credentials hafifpix --apple-id you@… --team-id 5MYT4VYJFC`
+with an app-specific password from account.apple.com.)
 
 Without this, downloaders must right-click → Open (and on macOS 15+, approve in
 System Settings → Privacy & Security). Fine for friends; not fine for the public.
