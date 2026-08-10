@@ -52,16 +52,17 @@ jobs:
 
       - name: Build signed DMG
         env:
-          SIGN_IDENTITY: "Developer ID Application: Dogu Kaan Yilmaz (5MYT4VYJFC)"
+          SIGN_IDENTITY: ${{ secrets.MACOS_SIGN_IDENTITY }}
         run: make dmg
 
       - name: Notarize and staple
         env:
           APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
           NOTARY_PASSWORD: ${{ secrets.NOTARY_PASSWORD }}
         run: |
           xcrun notarytool submit dist/HafifPix-*.dmg \
-            --apple-id "$APPLE_ID" --team-id 5MYT4VYJFC \
+            --apple-id "$APPLE_ID" --team-id "$APPLE_TEAM_ID" \
             --password "$NOTARY_PASSWORD" --wait
           xcrun stapler staple dist/HafifPix-*.dmg
 
