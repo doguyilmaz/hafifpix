@@ -93,7 +93,7 @@ struct StatusBarView: View {
 
     private var statusText: String {
         if model.isBusy {
-            return L("Optimizing… \(model.activeJobs) files remaining")
+            return L("Optimizing… \(model.inFlightCount) files remaining")
         }
         if let totals = model.totals, totals.saved > 0 {
             let percent = Formatting.savings(original: totals.original, new: totals.original - totals.saved)

@@ -66,19 +66,34 @@ final class AppModel {
     }
 
     private var jobToEntry: [JobID: UUID] = [:]
-    private var engine: OptimizationEngine!
-    private(set) var activeJobs = 0
 
-    init() {
-        settings = SettingsStorage.load()
-        engine = OptimizationEngine { [weak self] event in
-            Task { @MainActor in
-                self?.apply(event)
-            }
+    /// Lazy so the event closure can capture a fully-initialized `self`
+    /// without an implicitly unwrapped optional. First touched on the main
+    /// actor from add()/again()/revert(), before any event can arrive.
+    @ObservationIgnored private lazy var engine = OptimizationEngine { [weak self] event in
+        Task { @MainActor in
+            self?.apply(event)
         }
     }
 
-    var isBusy: Bool { activeJobs > 0 }
+    init() {
+        settings = SettingsStorage.load()
+    }
+
+    /// Derived from the entries themselves, so removing or clearing a row
+    /// mid-flight can never strand a stale counter and leave the toolbar
+    /// disabled. A row is in flight while pending or running.
+    var isBusy: Bool { inFlightCount > 0 }
+
+    /// Rows still pending or running, derived from the entries.
+    var inFlightCount: Int {
+        entries.reduce(into: 0) { count, entry in
+            switch entry.status {
+            case .pending, .running: count += 1
+            default: break
+            }
+        }
+    }
 
     var totals: (original: Int64, saved: Int64)? {
         let finished = entries.filter {
@@ -127,7 +142,6 @@ final class AppModel {
             }
         }
         guard !accepted.isEmpty else { return }
-        activeJobs += accepted.count
         await engine.enqueue(accepted, settings: settings)
     }
 
@@ -149,8 +163,6 @@ final class AppModel {
             requests.append(request)
         }
         guard !requests.isEmpty else { return }
-        activeJobs += requests.count
-        let engine = engine!
         Task { await engine.enqueue(requests, settings: snapshot) }
     }
 
@@ -167,7 +179,6 @@ final class AppModel {
         guard let index = entries.firstIndex(where: { $0.id == entryID }),
               let jobID = entries[index].jobID else { return }
         let url = entries[index].url
-        let engine = engine!
         Task { await engine.revert(id: jobID, url: url) }
     }
 
@@ -233,20 +244,16 @@ final class AppModel {
         case .optimized(_, let newBytes):
             entries[index].currentBytes = newBytes
             entries[index].status = .optimized
-            activeJobs = max(0, activeJobs - 1)
         case .converted(_, let newBytes, let outputURL):
             entries[index].currentBytes = newBytes
             entries[index].status = .converted(outputURL)
-            activeJobs = max(0, activeJobs - 1)
         case .alreadyOptimal:
             entries[index].status = .alreadyOptimal
-            activeJobs = max(0, activeJobs - 1)
         case .reverted(let bytes):
             entries[index].currentBytes = bytes
             entries[index].status = .reverted
         case .failed(let message):
             entries[index].status = .failed(message)
-            activeJobs = max(0, activeJobs - 1)
         }
     }
 }

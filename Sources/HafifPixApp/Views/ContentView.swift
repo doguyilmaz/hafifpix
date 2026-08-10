@@ -81,14 +81,6 @@ struct ContentView: View {
     }
 
     private func openPanel() {
-        let panel = NSOpenPanel()
-        panel.canChooseFiles = true
-        panel.canChooseDirectories = true
-        panel.allowsMultipleSelection = true
-        panel.allowedContentTypes = [.png, .jpeg, .gif, .svg, .webP, .folder]
-        panel.message = L("Choose images or folders to optimize")
-        if panel.runModal() == .OK {
-            model.add(urls: panel.urls)
-        }
+        model.openFromMenu()
     }
 }

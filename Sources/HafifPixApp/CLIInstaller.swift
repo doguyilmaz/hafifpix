@@ -32,7 +32,10 @@ enum CLIInstaller {
             try? FileManager.default.removeItem(atPath: targetPath)
             try FileManager.default.createSymbolicLink(atPath: targetPath, withDestinationPath: source)
         } else {
-            try runPrivileged("mkdir -p '\(directory)' && ln -sf '\(source)' '\(targetPath)'")
+            try runPrivileged([
+                "/bin/mkdir", "-p", directory,
+                "&&", "/bin/ln", "-sf", source, targetPath,
+            ])
         }
     }
 
@@ -41,14 +44,19 @@ enum CLIInstaller {
         if FileManager.default.isWritableFile(atPath: directory) {
             try? FileManager.default.removeItem(atPath: targetPath)
         } else {
-            try runPrivileged("rm -f '\(targetPath)'")
+            try runPrivileged(["/bin/rm", "-f", targetPath])
         }
     }
 
-    /// Runs a shell command via the standard macOS admin authorization dialog.
-    /// Must be called on the main thread (NSAppleScript requirement).
-    private static func runPrivileged(_ command: String) throws {
-        let script = "do shell script \"\(command)\" with administrator privileges"
+    /// Runs a command as root via the standard macOS admin authorization
+    /// dialog. Each argument is individually shell-quoted (bare `&&` passes
+    /// through as an operator) and the whole command is escaped for the
+    /// AppleScript string literal, so a path containing quotes or spaces
+    /// cannot break out or inject. Must be called on the main thread
+    /// (NSAppleScript requirement).
+    private static func runPrivileged(_ arguments: [String]) throws {
+        let command = arguments.map { $0 == "&&" ? $0 : shellQuoted($0) }.joined(separator: " ")
+        let script = "do shell script \"\(appleScriptQuoted(command))\" with administrator privileges"
         guard let appleScript = NSAppleScript(source: script) else {
             throw CLIError.installFailed(nil)
         }
@@ -61,6 +69,19 @@ enum CLIInstaller {
             }
             throw CLIError.installFailed(errorInfo["NSAppleScriptErrorMessage"] as? String)
         }
+    }
+
+    /// POSIX single-quote escaping: wrap in single quotes and close/escape
+    /// any embedded single quote. Safe for arbitrary paths.
+    static func shellQuoted(_ value: String) -> String {
+        "'" + value.replacingOccurrences(of: "'", with: "'\\''") + "'"
+    }
+
+    /// Escapes a string for embedding in an AppleScript double-quoted literal.
+    static func appleScriptQuoted(_ value: String) -> String {
+        value
+            .replacingOccurrences(of: "\\", with: "\\\\")
+            .replacingOccurrences(of: "\"", with: "\\\"")
     }
 
     enum CLIError: Error, LocalizedError {
