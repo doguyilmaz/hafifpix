@@ -30,6 +30,11 @@ TOOLS=(
 # Optional: bundled only if present (not in homebrew-core today).
 OPTIONAL_TOOLS=(/opt/homebrew/bin/cjpegli)
 
+# Compile localized strings from the catalogs (generated, not committed).
+echo "==> Compiling localizations"
+xcrun xcstringstool compile Localization/HafifPixApp.xcstrings --output-directory Sources/HafifPixApp/Resources
+xcrun xcstringstool compile Localization/HafifPixCore.xcstrings --output-directory Sources/HafifPixCore/Resources
+
 echo "==> Building release binaries"
 swift build -c release --product HafifPixApp
 swift build -c release --product hafif
@@ -56,12 +61,13 @@ for locale in en tr de fr es ja zh-Hans; do
     mkdir -p "$CONTENTS/Resources/$locale.lproj"
 done
 
-if [[ ! -f Resources/AppIcon.icns ]]; then
-    echo "==> Generating icon"
-    swift scripts/make-icon-from-art.swift Resources/icon-art.png "$ROOT/.build/AppIcon.iconset"
-    iconutil -c icns "$ROOT/.build/AppIcon.iconset" -o Resources/AppIcon.icns
-fi
-cp Resources/AppIcon.icns "$CONTENTS/Resources/AppIcon.icns"
+# Compile the Icon Composer icon with actool: emits the classic
+# AppIcon.icns and the Assets.car carrying the macOS 26 layered icon, so
+# the Dock, app switcher, Finder and Sparkle all get the right art.
+echo "==> Compiling app icon"
+actool Resources/AppIcon.icon --compile "$CONTENTS/Resources" --app-icon AppIcon \
+    --platform macosx --minimum-deployment-target 15.0 \
+    --output-partial-info-plist "$ROOT/.build/appicon-partial.plist" >/dev/null
 cp LICENSE THIRD_PARTY_LICENSES.md "$CONTENTS/Resources/"
 
 echo "==> Embedding Sparkle"

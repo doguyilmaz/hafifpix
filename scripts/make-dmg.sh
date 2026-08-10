@@ -19,7 +19,8 @@ rm -rf "$STAGING" "$DMG" "$TMP_DMG"
 mkdir -p "$STAGING"
 ditto "$APP" "$STAGING/HafifPix.app"
 ln -s /Applications "$STAGING/Applications"
-cp Resources/AppIcon.icns "$STAGING/.VolumeIcon.icns"
+# actool compiled the icns into the bundle; reuse it for the volume icon.
+cp "$APP/Contents/Resources/AppIcon.icns" "$STAGING/.VolumeIcon.icns"
 
 echo "==> Creating writable image"
 hdiutil create -volname "$VOL" -srcfolder "$STAGING" -fs HFS+ -format UDRW -o "$TMP_DMG" -quiet

@@ -12,6 +12,8 @@ jobs:
     runs-on: macos-26
     steps:
       - uses: actions/checkout@v4
+      - name: Compile localizations
+        run: make strings
       - name: Build
         run: swift build
       - name: Test

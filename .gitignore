@@ -3,4 +3,7 @@ dist/
 *.xcodeproj
 .DS_Store
 .swiftpm/
-Resources/AppIcon.icns
+
+# Generated from Localization/*.xcstrings by `make strings`
+Sources/*/Resources/*.lproj/
+.vscode/

@@ -1,15 +1,15 @@
 APP = dist/HafifPix.app
 VERSION := $(shell /usr/libexec/PlistBuddy -c 'Print CFBundleShortVersionString' Resources/Info.plist)
 
-.PHONY: build test app run install install-cli icon dmg appcast release clean
+.PHONY: build test app run install install-cli strings dmg appcast release clean
 
-build:
+build: strings
 	swift build
 
-test:
+test: strings
 	swift test
 
-app:
+app: strings
 	bash scripts/build-app.sh
 
 run: app
@@ -26,11 +26,8 @@ install-cli:
 	ln -sf /Applications/HafifPix.app/Contents/Resources/bin/hafif $$bin/hafif && \
 	echo "Symlinked hafif to $$bin/hafif"
 
-icon:
-	swift scripts/make-icon-from-art.swift Resources/icon-art.png .build/AppIcon.iconset
-	iconutil -c icns .build/AppIcon.iconset -o Resources/AppIcon.icns
-
-# Recompile .lproj resources after editing the catalogs in Localization/.
+# Compile .lproj resources from the String Catalogs. Generated output is
+# not committed (see .gitignore); every build target regenerates it.
 strings:
 	xcrun xcstringstool compile Localization/HafifPixApp.xcstrings --output-directory Sources/HafifPixApp/Resources
 	xcrun xcstringstool compile Localization/HafifPixCore.xcstrings --output-directory Sources/HafifPixCore/Resources
