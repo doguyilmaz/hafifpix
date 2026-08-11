@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3.1
+
+- New app icon rebuilt with Icon Composer for a crisp Liquid Glass look
+- More secure command line tool installation
+- Reliability: the toolbar can no longer get stuck after removing files
+  mid-optimization; file pickers no longer block the window
+- Refreshed README with a demo and screenshots
+
 ## 1.3.0 (2026-07-11)
 
 - Install the `hafif` command line tool from Settings, General (no more manual symlink)
