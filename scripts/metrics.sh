@@ -50,9 +50,15 @@ rule
 # release day therefore reads near zero and means nothing yet.
 latest=$(jq -r '[.[] | select(.prerelease == false)] | first' <<<"$releases")
 latest_date=$(jq -r '.published_at' <<<"$latest")
-days=$(((($(date +%s) - $(date -j -f "%Y-%m-%dT%H:%M:%SZ" "$latest_date" +%s)) / 86400) + 1))
+# -u because GitHub's timestamp is UTC and `date -j -f` would otherwise read it
+# as local, which is a whole day out whenever the offset crosses midnight.
+published=$(date -u -j -f "%Y-%m-%dT%H:%M:%SZ" "$latest_date" +%s)
+days=$((((($(date +%s) - published)) / 86400) + 1))
 hits=$(jq '[.assets[] | select(.name == "appcast.xml") | .download_count] | add // 0' <<<"$latest")
-printf '%s fetches / %s days  ≈ %s active\n' "$hits" "$days" "$((hits / days))"
+# Decimal, because integer division reported a feed still being polled as zero
+# for any rate below one a day.
+rate=$(awk -v h="$hits" -v d="$days" 'BEGIN { printf "%.1f", h / d }')
+printf '%s fetches / %s days  ≈ %s a day\n' "$hits" "$days" "$rate"
 
 echo
 bold "Discovery (rolling 14 days, needs push access)"
