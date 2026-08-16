@@ -38,6 +38,21 @@ result is smaller and still decodes with identical dimensions and frame count.
 - **`hafif` CLI** for scripts and CI, sharing the app's engine and settings
 - **Finder integration**: Open With, Services menu, dock drops
 
+## Install
+
+```sh
+brew install --cask doguyilmaz/tap/hafifpix
+```
+
+Installs the app and puts the `hafif` CLI on your PATH.
+
+Or download the DMG from
+[Releases](https://github.com/doguyilmaz/hafifpix/releases) and drag HafifPix
+to Applications — then `make install-cli` for the CLI.
+
+Either way updates arrive in-app: HafifPix updates itself, so Homebrew is told
+to leave it alone once installed.
+
 ## Settings
 
 <table>

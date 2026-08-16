@@ -1,7 +1,7 @@
 APP = dist/HafifPix.app
 VERSION := $(shell /usr/libexec/PlistBuddy -c 'Print CFBundleShortVersionString' Resources/Info.plist)
 
-.PHONY: build test app run install install-cli strings dmg appcast release clean
+.PHONY: build test app run install install-cli strings dmg appcast release tap metrics clean
 
 build: strings
 	swift build
@@ -44,6 +44,17 @@ appcast:
 release: appcast
 	gh release create v$(VERSION) dist/release/HafifPix-$(VERSION).dmg dist/release/appcast.xml \
 		--title "HafifPix-$(VERSION)" --generate-notes
+	./scripts/update-tap.sh $(VERSION) dist/release/HafifPix-$(VERSION).dmg
+
+# Republishes the cask for an existing release, hashing the DMG it downloads.
+# Only needed if the release job's cask step was skipped or failed.
+# VERSION is the working tree's placeholder, so ask GitHub what shipped.
+# Override with `make tap V=1.3.1`.
+tap:
+	@./scripts/update-tap.sh $(if $(V),$(V),$(shell gh release view --json tagName --jq '.tagName' | sed 's/^v//'))
+
+metrics:
+	@./scripts/metrics.sh
 
 clean:
 	rm -rf .build dist
